@@ -18,6 +18,7 @@ $(document).ready(function () {
     const fullUrl = `${apiUrl}?locationType=${locationType}&locationName=${encodeURIComponent(
       locationName
     )}&startDate=${startDate}&endDate=${endDate}&format=JSON`;
+    // alert(fullUrl);
     return new Promise(function (resolve, reject) {
       $.ajax({
         url: fullUrl,
@@ -43,13 +44,17 @@ $(document).ready(function () {
       "https://a5c7zwf7e5.execute-api.ap-southeast-2.amazonaws.com/dev/lut";
     const offencesUrl =
       "https://a5c7zwf7e5.execute-api.ap-southeast-2.amazonaws.com/dev/offences";
-    const startDate = "06-26-2017";
-    const endDate = "08-26-2019";
+    const startDate = "08-25-2024";
+    const endDate = "08-26-2024";
 
     fetchGeographiesData(geographiesUrl).done(function (data) {
-      const boundaryPromises = data.map((item) =>
+      // Filter out only the items where type is "POSTCODE"
+      const postcodeData = data.filter(item => item.type === "POSTCODE");
+
+      const boundaryPromises = postcodeData.map((item) =>
         fetchOffencesData(offencesUrl, item.type, item.name, startDate, endDate)
       );
+
       // Wait for all promises to complete
       Promise.all(boundaryPromises).then(function (results) {
         console.log(results.filter((result) => result !== null)); // Ignore null results
