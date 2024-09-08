@@ -1,0 +1,647 @@
+[
+  {
+    "4000": [
+      "Brisbane City",
+      "Petrie Terrace",
+      "Spring Hill"
+    ]
+  },
+  {
+    "4005": [
+      "New Farm",
+      "Teneriffe"
+    ]
+  },
+  {
+    "4006": [
+      "Bowen Hills",
+      "Fortitude Valley",
+      "Herston",
+      "Newstead"
+    ]
+  },
+  {
+    "4007": [
+      "Ascot",
+      "Hamilton"
+    ]
+  },
+  {
+    "4008": [
+      "Brisbane Airport",
+      "Pinkenba"
+    ]
+  },
+  {
+    "4009": [
+      "Eagle Farm"
+    ]
+  },
+  {
+    "4010": [
+      "Albion"
+    ]
+  },
+  {
+    "4011": [
+      "Clayfield",
+      "Hendra"
+    ]
+  },
+  {
+    "4012": [
+      "Nundah",
+      "Wavell Heights"
+    ]
+  },
+  {
+    "4013": [
+      "Northgate"
+    ]
+  },
+  {
+    "4014": [
+      "Banyo",
+      "Nudgee",
+      "Nudgee Beach",
+      "Virginia"
+    ]
+  },
+  {
+    "4017": [
+      "Bracken Ridge",
+      "Brighton",
+      "Deagon",
+      "Sandgate",
+      "Shorncliffe"
+    ]
+  },
+  {
+    "4018": [
+      "Fitzgibbon",
+      "Taigum"
+    ]
+  },
+  {
+    "4019": [
+      "Clontarf",
+      "Margate",
+      "Woody Point"
+    ]
+  },
+  {
+    "4020": [
+      "Newport",
+      "Redcliffe",
+      "Scarborough"
+    ]
+  },
+  {
+    "4021": [
+      "Kippa-Ring"
+    ]
+  },
+  {
+    "4022": [
+      "Rothwell"
+    ]
+  },
+  {
+    "4025": [
+      "Bulwer",
+      "Cowan Cowan",
+      "Kooringal",
+      "Moreton Island"
+    ]
+  },
+  {
+    "4030": [
+      "Kalinga",
+      "Lutwyche",
+      "Windsor",
+      "Wooloowin"
+    ]
+  },
+  {
+    "4031": [
+      "Gordon Park",
+      "Kedron"
+    ]
+  },
+  {
+    "4032": [
+      "Chermside",
+      "Chermside West"
+    ]
+  },
+  {
+    "4034": [
+      "Aspley",
+      "Boondall",
+      "Carseldine",
+      "Geebung",
+      "Zillmere"
+    ]
+  },
+  {
+    "4035": [
+      "Bridgeman Downs",
+      "Albany Creek"
+    ]
+  },
+  {
+    "4036": [
+      "Bald Hills"
+    ]
+  },
+  {
+    "4037": [
+      "Eatons Hill"
+    ]
+  },
+  {
+    "4051": [
+      "Alderley",
+      "Enoggera",
+      "Gaythorne",
+      "Grange",
+      "Newmarket",
+      "Wilston"
+    ]
+  },
+  {
+    "4053": [
+      "Everton Park",
+      "McDowall",
+      "Mitchelton",
+      "Stafford",
+      "Stafford Heights",
+      "Everton Hills"
+    ]
+  },
+  {
+    "4054": [
+      "Keperra",
+      "Arana Hills"
+    ]
+  },
+  {
+    "4055": [
+      "Ferny Grove",
+      "Upper Kedron",
+      "Bunya",
+      "Ferny Hills"
+    ]
+  },
+  {
+    "4059": [
+      "Kelvin Grove",
+      "Red Hill"
+    ]
+  },
+  {
+    "4060": [
+      "Ashgrove"
+    ]
+  },
+  {
+    "4061": [
+      "The Gap"
+    ]
+  },
+  {
+    "4064": [
+      "Milton",
+      "Paddington"
+    ]
+  },
+  {
+    "4065": [
+      "Bardon"
+    ]
+  },
+  {
+    "4066": [
+      "Auchenflower",
+      "Mount Coot-tha",
+      "Toowong"
+    ]
+  },
+  {
+    "4067": [
+      "St Lucia"
+    ]
+  },
+  {
+    "4068": [
+      "Chelmer",
+      "Indooroopilly",
+      "Taringa"
+    ]
+  },
+  {
+    "4069": [
+      "Brookfield",
+      "Chapel Hill",
+      "Fig Tree Pocket",
+      "Kenmore",
+      "Kenmore Hills",
+      "Pinjarra Hills",
+      "Pullenvale",
+      "Upper Brookfield"
+    ]
+  },
+  {
+    "4070": [
+      "Anstead",
+      "Bellbowrie",
+      "Moggill"
+    ]
+  },
+  {
+    "4073": [
+      "Seventeen Mile Rocks",
+      "Sinnamon Park"
+    ]
+  },
+  {
+    "4074": [
+      "Jamboree Heights",
+      "Jindalee",
+      "Middle Park",
+      "Mount Ommaney",
+      "Riverhills",
+      "Sumner",
+      "Westlake"
+    ]
+  },
+  {
+    "4075": [
+      "Corinda",
+      "Graceville",
+      "Oxley",
+      "Sherwood"
+    ]
+  },
+  {
+    "4076": [
+      "Darra",
+      "Wacol"
+    ]
+  },
+  {
+    "4077": [
+      "Doolandella",
+      "Durack",
+      "Inala",
+      "Richlands"
+    ]
+  },
+  {
+    "4078": [
+      "Ellen Grove",
+      "Forest Lake"
+    ]
+  },
+  {
+    "4101": [
+      "Highgate Hill",
+      "South Brisbane",
+      "West End"
+    ]
+  },
+  {
+    "4102": [
+      "Dutton Park",
+      "Woolloongabba"
+    ]
+  },
+  {
+    "4103": [
+      "Annerley",
+      "Fairfield"
+    ]
+  },
+  {
+    "4104": [
+      "Yeronga"
+    ]
+  },
+  {
+    "4105": [
+      "Moorooka",
+      "Tennyson",
+      "Yeerongpilly"
+    ]
+  },
+  {
+    "4106": [
+      "Rocklea"
+    ]
+  },
+  {
+    "4107": [
+      "Salisbury"
+    ]
+  },
+  {
+    "4108": [
+      "Archerfield",
+      "Coopers Plains"
+    ]
+  },
+  {
+    "4109": [
+      "MacGregor",
+      "Robertson",
+      "Sunnybank",
+      "Sunnybank Hills"
+    ]
+  },
+  {
+    "4110": [
+      "Acacia Ridge",
+      "Heathwood",
+      "Larapinta",
+      "Pallara",
+      "Willawong"
+    ]
+  },
+  {
+    "4111": [
+      "Nathan"
+    ]
+  },
+  {
+    "4112": [
+      "Kuraby"
+    ]
+  },
+  {
+    "4113": [
+      "Eight Mile Plains",
+      "Runcorn"
+    ]
+  },
+  {
+    "4114": [
+      "Kingston",
+      "Logan Central",
+      "Woodridge"
+    ]
+  },
+  {
+    "4115": [
+      "Algester",
+      "Parkinson"
+    ]
+  },
+  {
+    "4116": [
+      "Calamvale",
+      "Drewvale",
+      "Stretton"
+    ]
+  },
+  {
+    "4117": [
+      "Karawatha",
+      "Berrinba"
+    ]
+  },
+  {
+    "4118": [
+      "Browns Plains",
+      "Forestdale",
+      "Heritage Park",
+      "Hillcrest",
+      "Regents Park"
+    ]
+  },
+  {
+    "4119": [
+      "Underwood"
+    ]
+  },
+  {
+    "4120": [
+      "Greenslopes",
+      "Stones Corner"
+    ]
+  },
+  {
+    "4121": [
+      "Holland Park",
+      "Holland Park West",
+      "Tarragindi"
+    ]
+  },
+  {
+    "4122": [
+      "Mansfield",
+      "Mount Gravatt",
+      "Mount Gravatt East",
+      "Upper Mount Gravatt",
+      "Wishart"
+    ]
+  },
+  {
+    "4123": [
+      "Rochedale",
+      "Rochedale South"
+    ]
+  },
+  {
+    "4124": [
+      "Spring Mountain",
+      "Boronia Heights",
+      "Greenbank",
+      "Lyons",
+      "New Beith",
+      "Silverbark Ridge"
+    ]
+  },
+  {
+    "4125": [
+      "Munruben",
+      "Park Ridge",
+      "Park Ridge South"
+    ]
+  },
+  {
+    "4127": [
+      "Daisy Hill",
+      "Priestdale",
+      "Slacks Creek",
+      "Springwood"
+    ]
+  },
+  {
+    "4128": [
+      "Shailer Park",
+      "Tanah Merah"
+    ]
+  },
+  {
+    "4129": [
+      "Loganholme"
+    ]
+  },
+  {
+    "4130": [
+      "Carbrook",
+      "Cornubia"
+    ]
+  },
+  {
+    "4131": [
+      "Loganlea",
+      "Meadowbrook"
+    ]
+  },
+  {
+    "4132": [
+      "Crestmead",
+      "Marsden"
+    ]
+  },
+  {
+    "4133": [
+      "Chambers Flat",
+      "Logan Reserve",
+      "Waterford",
+      "Waterford West"
+    ]
+  },
+  {
+    "4151": [
+      "Coorparoo"
+    ]
+  },
+  {
+    "4152": [
+      "Camp Hill",
+      "Carina",
+      "Carina Heights",
+      "Carindale"
+    ]
+  },
+  {
+    "4153": [
+      "Belmont"
+    ]
+  },
+  {
+    "4154": [
+      "Gumdale",
+      "Ransome",
+      "Wakerley"
+    ]
+  },
+  {
+    "4155": [
+      "Chandler"
+    ]
+  },
+  {
+    "4156": [
+      "Burbank",
+      "Mackenzie"
+    ]
+  },
+  {
+    "4157": [
+      "Capalaba",
+      "Sheldon"
+    ]
+  },
+  {
+    "4158": [
+      "Thorneside"
+    ]
+  },
+  {
+    "4159": [
+      "Birkdale"
+    ]
+  },
+  {
+    "4160": [
+      "Ormiston",
+      "Wellington Point"
+    ]
+  },
+  {
+    "4161": [
+      "Alexandra Hills"
+    ]
+  },
+  {
+    "4163": [
+      "Cleveland"
+    ]
+  },
+  {
+    "4164": [
+      "Thornlands"
+    ]
+  },
+  {
+    "4165": [
+      "Mount Cotton",
+      "Redland Bay",
+      "Victoria Point"
+    ]
+  },
+  {
+    "4169": [
+      "East Brisbane",
+      "Kangaroo Point"
+    ]
+  },
+  {
+    "4170": [
+      "Cannon Hill",
+      "Morningside",
+      "Norman Park",
+      "Seven Hills"
+    ]
+  },
+  {
+    "4171": [
+      "Balmoral",
+      "Bulimba",
+      "Hawthorne"
+    ]
+  },
+  {
+    "4172": [
+      "Murarrie"
+    ]
+  },
+  {
+    "4173": [
+      "Tingalpa"
+    ]
+  },
+  {
+    "4174": [
+      "Hemmant"
+    ]
+  },
+  {
+    "4178": [
+      "Lytton",
+      "Port of Brisbane",
+      "Wynnum",
+      "Wynnum West"
+    ]
+  },
+  {
+    "4179": [
+      "Lota",
+      "Manly",
+      "Manly West"
+    ]
+  }
+]

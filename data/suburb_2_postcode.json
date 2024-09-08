@@ -1,0 +1,998 @@
+[
+  {
+    "suburb": "Brisbane City",
+    "postcode": 4000
+  },
+  {
+    "suburb": "Petrie Terrace",
+    "postcode": 4000
+  },
+  {
+    "suburb": "Spring Hill",
+    "postcode": 4000
+  },
+  {
+    "suburb": "New Farm",
+    "postcode": 4005
+  },
+  {
+    "suburb": "Teneriffe",
+    "postcode": 4005
+  },
+  {
+    "suburb": "Bowen Hills",
+    "postcode": 4006
+  },
+  {
+    "suburb": "Fortitude Valley",
+    "postcode": 4006
+  },
+  {
+    "suburb": "Herston",
+    "postcode": 4006
+  },
+  {
+    "suburb": "Newstead",
+    "postcode": 4006
+  },
+  {
+    "suburb": "Ascot",
+    "postcode": 4007
+  },
+  {
+    "suburb": "Hamilton",
+    "postcode": 4007
+  },
+  {
+    "suburb": "Brisbane Airport",
+    "postcode": 4008
+  },
+  {
+    "suburb": "Pinkenba",
+    "postcode": 4008
+  },
+  {
+    "suburb": "Eagle Farm",
+    "postcode": 4009
+  },
+  {
+    "suburb": "Albion",
+    "postcode": 4010
+  },
+  {
+    "suburb": "Clayfield",
+    "postcode": 4011
+  },
+  {
+    "suburb": "Hendra",
+    "postcode": 4011
+  },
+  {
+    "suburb": "Nundah",
+    "postcode": 4012
+  },
+  {
+    "suburb": "Wavell Heights",
+    "postcode": 4012
+  },
+  {
+    "suburb": "Northgate",
+    "postcode": 4013
+  },
+  {
+    "suburb": "Banyo",
+    "postcode": 4014
+  },
+  {
+    "suburb": "Nudgee",
+    "postcode": 4014
+  },
+  {
+    "suburb": "Nudgee Beach",
+    "postcode": 4014
+  },
+  {
+    "suburb": "Virginia",
+    "postcode": 4014
+  },
+  {
+    "suburb": "Bracken Ridge",
+    "postcode": 4017
+  },
+  {
+    "suburb": "Brighton",
+    "postcode": 4017
+  },
+  {
+    "suburb": "Deagon",
+    "postcode": 4017
+  },
+  {
+    "suburb": "Sandgate",
+    "postcode": 4017
+  },
+  {
+    "suburb": "Shorncliffe",
+    "postcode": 4017
+  },
+  {
+    "suburb": "Fitzgibbon",
+    "postcode": 4018
+  },
+  {
+    "suburb": "Taigum",
+    "postcode": 4018
+  },
+  {
+    "suburb": "Clontarf",
+    "postcode": 4019
+  },
+  {
+    "suburb": "Margate",
+    "postcode": 4019
+  },
+  {
+    "suburb": "Woody Point",
+    "postcode": 4019
+  },
+  {
+    "suburb": "Newport",
+    "postcode": 4020
+  },
+  {
+    "suburb": "Redcliffe",
+    "postcode": 4020
+  },
+  {
+    "suburb": "Scarborough",
+    "postcode": 4020
+  },
+  {
+    "suburb": "Kippa-Ring",
+    "postcode": 4021
+  },
+  {
+    "suburb": "Rothwell",
+    "postcode": 4022
+  },
+  {
+    "suburb": "Bulwer",
+    "postcode": 4025
+  },
+  {
+    "suburb": "Cowan Cowan",
+    "postcode": 4025
+  },
+  {
+    "suburb": "Kooringal",
+    "postcode": 4025
+  },
+  {
+    "suburb": "Moreton Island",
+    "postcode": 4025
+  },
+  {
+    "suburb": "Kalinga",
+    "postcode": 4030
+  },
+  {
+    "suburb": "Lutwyche",
+    "postcode": 4030
+  },
+  {
+    "suburb": "Windsor",
+    "postcode": 4030
+  },
+  {
+    "suburb": "Wooloowin",
+    "postcode": 4030
+  },
+  {
+    "suburb": "Gordon Park",
+    "postcode": 4031
+  },
+  {
+    "suburb": "Kedron",
+    "postcode": 4031
+  },
+  {
+    "suburb": "Chermside",
+    "postcode": 4032
+  },
+  {
+    "suburb": "Chermside West",
+    "postcode": 4032
+  },
+  {
+    "suburb": "Aspley",
+    "postcode": 4034
+  },
+  {
+    "suburb": "Boondall",
+    "postcode": 4034
+  },
+  {
+    "suburb": "Carseldine",
+    "postcode": 4034
+  },
+  {
+    "suburb": "Geebung",
+    "postcode": 4034
+  },
+  {
+    "suburb": "Zillmere",
+    "postcode": 4034
+  },
+  {
+    "suburb": "Bridgeman Downs",
+    "postcode": 4035
+  },
+  {
+    "suburb": "Albany Creek",
+    "postcode": 4035
+  },
+  {
+    "suburb": "Bald Hills",
+    "postcode": 4036
+  },
+  {
+    "suburb": "Eatons Hill",
+    "postcode": 4037
+  },
+  {
+    "suburb": "Alderley",
+    "postcode": 4051
+  },
+  {
+    "suburb": "Enoggera",
+    "postcode": 4051
+  },
+  {
+    "suburb": "Gaythorne",
+    "postcode": 4051
+  },
+  {
+    "suburb": "Grange",
+    "postcode": 4051
+  },
+  {
+    "suburb": "Newmarket",
+    "postcode": 4051
+  },
+  {
+    "suburb": "Wilston",
+    "postcode": 4051
+  },
+  {
+    "suburb": "Everton Park",
+    "postcode": 4053
+  },
+  {
+    "suburb": "McDowall",
+    "postcode": 4053
+  },
+  {
+    "suburb": "Mitchelton",
+    "postcode": 4053
+  },
+  {
+    "suburb": "Stafford",
+    "postcode": 4053
+  },
+  {
+    "suburb": "Stafford Heights",
+    "postcode": 4053
+  },
+  {
+    "suburb": "Everton Hills",
+    "postcode": 4053
+  },
+  {
+    "suburb": "Keperra",
+    "postcode": 4054
+  },
+  {
+    "suburb": "Arana Hills",
+    "postcode": 4054
+  },
+  {
+    "suburb": "Ferny Grove",
+    "postcode": 4055
+  },
+  {
+    "suburb": "Upper Kedron",
+    "postcode": 4055
+  },
+  {
+    "suburb": "Bunya",
+    "postcode": 4055
+  },
+  {
+    "suburb": "Ferny Hills",
+    "postcode": 4055
+  },
+  {
+    "suburb": "Kelvin Grove",
+    "postcode": 4059
+  },
+  {
+    "suburb": "Red Hill",
+    "postcode": 4059
+  },
+  {
+    "suburb": "Ashgrove",
+    "postcode": 4060
+  },
+  {
+    "suburb": "The Gap",
+    "postcode": 4061
+  },
+  {
+    "suburb": "Milton",
+    "postcode": 4064
+  },
+  {
+    "suburb": "Paddington",
+    "postcode": 4064
+  },
+  {
+    "suburb": "Bardon",
+    "postcode": 4065
+  },
+  {
+    "suburb": "Auchenflower",
+    "postcode": 4066
+  },
+  {
+    "suburb": "Mount Coot-tha",
+    "postcode": 4066
+  },
+  {
+    "suburb": "Toowong",
+    "postcode": 4066
+  },
+  {
+    "suburb": "St Lucia",
+    "postcode": 4067
+  },
+  {
+    "suburb": "Chelmer",
+    "postcode": 4068
+  },
+  {
+    "suburb": "Indooroopilly",
+    "postcode": 4068
+  },
+  {
+    "suburb": "Taringa",
+    "postcode": 4068
+  },
+  {
+    "suburb": "Brookfield",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Chapel Hill",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Fig Tree Pocket",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Kenmore",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Kenmore Hills",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Pinjarra Hills",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Pullenvale",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Upper Brookfield",
+    "postcode": 4069
+  },
+  {
+    "suburb": "Anstead",
+    "postcode": 4070
+  },
+  {
+    "suburb": "Bellbowrie",
+    "postcode": 4070
+  },
+  {
+    "suburb": "Moggill",
+    "postcode": 4070
+  },
+  {
+    "suburb": "Seventeen Mile Rocks",
+    "postcode": 4073
+  },
+  {
+    "suburb": "Sinnamon Park",
+    "postcode": 4073
+  },
+  {
+    "suburb": "Jamboree Heights",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Jindalee",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Middle Park",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Mount Ommaney",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Riverhills",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Sumner",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Westlake",
+    "postcode": 4074
+  },
+  {
+    "suburb": "Corinda",
+    "postcode": 4075
+  },
+  {
+    "suburb": "Graceville",
+    "postcode": 4075
+  },
+  {
+    "suburb": "Oxley",
+    "postcode": 4075
+  },
+  {
+    "suburb": "Sherwood",
+    "postcode": 4075
+  },
+  {
+    "suburb": "Darra",
+    "postcode": 4076
+  },
+  {
+    "suburb": "Wacol",
+    "postcode": 4076
+  },
+  {
+    "suburb": "Doolandella",
+    "postcode": 4077
+  },
+  {
+    "suburb": "Durack",
+    "postcode": 4077
+  },
+  {
+    "suburb": "Inala",
+    "postcode": 4077
+  },
+  {
+    "suburb": "Richlands",
+    "postcode": 4077
+  },
+  {
+    "suburb": "Ellen Grove",
+    "postcode": 4078
+  },
+  {
+    "suburb": "Forest Lake",
+    "postcode": 4078
+  },
+  {
+    "suburb": "Highgate Hill",
+    "postcode": 4101
+  },
+  {
+    "suburb": "South Brisbane",
+    "postcode": 4101
+  },
+  {
+    "suburb": "West End",
+    "postcode": 4101
+  },
+  {
+    "suburb": "Dutton Park",
+    "postcode": 4102
+  },
+  {
+    "suburb": "Woolloongabba",
+    "postcode": 4102
+  },
+  {
+    "suburb": "Annerley",
+    "postcode": 4103
+  },
+  {
+    "suburb": "Fairfield",
+    "postcode": 4103
+  },
+  {
+    "suburb": "Yeronga",
+    "postcode": 4104
+  },
+  {
+    "suburb": "Moorooka",
+    "postcode": 4105
+  },
+  {
+    "suburb": "Tennyson",
+    "postcode": 4105
+  },
+  {
+    "suburb": "Yeerongpilly",
+    "postcode": 4105
+  },
+  {
+    "suburb": "Rocklea",
+    "postcode": 4106
+  },
+  {
+    "suburb": "Salisbury",
+    "postcode": 4107
+  },
+  {
+    "suburb": "Archerfield",
+    "postcode": 4108
+  },
+  {
+    "suburb": "Coopers Plains",
+    "postcode": 4108
+  },
+  {
+    "suburb": "MacGregor",
+    "postcode": 4109
+  },
+  {
+    "suburb": "Robertson",
+    "postcode": 4109
+  },
+  {
+    "suburb": "Sunnybank",
+    "postcode": 4109
+  },
+  {
+    "suburb": "Sunnybank Hills",
+    "postcode": 4109
+  },
+  {
+    "suburb": "Acacia Ridge",
+    "postcode": 4110
+  },
+  {
+    "suburb": "Heathwood",
+    "postcode": 4110
+  },
+  {
+    "suburb": "Larapinta",
+    "postcode": 4110
+  },
+  {
+    "suburb": "Pallara",
+    "postcode": 4110
+  },
+  {
+    "suburb": "Willawong",
+    "postcode": 4110
+  },
+  {
+    "suburb": "Nathan",
+    "postcode": 4111
+  },
+  {
+    "suburb": "Kuraby",
+    "postcode": 4112
+  },
+  {
+    "suburb": "Eight Mile Plains",
+    "postcode": 4113
+  },
+  {
+    "suburb": "Runcorn",
+    "postcode": 4113
+  },
+  {
+    "suburb": "Kingston",
+    "postcode": 4114
+  },
+  {
+    "suburb": "Logan Central",
+    "postcode": 4114
+  },
+  {
+    "suburb": "Woodridge",
+    "postcode": 4114
+  },
+  {
+    "suburb": "Algester",
+    "postcode": 4115
+  },
+  {
+    "suburb": "Parkinson",
+    "postcode": 4115
+  },
+  {
+    "suburb": "Calamvale",
+    "postcode": 4116
+  },
+  {
+    "suburb": "Drewvale",
+    "postcode": 4116
+  },
+  {
+    "suburb": "Stretton",
+    "postcode": 4116
+  },
+  {
+    "suburb": "Karawatha",
+    "postcode": 4117
+  },
+  {
+    "suburb": "Berrinba",
+    "postcode": 4117
+  },
+  {
+    "suburb": "Browns Plains",
+    "postcode": 4118
+  },
+  {
+    "suburb": "Forestdale",
+    "postcode": 4118
+  },
+  {
+    "suburb": "Heritage Park",
+    "postcode": 4118
+  },
+  {
+    "suburb": "Hillcrest",
+    "postcode": 4118
+  },
+  {
+    "suburb": "Regents Park",
+    "postcode": 4118
+  },
+  {
+    "suburb": "Underwood",
+    "postcode": 4119
+  },
+  {
+    "suburb": "Greenslopes",
+    "postcode": 4120
+  },
+  {
+    "suburb": "Stones Corner",
+    "postcode": 4120
+  },
+  {
+    "suburb": "Holland Park",
+    "postcode": 4121
+  },
+  {
+    "suburb": "Holland Park West",
+    "postcode": 4121
+  },
+  {
+    "suburb": "Tarragindi",
+    "postcode": 4121
+  },
+  {
+    "suburb": "Mansfield",
+    "postcode": 4122
+  },
+  {
+    "suburb": "Mount Gravatt",
+    "postcode": 4122
+  },
+  {
+    "suburb": "Mount Gravatt East",
+    "postcode": 4122
+  },
+  {
+    "suburb": "Upper Mount Gravatt",
+    "postcode": 4122
+  },
+  {
+    "suburb": "Wishart",
+    "postcode": 4122
+  },
+  {
+    "suburb": "Rochedale",
+    "postcode": 4123
+  },
+  {
+    "suburb": "Rochedale South",
+    "postcode": 4123
+  },
+  {
+    "suburb": "Spring Mountain",
+    "postcode": 4124
+  },
+  {
+    "suburb": "Boronia Heights",
+    "postcode": 4124
+  },
+  {
+    "suburb": "Greenbank",
+    "postcode": 4124
+  },
+  {
+    "suburb": "Lyons",
+    "postcode": 4124
+  },
+  {
+    "suburb": "New Beith",
+    "postcode": 4124
+  },
+  {
+    "suburb": "Silverbark Ridge",
+    "postcode": 4124
+  },
+  {
+    "suburb": "Munruben",
+    "postcode": 4125
+  },
+  {
+    "suburb": "Park Ridge",
+    "postcode": 4125
+  },
+  {
+    "suburb": "Park Ridge South",
+    "postcode": 4125
+  },
+  {
+    "suburb": "Daisy Hill",
+    "postcode": 4127
+  },
+  {
+    "suburb": "Priestdale",
+    "postcode": 4127
+  },
+  {
+    "suburb": "Slacks Creek",
+    "postcode": 4127
+  },
+  {
+    "suburb": "Springwood",
+    "postcode": 4127
+  },
+  {
+    "suburb": "Shailer Park",
+    "postcode": 4128
+  },
+  {
+    "suburb": "Tanah Merah",
+    "postcode": 4128
+  },
+  {
+    "suburb": "Loganholme",
+    "postcode": 4129
+  },
+  {
+    "suburb": "Carbrook",
+    "postcode": 4130
+  },
+  {
+    "suburb": "Cornubia",
+    "postcode": 4130
+  },
+  {
+    "suburb": "Loganlea",
+    "postcode": 4131
+  },
+  {
+    "suburb": "Meadowbrook",
+    "postcode": 4131
+  },
+  {
+    "suburb": "Crestmead",
+    "postcode": 4132
+  },
+  {
+    "suburb": "Marsden",
+    "postcode": 4132
+  },
+  {
+    "suburb": "Chambers Flat",
+    "postcode": 4133
+  },
+  {
+    "suburb": "Logan Reserve",
+    "postcode": 4133
+  },
+  {
+    "suburb": "Waterford",
+    "postcode": 4133
+  },
+  {
+    "suburb": "Waterford West",
+    "postcode": 4133
+  },
+  {
+    "suburb": "Coorparoo",
+    "postcode": 4151
+  },
+  {
+    "suburb": "Camp Hill",
+    "postcode": 4152
+  },
+  {
+    "suburb": "Carina",
+    "postcode": 4152
+  },
+  {
+    "suburb": "Carina Heights",
+    "postcode": 4152
+  },
+  {
+    "suburb": "Carindale",
+    "postcode": 4152
+  },
+  {
+    "suburb": "Belmont",
+    "postcode": 4153
+  },
+  {
+    "suburb": "Gumdale",
+    "postcode": 4154
+  },
+  {
+    "suburb": "Ransome",
+    "postcode": 4154
+  },
+  {
+    "suburb": "Wakerley",
+    "postcode": 4154
+  },
+  {
+    "suburb": "Chandler",
+    "postcode": 4155
+  },
+  {
+    "suburb": "Burbank",
+    "postcode": 4156
+  },
+  {
+    "suburb": "Mackenzie",
+    "postcode": 4156
+  },
+  {
+    "suburb": "Capalaba",
+    "postcode": 4157
+  },
+  {
+    "suburb": "Sheldon",
+    "postcode": 4157
+  },
+  {
+    "suburb": "Thorneside",
+    "postcode": 4158
+  },
+  {
+    "suburb": "Birkdale",
+    "postcode": 4159
+  },
+  {
+    "suburb": "Ormiston",
+    "postcode": 4160
+  },
+  {
+    "suburb": "Wellington Point",
+    "postcode": 4160
+  },
+  {
+    "suburb": "Alexandra Hills",
+    "postcode": 4161
+  },
+  {
+    "suburb": "Cleveland",
+    "postcode": 4163
+  },
+  {
+    "suburb": "Thornlands",
+    "postcode": 4164
+  },
+  {
+    "suburb": "Mount Cotton",
+    "postcode": 4165
+  },
+  {
+    "suburb": "Redland Bay",
+    "postcode": 4165
+  },
+  {
+    "suburb": "Victoria Point",
+    "postcode": 4165
+  },
+  {
+    "suburb": "East Brisbane",
+    "postcode": 4169
+  },
+  {
+    "suburb": "Kangaroo Point",
+    "postcode": 4169
+  },
+  {
+    "suburb": "Cannon Hill",
+    "postcode": 4170
+  },
+  {
+    "suburb": "Morningside",
+    "postcode": 4170
+  },
+  {
+    "suburb": "Norman Park",
+    "postcode": 4170
+  },
+  {
+    "suburb": "Seven Hills",
+    "postcode": 4170
+  },
+  {
+    "suburb": "Balmoral",
+    "postcode": 4171
+  },
+  {
+    "suburb": "Bulimba",
+    "postcode": 4171
+  },
+  {
+    "suburb": "Hawthorne",
+    "postcode": 4171
+  },
+  {
+    "suburb": "Murarrie",
+    "postcode": 4172
+  },
+  {
+    "suburb": "Tingalpa",
+    "postcode": 4173
+  },
+  {
+    "suburb": "Hemmant",
+    "postcode": 4174
+  },
+  {
+    "suburb": "Lytton",
+    "postcode": 4178
+  },
+  {
+    "suburb": "Port of Brisbane",
+    "postcode": 4178
+  },
+  {
+    "suburb": "Wynnum",
+    "postcode": 4178
+  },
+  {
+    "suburb": "Wynnum West",
+    "postcode": 4178
+  },
+  {
+    "suburb": "Lota",
+    "postcode": 4179
+  },
+  {
+    "suburb": "Manly",
+    "postcode": 4179
+  },
+  {
+    "suburb": "Manly West",
+    "postcode": 4179
+  }
+]
