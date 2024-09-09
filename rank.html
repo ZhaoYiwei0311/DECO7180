@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/rankHeader.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/rank.css" />
+    
+
+
+    <title>Region Rank</title>
+  </head>
+
+
+  <body>
+      <div class="container">
+        <header class="header">
+            <a href="index.html">
+              <img
+                class="logo"
+                alt="application logo"
+                src="media/logo/web logo.png"
+              />
+            </a>
+          
+          <form class="search">
+            <input
+              type="text"
+              class="search-field"
+              placeholder="Search your interested area 🔍"
+            />
+            <button class="search-btn">
+              <span>Search</span>
+            </button>
+          </form>
+
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="nav-btn" href="index.html">Back Home</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        
+        <div class="search-results">
+        <div class="button-box">
+          <select class="sort-button" id="sortSelect">
+            <option value="" selected disabled>Sort Area Here</option>
+            <option value="order">Sort by postcode</option>
+            <option value="type">Sort by score</option>
+            <option value="dateTime">Sort by time</option>
+            <option value="name">Sort by name</option>
+            <option value="price">Sort by price</option>
+          </select>
+        </div>
+        <ul class="results"></ul>
+      </div>
+
+      <div class="event">
+        <div class="message">
+          <p>⭐️ Start by clicking any area. Have fun! 😄</p>
+        </div>
+      </div>
+
+      </div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+  </body>
+</html>
+</html>
+

@@ -22,20 +22,44 @@ Paragraph default: 1.6
 
 --- 02 COLORS
 
-- Primary: #104911 
-- Tints:
-#285b29 #406d41 #588058 #709270 #88a488 #9fb6a0
-#b7c8b8 #cfdbcf #e7ede7 #ecf1ec
-- Shades: 
-#0d3a0e #0b330c #030f03 #082509 #061d07 #030f03
-- Accents
-#548C2F #FFD449 #F9A620 #e18b00
-- Greys
 #888 #555 #333
 #767676 (lightest grey allowed on #fff) 
 #6f6f6f (lightest grey allowed on #e7ede7) 
 
---- 05 SHADOWS
+--- 03 BUTTONS
+
+/* Primary Colors */
+/* --primary-color-1: #b7c6e3 */
+
+/* Tints */
+/* --tint-color-1: #f3fafa
+--tint-color-2: #e6edf9
+--tint-color-3: #cde8f3
+--tint-color-4: #c4e5ef
+--tint-color-5: #aed9d8
+--tint-color-6: #99bcdd */
+
+/* Shades */
+/* --shade-color-1: #1a2847
+--shade-color-2: #19325f
+--shade-color-3: #354e6b
+--shade-color-4: #414f67
+--shade-color-5: #6f94cd */
+
+/* Accent Colors */
+/* --accent-color-1: #c6ffdd
+--accent-color-2: #fbd786
+--accent-color-3: #f7797d
+--accent-color-4: #4994c4
+--accent-color-5: #106898
+--accent-color-6: #5976ba */
+
+/* Greys */
+/* --grey-color-1: #e4e5e6
+--grey-color-3: #888888
+--grey-color-4: #555555 */
+
+/* --- 05 SHADOWS
 
 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
@@ -69,10 +93,10 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1;
-  font-weight: 400;
-  color: #555;
+  font-weight: 500;
+  color: #000000;
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
@@ -106,8 +130,8 @@ body {
 }
 
 /* .grid:last-child {
-  margin-bottom: 0;
-} */
+    margin-bottom: 0;
+  } */
 
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
@@ -126,8 +150,8 @@ body {
 }
 
 /* .grid--5-cols {
-  grid-template-columns: repeat(5, 1fr);
-} */
+    grid-template-columns: repeat(5, 1fr);
+  } */
 
 .grid--center-v {
   align-items: center;
@@ -144,7 +168,7 @@ body {
 }
 
 .heading-primary {
-  font-size: 5.2rem;
+  font-size: 4rem;
   line-height: 1.05;
   margin-bottom: 3.2rem;
 }
@@ -165,7 +189,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #104911;
+  color: #1a2847;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -194,25 +218,31 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #104911;
-  color: #fff;
+  border-radius: 45px;
+  background-color: #fff;
+  color: #555;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #588058;
+  border-radius: 45px;
+  color: #fff;
+  background-color: #414f67;
   transform: scale(1.05);
 }
 
 .btn--outline:link,
 .btn--outline:visited {
+  border-radius: 45px;
   background-color: #fff;
   color: #555;
 }
 
 .btn--outline:hover,
 .btn--outline:active {
-  background-color: #e7ede7;
+  border-radius: 45px;
+  color: #fff;
+  background-color: #414f67;
   transform: scale(1.05);
 
   /* border: 3px solid #fff; */
@@ -237,9 +267,10 @@ body {
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #104911;
+  color: #19325f;
+  font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
+  /* border-bottom: 1px solid currentColor; */
   padding-bottom: 2px;
   transition: all 0.3s;
 }
@@ -247,8 +278,8 @@ body {
 .link:hover,
 .link:active {
   color: #030f03;
-  border-bottom: 1px solid transparent;
-  transform: scale(1.05);
+  /* border-bottom: 1px solid transparent; */
+  transform: scale(1.1);
 }
 
 .list {
@@ -269,18 +300,19 @@ body {
 .list-icon {
   width: 3rem;
   height: 3rem;
-  color: #104911;
+  color: #354e6b;
 }
 
 *:focus {
   outline: none;
-  /* outline: 4px dotted #104911; */
+  /* outline: 4px dotted #354e6b; */
   /* outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem #7092707f;
+  box-shadow: 0 0 0 0.8rem #354e6b8e;
 }
 
 /* HELPER/SETTINGS CLASSES */
 .margin-right-sm {
+  margin-top: 1.2rem;
   margin-right: 1.6rem !important;
 }
 
@@ -317,7 +349,7 @@ strong {
 .heading--2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #285b29;
+  color: #354e6b;
   text-transform: uppercase;
   text-align: center;
 }
