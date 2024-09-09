@@ -30,7 +30,7 @@ $(document).ready(function () {
   }
 
   // const limit = pLimit(5);
-  
+
   function fetchAllData() {
     const geographiesUrl =
       "https://a5c7zwf7e5.execute-api.ap-southeast-2.amazonaws.com/dev/lut";

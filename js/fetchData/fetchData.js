@@ -1,5 +1,8 @@
-$(document).ready(function () {
-  function fetchData(datasetId, totalRecords, additionalQuery, callback) {
+let wildfireData;
+let floodData;
+
+function fetchData(datasetId, totalRecords, additionalQuery) {
+  return new Promise(function (resolve, reject) {
     var limit = 100;
     var offset = 0;
     var allData = [];
@@ -23,31 +26,43 @@ $(document).ready(function () {
           if (offset < totalRecords) {
             fetch();
           } else {
-            callback(allData);
+            resolve(allData); // 在这里调用 resolve 来解析 Promise
           }
         },
         error: function (xhr, status, error) {
           console.error("Fail", status, error);
+          reject(new Error(error)); // 在这里调用 reject 来拒绝 Promise
         },
       });
     }
 
     fetch();
-  }
-
-  // first dataset
+  });
+}
+function fetchDataAndExport() {
   const datasetId1 = "wild-fire-history";
   const totalRecords1 = 556;
   const additionalQuery1 = "";
-  fetchData(datasetId1, totalRecords1, additionalQuery1, function (data) {
-    console.log("Data for dataset wild fire:", data);
-  });
 
-  // second dataset
   const datasetId2 = "flood-awareness-creek";
   const totalRecords2 = 503; // 503 records for high risk
   const additionalQuery2 = "?select=*&where=flood_risk%3D%22High%22";
-  fetchData(datasetId2, totalRecords2, additionalQuery2, function (data) {
-    console.log("Data for dataset flood area:", data);
-  });
-});
+
+  let wildfirePromise = fetchData(datasetId1, totalRecords1, additionalQuery1);
+  let floodPromise = fetchData(datasetId2, totalRecords2, additionalQuery2);
+
+  return Promise.all([wildfirePromise, floodPromise])
+    .then((data) => {
+      [wildfireData, floodData] = data;
+
+      return {
+        wildfireData,
+        floodData,
+      };
+    })
+    .catch((error) => {
+      console.error("Data loading failed:", error);
+    });
+}
+
+export { fetchDataAndExport };
