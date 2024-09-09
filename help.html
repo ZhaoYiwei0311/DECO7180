@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general2.css" />
+    <link rel="stylesheet" href="css/styleQueries.css" />
+
+    <title>BriSentinel</title>
+  </head>
+
+  <body>
+    <main>
+        <header class="header">
+            <div class="logo-container">
+                <a href="#">
+                    <img
+                        class="logo"
+                        alt="application logo"
+                        src="media/logo/web logo.png"
+                    />
+                </a>
+                <div class="logo-text">
+                    <h1>BriSentinel</h1>
+                    <p>Your Trusted Guide to Safe and Smart Property Choices in Brisbane</p>
+                </div>
+            </div>
+            <nav class="main-nav"> 
+              <ul class="main-nav-list">
+                <li><a class="main-nav-link" href="index.html">Area</a></li>
+                <li><a class="main-nav-link" href="index.html">RiskMap</a></li>
+                <li><a class="main-nav-link" href="eventMap.html">Recommend</a></li>
+                <li><a class="main-nav-link" href="help.html">Help</a></li>
+                <li>
+                  <a href="#">
+                    <img
+                      class="user-icon"
+                      alt="user-icon"
+                      src="media/homage/user-icon.jpg"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </header>
+
+        <section class="section-hero">
+            <div class="hero">
+              <div class="hero-img-box">
+                <picture>
+                                   <source
+                    srcset="media/gallery/Homepage_house.jpg"
+                    type="image/webp"
+                    alt="A cosy house"
+                  />
+                  <source
+                    srcset="media/gallery/Homepage_house.jpg"
+                    type="image/png"
+                    alt="A cosy house"
+                  />
+                  
+                  <img
+                    src="media/gallery/Homepage_house.jpg"
+                    class="hero-img"
+                    alt="A cosy house"
+                  />
+                </picture>
+              </div>
+              <div class="hero-text-box">
+                <h1 class="heading-primary">Welcome to BriSentinel</h1>
+                <h3 class="hero-description">
+                  Our platform offers:
+                </h3>
+                <ul class="features-list">
+                    <li>
+                        <img src="media/homage/flooded-house.png" alt="Disaster Risk Mapping Icon">
+                        <span>Disaster Risk Mapping</span>
+                    </li>
+                    <li>
+                        <img src="media/homage/discussion.png" alt="Interactive Comparisons Icon">
+                        <span>Interactive Comparisons</span>
+                    </li>
+                    <li>
+                        <img src="media/homage/recommend.png" alt="Recommendations Icon">
+                        <span>Recommendations</span>
+                    </li>
+                    <li>
+                        <img src="media/homage/custody.png" alt="Crime Rate Icon">
+                        <span>Crime Rate</span>
+                    </li>
+                </ul>
+
+                <a href="#cards" class="btn btn--full margin-right-sm"
+                  >See Our Events</a
+                >
+                <a href="#intro" class="btn btn--outline">Learn more &darr;</a>
+              </div>
+              
+            </div>
+        </section>
+
+        <section class="section-cards" id="cards">
+          <div class="container center-text">
+            <span class="subheading">Properties</span>
+            <h2 class="heading-secondary">Discover more Properties!</h2>
+          </div>
+  
+          <div class="container grid grid--2-cols margin-bottom-md">
+            <div class="card" style="height: 700px">
+              <img
+                src="media/homage/property1.jpeg"
+                class="card-img"
+                alt="People cycling in the city"
+              />
+              <div class="card-content">
+                <div class="card-tags">
+                  <span class="card-text">$900,000</span>
+                </div>
+                <p class="card-title">Spacious 3-Bedroom Family Home</p>
+                <ul class="card-attributes">
+                  <li class="card-attribute">
+                    <span
+                      >📍 123 Example Street, Toowong, Brisbane, QLD 4066</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                    <span
+                      >⚠️ Safety index:78/100</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                      <span>👮 Crime Rate: 60/100 (Low risk)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="card" style="height: 700px">
+              <img
+                src="media/homage/property2.jpeg"
+                class="card-img"
+                alt="A cute smiling dog."
+              />
+              <div class="card-content">
+                <div class="card-tags">
+                  <span class="card-text">$700,000</span>
+                </div>
+                <p class="card-title">Charming 4-Bedroom House in Westend</p>
+                <ul class="card-attributes">
+                  <li class="card-attribute">
+                    <span
+                      >📍 456 River Road, West End, Brisbane, QLD 4101</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                    <span
+                      >⚠️ Safety index:70/100</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                      <span>👮 Crime Rate: 75/100 (Moderate Risk Area)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            
+          </div>
+
+          <div class="container grid grid--2-cols margin-bottom-md">
+
+            <div class="card" style="height: 700px">
+              <img
+                src="media/homage/property2.jpeg"
+                class="card-img"
+                alt="A cute smiling dog."
+              />
+              <div class="card-content">
+                <div class="card-tags">
+                  <span class="card-text">$700,000</span>
+                </div>
+                <p class="card-title">Charming 4-Bedroom House in Westend</p>
+                <ul class="card-attributes">
+                  <li class="card-attribute">
+                    <span
+                      >📍 456 River Road, West End, Brisbane, QLD 4101</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                    <span
+                      >⚠️ Safety index:70/100</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                      <span>👮 Crime Rate: 75/100 (Moderate Risk Area)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="card" style="height: 700px">
+              <img
+                src="media/homage/property3.jpeg"
+                class="card-img"
+                alt="A bog and a girl in the pool."
+              />
+              <div class="card-content">
+                <div class="card-tags">
+                  <span class="card-text">$600,000</span>
+                </div>
+                <p class="card-title">Cozy 1-Bedroom Studio in South Brisbane</p>
+                <ul class="card-attributes">
+                  <li class="card-attribute">
+                    <span
+                      >📍 321 Example Street, South Brisbane, QLD 4101</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                    <span
+                      >⚠️ Safety Index: 65/100</span
+                    >
+                  </li>
+                  <li class="card-attribute">
+                      <span
+                        >☠️ Crime Rate: 80/100 (High Risk Area)</span
+                      >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+  
+          <div class="container all-events">
+            <a href="events.html" class="link">See more propertries &rarr;</a>
+          </div>
+        </section>
+
+        <section class="section-intro" id="intro">
+            <div class="container">
+              <span class="subheading">How it works</span>
+              <h2 class="heading-secondary">Navigate your way to a safer property choice</h2>
+            </div>
+    
+            <div class="container grid grid--2-cols grid--center-v">
+              <!-- INTRO 01 -->
+              <div class="intro-img-box">
+                <img
+                  src="media/gallery/MapOverview.png"
+                  class="intro-img"
+                  alt="An desktop application page showing events and displaying them on a map."
+                />
+              </div>
+              <div class="intro-text-box">
+                <p class="intro-number">🗺️</p>
+                <h3 class="heading-tertiary">RiskMap</h3>
+                <p class="intro-description">
+                  Obtain a safety score by analyzing the indices of the surrounding environment.
+                </p>
+              </div>
+              <div class="intro-text-box">
+                <p class="intro-number">📊</p>
+                <h3 class="heading-tertiary">Analyzing</h3>
+                <p class="intro-description">
+                  Dive into detailed maps showing disaster-prone areas and crime statiscs.
+                </p>
+              </div>
+    
+              <div class="intro-img-box">
+                <img
+                  src="media/gallery/EventOverview.png"
+                  class="intro-img"
+                  alt="An desktop application page showing events."
+                />
+              </div>
+    
+              <div class="intro-img-box">
+                <img
+                  src="media/gallery/MapOverview.png"
+                  class="intro-img"
+                  alt="An desktop application page showing events and displaying them on a map."
+                />
+              </div>
+              <div class="intro-text-box">
+                <p class="intro-number">📈</p>
+                <h3 class="heading-tertiary">Prediction</h3>
+                <p class="intro-description">
+                  Take your search a step further by exploring events on our map.
+                  With just a click, you could easily find events happening in your
+                  neighborhood or plan your next adventure in a new area.
+                </p>
+              </div>
+    
+              <div class="intro-text-box">
+                <p class="intro-number">🏠</p>
+                <h3 class="heading-tertiary">Listing Property</h3>
+                <p class="intro-description">
+                  Share your experiences, insights, and feedback through our
+                  integrated blog feature! Join the conversation, inspire others,
+                  and be inspired by the vibrant community of wellness enthusiasts
+                  on our platform.
+                </p>
+              </div>
+              <div class="intro-img-box">
+                <img
+                  src="media/gallery/BlogOverview.png"
+                  class="intro-img"
+                  alt="An desktop application page showing user's blog posts."
+                />
+              </div>
+            </div>
+        </section>
+
+          <footer class="footer">
+            <div class="container grid grid--footer">
+              <div class="logo-col">
+                <a href="#" class="footer-logo">
+                  <img class="logo-img" alt="logo" src="media/logo/web logo.png" />
+                </a>
+      
+                <ul class="social-links">
+                  <li>
+                    <a class="footer-link" href="#"
+                      ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="#"
+                      ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="footer-link" href="#"
+                      ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+      
+              <div class="address-col">
+                <p class="footer-heading">Contact us</p>
+                <address class="contacts">
+                  <p class="address">
+                    The University of Queensland, St Lucia, QLD 4072
+                  </p>
+                  <p>
+                    <a class="footer-link" href="tel:400-000-000">400-000-000</a
+                    ><br />
+                    <a class="footer-link" href="mailto:hello@omnifood.com"
+                      >hello@CompanyName.com</a
+                    >
+                  </p>
+                </address>
+              </div>
+      
+              <nav class="nav-col">
+                <p class="footer-heading">Account</p>
+                <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Create account</a></li>
+                  <li><a class="footer-link" href="#">Sign in</a></li>
+                  <li><a class="footer-link" href="#">iOS app</a></li>
+                  <li><a class="footer-link" href="#">Android app</a></li>
+                </ul>
+              </nav>
+      
+              <nav class="nav-col">
+                <p class="footer-heading">Company</p>
+                <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">About</a></li>
+                  <li><a class="footer-link" href="#">For Business</a></li>
+                  <li><a class="footer-link" href="#">Partners</a></li>
+                </ul>
+              </nav>
+      
+              <nav class="nav-col">
+                <p class="footer-heading">Resources</p>
+                <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Directory</a></li>
+                  <li><a class="footer-link" href="#">Help center</a></li>
+                  <li><a class="footer-link" href="#">Privacy & terms</a></li>
+                </ul>
+              </nav>
+            </div>
+          </footer>
+          <script type="module" src="js/homepage.js"></script>
+          <script src="js/script.js"></script>
+    </main>
+  </body>
+</html> 
