@@ -29,30 +29,37 @@ Paragraph default: 1.6
 --- 03 BUTTONS
 
 /* Primary Colors */
-/* --primary-color-1: #b7c6e3 */
-
-/* Tints */
-/* --tint-color-1: #f3fafa
---tint-color-2: #e6edf9
---tint-color-3: #cde8f3
---tint-color-4: #c4e5ef
---tint-color-5: #aed9d8
---tint-color-6: #99bcdd */
+/* --primary-color-1: #6F94CD */
 
 /* Shades */
-/* --shade-color-1: #1a2847
---shade-color-2: #19325f
---shade-color-3: #354e6b
---shade-color-4: #414f67
---shade-color-5: #6f94cd */
+/* #6F94CD	#6485B9	#5976A4	#4E6890	#43597B	#384A67	#2C3B52	#212C3D	#161E29	#0B0F14	#000000*/
+
+/* Tints */
+/* #6F94CD	#7D9FD2	#8CA9D7	#9AB4DC	#A9BFE1	#B7CAE6	#C5D4EB	#D4DFF0	#E2EAF5	#F1F4FA	#FFFFFF */
+
+/* Crime Color*/
+/* #BC4749	#A94042	#96393A	#843233	#712B2C	#5E2425	#4B1C1D	#381516	#260E0F	#130707	#000000
+#BC4749	#C3595B	#C96C6D	#D07E80	#D79192	#DEA3A4	#E4B5B6	#EBC8C8	#F2DADB	#F8EDED	#FFFFFF */
+
+/* Wildfire Color */
+/* #da5b17 #de6b2e #E17C45	#E58C5D	#E99D74	#EDAD8B	#F0BDA2	#F4CEB9	#F8DED1	#FBEFE8	#FFFFFF
+#DA5B17	#C45215	#AE4912	#994010*/
+
+/* Flood Color */
+/* #68ABBC	#5E9AA9	#538996	#497884	#3E6771	#34565E 
+#68ABBC	#77B3C3	#86BCC9	#95C4D0	#A4CDD7	#B4D5DE	#C3DDE4	*/
 
 /* Accent Colors */
-/* --accent-color-1: #c6ffdd
---accent-color-2: #fbd786
---accent-color-3: #f7797d
---accent-color-4: #4994c4
+/* --accent-color-1: #68ABBC
+--accent-color-2: #FFA62B
+--accent-color-3: #EDE7E3
+--accent-color-4: #6AA4B0
 --accent-color-5: #106898
---accent-color-6: #5976ba */
+--accent-color-6: #13414A 
+--accent-color-4: #6AA4B0
+--accent-color-5: #106898
+--accent-color-6: #13414A 
+*/
 
 /* Greys */
 /* --grey-color-1: #e4e5e6
@@ -78,6 +85,7 @@ Medium: 11px
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #9fcbf5;
 }
 
 html {
