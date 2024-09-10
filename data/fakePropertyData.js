@@ -1,11 +1,11 @@
 const fakeDataList = [
   {
-    imgSrc: "media/blogs/workshop.jpg",
-    username: "-- 🧔🏼‍♀️ GoldenSunrise23",
+    imgSrc: "https://www.bankrate.com/2023/03/09124248/how-to-invest-in-real-estate-in-2024.jpeg?auto=webp&optimize=high&crop=16:9&width=912%20912w",
+    username: "-- 🧔🏼‍♀️ Rayplus",
     comment:
-      "Let your soul bloom with wisdom 😎 in our empowering workshops🛠️. ",
+      "Charming Sunnybank home completed with a swimming pool ",
     imageDescription:
-      "An image of people participating in an empowering workshop.",
+      "Proudly positioned on a large 1,009sqm lot and nestled behind a private gated facade sits this gorgeous, family-friendly haven. ",
   },
   {
     imgSrc: "media/blogs/blossom.jpg",
