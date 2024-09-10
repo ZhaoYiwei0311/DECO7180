@@ -53,7 +53,7 @@
   width: var(--card-width);
   position: relative;
   transition: transform 0.5s !important;
-  background-color: #ecf1ecd5;
+  background-color: #c5d4ebd8;
 }
 
 .card-hover:hover {
@@ -133,7 +133,7 @@
 
 .card-content {
   padding: 1.6rem;
-  color: #082509;
+  color: #212c3d;
   display: flex;
   flex-direction: column;
 }
@@ -146,7 +146,7 @@
 }
 
 .blog-link {
-  color: #0b330c;
+  color: #2c3b52;
   font-size: 1.6rem;
   margin-top: 1rem;
   align-self: flex-end;
@@ -162,7 +162,7 @@
 
 .card-username {
   font-size: 1.6rem;
-  color: #082509;
+  color: #2c3b52;
   font-weight: 500;
   margin-top: 1rem;
   text-align: right;
