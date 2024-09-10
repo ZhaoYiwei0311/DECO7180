@@ -85,7 +85,6 @@ Medium: 11px
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #9fcbf5;
 }
 
 html {
@@ -96,8 +95,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 
-  /* Does NOT work on Safari */
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body {

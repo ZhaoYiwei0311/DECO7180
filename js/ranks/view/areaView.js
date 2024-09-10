@@ -40,7 +40,7 @@ class AreaView extends View {
           <h2 class="heading--2">📍 Location: </h2>
   
             <span class="event__info-data">${this._data.address}</span>
-            <a class="event__info-data event__info-buttons" href="map.html" target="_blank">
+            <a class="event__info-data event__info-buttons" href="map.html#${this._data.suburb}" target="_blank">
               <span>See on the map</span>
             </a> 
           </div>
@@ -52,7 +52,7 @@ class AreaView extends View {
 
         <div class="event__info-row">
           <h2 class="heading--2">👩🏼‍🦱 Heading 222  :</h2>
-          <a class="event__info-data event__info-buttons" href="#" target="_blank">
+          <a class="event__info-data event__info-buttons" href="chart.html#${this._data.suburb}" target="_blank">
               <span>See More Details</span>
             </a> 
           
