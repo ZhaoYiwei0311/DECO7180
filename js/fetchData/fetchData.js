@@ -39,6 +39,7 @@ function fetchData(datasetId, totalRecords, additionalQuery) {
     fetch();
   });
 }
+
 function fetchDataAndExport() {
   const datasetId1 = "wild-fire-history";
   const totalRecords1 = 556;

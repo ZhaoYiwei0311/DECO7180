@@ -1,9 +1,10 @@
-fakeDataList = [
+const fakeDataList = [
   {
     suburb: "Milton",
     postcode: 4064,
     imageUrl:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/102909774.jpg?k=51ce76490fcd81eade0aff827b885902c39b0a981e80a444a52388dba60b6f30&o=&hp=1",
+    imageDescription: "Milton photo",
     boundaries: [
       {
         lat: -27.4710107,
@@ -63,16 +64,6 @@ fakeDataList = [
       { type: "Fraud", count: 19 },
       { type: "Liquor (excl. Drunkenness)", count: 17 },
       { type: "others", count: 23 },
-    ],
-    coordinates: [
-      [150.392518483, -23.66567985],
-      [150.392135911, -23.664841496],
-      [150.391936578, -23.664370425],
-      [150.391771801, -23.664020717],
-      [150.391631231, -23.663750507],
-      [150.391428418, -23.663444512],
-      [150.391208068, -23.663185827],
-      [150.391015001, -23.663241267],
     ],
   },
 ];
