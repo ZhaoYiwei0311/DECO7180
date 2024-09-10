@@ -1,14 +1,17 @@
 const fakeDataList = [
   {
-    imgSrc: "https://www.bankrate.com/2023/03/09124248/how-to-invest-in-real-estate-in-2024.jpeg?auto=webp&optimize=high&crop=16:9&width=912%20912w",
-    username: "-- 🧔🏼‍♀️ Rayplus",
+    imgSrc:
+      "https://www.bankrate.com/2023/03/09124248/how-to-invest-in-real-estate-in-2024.jpeg?auto=webp&optimize=high&crop=16:9&width=912%20912w",
     comment:
-      "Charming Sunnybank home completed with a swimming pool ",
+      "Proudly positioned on a large 1,009sqm lot and nestled behind a private gated facade sits this gorgeous, family-friendly haven.",
+    username: "-- 🧔🏼‍♀️ Rayplus",
     imageDescription:
-      "Proudly positioned on a large 1,009sqm lot and nestled behind a private gated facade sits this gorgeous, family-friendly haven. ",
+      "Charming Sunnybank home completed with a swimming pool  ",
+    propertyInfo: "🛌 3 🛁 1 🚗 1 700㎡ ",
   },
   {
-    imgSrc: "https://i2.au.reastatic.net/1000x750/09194c17c67478a823b52a07a928d8ad4702b6e33dba6b83c1b7600f87ddac8a/image.jpg",
+    imgSrc:
+      "https://i2.au.reastatic.net/1000x750/09194c17c67478a823b52a07a928d8ad4702b6e33dba6b83c1b7600f87ddac8a/image.jpg",
     username: "-- 👩‍🔧 EstateWizard2333",
     comment:
       "Embrace the beauty of connections 🌸 and watch them blossom within our supportive community！✨",
@@ -16,7 +19,8 @@ const fakeDataList = [
       "A vibrant image symbolizing the blossoming connections within a community.",
   },
   {
-    imgSrc: "https://i2.au.reastatic.net/800x600/51db761d83960db50b4131a3d3311c86a19daf33561e3593c4ba6125747a8c3e/image.jpg",
+    imgSrc:
+      "https://i2.au.reastatic.net/800x600/51db761d83960db50b4131a3d3311c86a19daf33561e3593c4ba6125747a8c3e/image.jpg",
     username: "-- 🧑🏼 RealtyPro3434",
     comment:
       "Connect deeply with like-minded souls 😊 and foster a sense of belonging! 🌟",
@@ -24,7 +28,8 @@ const fakeDataList = [
       "An image representing the deep connections and sense of belonging within a community.",
   },
   {
-    imgSrc: "https://i2.au.reastatic.net/800x600/ffa3a27fd4be6f7a9251871791dc1f274e813e28699db76d721c50e2ab451c34/image.jpg",
+    imgSrc:
+      "https://i2.au.reastatic.net/800x600/ffa3a27fd4be6f7a9251871791dc1f274e813e28699db76d721c50e2ab451c34/image.jpg",
     username: "-- 👩🏼‍🦱 HomeHero2333",
     comment:
       "Stay connected with your community 🏫 and let your light shine through every challenge. 😊",
@@ -32,7 +37,8 @@ const fakeDataList = [
       "An image illustrating the importance of staying connected within a community.",
   },
   {
-    imgSrc: "https://vuerealestate.com.au/wp-content/uploads/2024/06/633f08923c4c51e97e723cde_State-of-Luxury-Real-Estate-in-Partnership-with-AREAA-2048x1406-1-1024x703-1.jpeg 1024w, https://vuerealestate.com.au/wp-content/uploads/2024/06/633f08923c4c51e97e723cde_State-of-Luxury-Real-Estate-in-Partnership-with-AREAA-2048x1406-1-1024x703-1-300x206.jpeg 300w, https://vuerealestate.com.au/wp-content/uploads/2024/06/633f08923c4c51e97e723cde_State-of-Luxury-Real-Estate-in-Partnership-with-AREAA-2048x1406-1-1024x703-1-768x527.jpeg",
+    imgSrc:
+      "https://vuerealestate.com.au/wp-content/uploads/2024/06/633f08923c4c51e97e723cde_State-of-Luxury-Real-Estate-in-Partnership-with-AREAA-2048x1406-1-1024x703-1.jpeg 1024w, https://vuerealestate.com.au/wp-content/uploads/2024/06/633f08923c4c51e97e723cde_State-of-Luxury-Real-Estate-in-Partnership-with-AREAA-2048x1406-1-1024x703-1-300x206.jpeg 300w, https://vuerealestate.com.au/wp-content/uploads/2024/06/633f08923c4c51e97e723cde_State-of-Luxury-Real-Estate-in-Partnership-with-AREAA-2048x1406-1-1024x703-1-768x527.jpeg",
     username: "-- 🧑🏼 PropertyPioneer",
     comment:
       "Join us for heartwarming gatherings every Friday 👯‍♂️👯 and strengthen the bonds of our community.",
@@ -40,7 +46,8 @@ const fakeDataList = [
       "An inviting image inviting people to join heartwarming community gatherings.",
   },
   {
-    imgSrc: "https://www.realestate.com.au/news-image/w_1024,h_768/v1659547674/news-lifestyle-content-assets/wp-content/production/capi_bf628398c82069429d3587c769e28c78_ec8812042acd007d81dce590bf6734cb.jpeg?_i=AA",
+    imgSrc:
+      "https://www.realestate.com.au/news-image/w_1024,h_768/v1659547674/news-lifestyle-content-assets/wp-content/production/capi_bf628398c82069429d3587c769e28c78_ec8812042acd007d81dce590bf6734cb.jpeg?_i=AA",
     username: "-- 👩🏽‍🦰 HouseHunter",
     comment:
       "Empower and uplift each other through supportive networks 🤝 and create waves of change. 😃",
@@ -48,7 +55,8 @@ const fakeDataList = [
       "A powerful image representing women empowerment and supportive networks.",
   },
   {
-    imgSrc: "https://cdn.businessday.ng/2021/07/luxury-residential-real-estate.png",
+    imgSrc:
+      "https://cdn.businessday.ng/2021/07/luxury-residential-real-estate.png",
     username: "-- 🧔🏼‍♀️ DreamDweller",
     comment:
       "Sip on dreams and share inspirations over a cup of coffee ☕️, nurturing our community spirit. ⭐️",

@@ -40,15 +40,18 @@ function createCard(i) {
   cardElement.style.visibility = "hidden";
 
   const cardMarkup = `
-      <img src="${fakeData.imgSrc}" class="card-img" alt=${fakeData.imageDescription} />
+      <img src="${fakeData.imgSrc}" class="card-img" alt=${
+    fakeData.imageDescription
+  } />
       <div class="card-content">
         
           <p class="card-attribute">
             <span>${fakeData.comment}</span>
             
           </p>
-          <a class="blog-link" href="events.html#371">👉See Event👈</a>
+          <a class="blog-link" href="rank.html#${"Milton"}">👉See Info👈</a>
           <p class="card-username">${fakeData.username}</p>
+          <p class="card-username">${fakeData.propertyInfo}</p>
       </div>
   `;
 

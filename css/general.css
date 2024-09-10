@@ -333,24 +333,6 @@ body {
 strong {
   font-weight: 500;
 }
-/*******************/
-/* REUSABLE FOR EVENT PAGE */
-
-.message,
-.error {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 5rem 4rem;
-  display: flex;
-}
-
-.message p,
-.error p {
-  margin-left: 1.5rem;
-  font-size: 3rem;
-  line-height: 1.5;
-  font-weight: 600;
-}
 
 .heading--2 {
   font-size: 2rem;
