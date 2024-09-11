@@ -54,7 +54,24 @@ body {
 /* CHART COMPONENTS */
 /**************************/
 
-.chart-container {
+.intro-sec {
+  padding: 2.4rem 0;
+  background-color: #ffffff;
+}
+
+.introNum {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.introDes {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* .chart-container {
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -76,4 +93,4 @@ body {
   .chart-row {
     flex-direction: column;
   }
-}
+} */
