@@ -1,3 +1,4 @@
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
 
@@ -80,6 +81,16 @@ Medium: 11px
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+
+
+/* Reference */
+/*
+The code snippet (1. How to comment) below has been sourced from
+http://answers.unity3d.com/answers/221574/view.html
+The code snippet appears in its original form
+*/
+/* CODE HERE
+/ / End code snippet (1. How to comment) */
 
 * {
   padding: 0;
