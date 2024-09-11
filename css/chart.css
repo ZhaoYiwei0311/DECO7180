@@ -54,7 +54,35 @@ body {
 /* CHART COMPONENTS */
 /**************************/
 
-.chart-container {
+.heading-sec {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+
+.intro-sec {
+  padding: 2.4rem 0;
+  background-color: #ffffff;
+}
+
+.introNum {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.introDes {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* .chart-container {
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -76,4 +104,4 @@ body {
   .chart-row {
     flex-direction: column;
   }
-}
+} */

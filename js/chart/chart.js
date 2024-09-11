@@ -1,9 +1,11 @@
 import { state } from "../ranks/model.js";
-
+import fakeDataList from '../../data/fakeDataMill.js';
 //Get the hash from the URL
 const suburbHref = window.location.hash.slice(1);
 const Suburb = state.suburbs[suburbHref];
 console.log(Suburb);
+let data = fakeDataList.filter(item => item.suburb === Suburb)[0];
+console.log(data);
 
 /////////////////////////////////////////
 // Set Google Charts Callback
@@ -20,26 +22,56 @@ google.charts.setOnLoadCallback(function () {
 // Callback that creates and populates a data table
 
 function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-    ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7],
-  ]);
 
-  var options = {
-    title: "My Daily Activities",
-    pieHole: 0.4,
-    width: "100%",
-    height: "100%",
-  };
+    const crime = fakeDataList[0].crime;
+    const suburb = fakeDataList[0].suburb;
 
-  var chart = new google.visualization.PieChart(
-    document.getElementById("donutchart")
-  );
-  chart.draw(data, options);
+    const dataArr = [['Crime Type', 'Count']];
+    crime.forEach(item => dataArr.push([item.type, item.count]));
+
+    const data = google.visualization.arrayToDataTable(dataArr);
+
+    const options = {
+        title: `Crime Statistics for ${suburb}`,
+        backgroundColor: 'transparent',
+        pieHole: 0.4,
+        colors: [
+          '#364859',
+          '#3C6482',
+          '#6189AE',
+          '#86AED9',
+          '#BFB084',
+          '#D9BD57',
+          '#E2A532',
+          '#E69225',
+          '#DD7E1E',
+          '#DA5B17',
+          '#F8EDED',
+          '#FFFFFF',
+        ]
+    };
+
+    const chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chart.draw(data, options);
+  // var data = google.visualization.arrayToDataTable([
+  //   ["Task", "Hours per Day"],
+  //   ["Work", 11],
+  //   ["Eat", 2],
+  //   ["Commute", 2],
+  //   ["Watch TV", 2],
+  //   ["Sleep", 7],
+  // ]);
+
+  // var options = {
+  //   pieHole: 0.4,
+  //   width: "100%",
+  //   height: "100%",
+  // };
+
+  // var chart = new google.visualization.PieChart(
+  //   document.getElementById("donutchart")
+  // );
+  // chart.draw(data, options);
 }
 
 function drawChart2() {

@@ -6,7 +6,7 @@
   }
   
   @media (max-width: 84em) {
-    .hero {
+    .part {
       max-width: 120rem;
     }
   
@@ -52,11 +52,11 @@
       padding: 0 3.2rem;
     }
   
-    .main-nav-list {
+    .header-nav-list {
       gap: 3.2rem;
     }
   
-    .hero {
+    .part {
       gap: 4.8rem;
     }
   
@@ -84,22 +84,18 @@
       font-size: 50%;
     }
   
-    .hero {
+    .part {
       grid-template-columns: 1fr;
       padding: 0 8rem;
       gap: 6.4rem;
     }
   
-    .hero-text-box,
-    .hero-img-box {
+    .part-text-box,
+    .part-img-box {
       text-align: center;
     }
   
-    .delivered-containers {
-      align-items: center;
-    }
-  
-    .hero-img {
+    .part-img {
       display: none;
     }
   
@@ -107,15 +103,15 @@
       grid-template-columns: 1fr;
     }
   
-    .intro-img-box:nth-child(3) {
+    .introImg-box:nth-child(3) {
       grid-row: 4;
     }
   
-    .intro-img-box:nth-child(4) {
+    .introImg-box:nth-child(4) {
       grid-row: 3;
     }
   
-    .intro-number {
+    .introNum {
       font-size: 7.4rem;
     }
   
@@ -141,21 +137,22 @@
       z-index: 9999;
     }
   
-    .main-nav {
-      background-color: rgba(255, 255, 255, 0.9);
-      -webkit-backdrop-filter: blur(5px);
-      backdrop-filter: blur(10px);
-      position: absolute;
+    .header-nav {
+
       top: 0;
       left: 0;
       width: 100%;
       height: 100vh;
       transform: translateX(100%);
-  
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(10px);
+
+      position: absolute;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.5s ease-in;
+      background-color: rgba(255, 255, 255, 0.9);
   
       /* 1) Hide it visually */
       opacity: 0;
@@ -167,7 +164,7 @@
       visibility: hidden;
     }
   
-    .nav-open .main-nav {
+    .nav-open .header-nav {
       opacity: 1;
       pointer-events: auto;
       visibility: visible;
@@ -183,13 +180,13 @@
       display: none;
     }
   
-    .main-nav-list {
+    .header-nav-list {
       flex-direction: column;
       gap: 4.8rem;
     }
   
-    .main-nav-link:link,
-    .main-nav-link:visited {
+    .header-nav-link:link,
+    .header-nav-link:visited {
       font-size: 3rem;
     }
   }
@@ -202,10 +199,10 @@
       font-size: 40%;
     }
   
-    .logo-col {
+    .logoCol {
       display: none;
     }
-    .grid--footer {
+    .footer-grid {
       grid-template-columns: 1fr 1fr;
     }
   }

@@ -1,3 +1,4 @@
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
 
@@ -80,6 +81,16 @@ Medium: 11px
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
+
+
+/* Reference */
+/*
+The code snippet (1. How to comment) below has been sourced from
+http://answers.unity3d.com/answers/221574/view.html
+The code snippet appears in its original form
+*/
+/* CODE HERE
+/ / End code snippet (1. How to comment) */
 
 * {
   padding: 0;
@@ -168,8 +179,6 @@ body {
 .heading-tertiary {
   font-weight: 700;
   color: #333;
-  /* color: #45260a; */
-  /* color: #343a40; */
   letter-spacing: -0.5px;
 }
 
@@ -183,6 +192,9 @@ body {
   font-size: 4.4rem;
   line-height: 1.2;
   margin-bottom: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
 }
 
 .heading-tertiary {
