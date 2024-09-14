@@ -1,3 +1,10 @@
+/* Reference */
+/*
+The code snippet (1. How to comment) below has been sourced from
+http://answers.unity3d.com/answers/221574/view.html
+The code snippet appears in its original form
+*/
+
 export default class View {
   _data;
 
@@ -41,3 +48,5 @@ export default class View {
     this._parentElement.innerHTML = "";
   }
 }
+
+/* End code snippet (1. How to comment) */

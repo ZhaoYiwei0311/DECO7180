@@ -1,4 +1,10 @@
 /* #1a2847 #19325f #354e6b #414f67 #99bcdd #6f94cd #adc8f1 #c4e5ef #f3fafa #5976ba #106898*/
+/* Reference */
+/*
+The code snippet (1. How to comment) below has been sourced from
+http://answers.unity3d.com/answers/221574/view.html
+The code snippet appears in its original form
+*/
 
 * {
   margin: 0;
@@ -53,26 +59,26 @@ body {
 }
 
 /*************************/
-/* SEARCH RESULT COMPONENTS */
+/* SUBURB RESULT COMPONENTS */
 /**************************/
 
-.search-results {
+.suburb-results {
   background-color: #b7d3f4;
+  flex-direction: column;
   padding: 1rem 0;
   display: flex;
-  flex-direction: column;
 }
 
-.results {
-  list-style: none;
-  margin-bottom: 2rem;
-  overflow-y: scroll;
+.rank-results {
   max-height: 96rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  list-style: none;
+  margin-bottom: 2rem;
+  overflow-y: scroll;
 }
 
-.results::-webkit-scrollbar {
+.rank-results::-webkit-scrollbar {
   display: none;
 }
 
@@ -89,28 +95,29 @@ body {
 }
 
 .sort-button {
-  border: none;
-  font-weight: 600;
-  font-size: 1.8rem;
   background-color: #f3fafa;
   color: #19325f;
   width: 18rem;
   height: 3.2rem;
+  border: none;
+  font-weight: 600;
   border-radius: 10px;
   text-align: center;
+  font-size: 1.8rem;
 }
+
 .sort-button:hover,
 .sort-button:focus {
+  color: #17406c;
   border: none;
   background-color: #bdcfe1;
-  color: #17406c;
 }
 
 /**************************/
-/* PREVIEW COMPONENTS */
+/* RANK COMPONENTS */
 /**************************/
-.preview__link:link,
-.preview__link:visited {
+.rank-link:link,
+.rank-link:visited {
   display: flex;
   align-items: center;
   padding: 1.5rem 3.25rem;
@@ -118,23 +125,27 @@ body {
   border-right: 1px solid #fff;
   text-decoration: none;
 }
-.preview__link:hover {
+
+.rank-link:hover {
   background-color: #adc8f1;
   transform: translateY(-2px);
 }
-.preview__link--active {
+
+.rank-link--active {
   background-color: #adc8f1;
 }
-.preview__fig {
+
+.rank-fig {
   flex: 0 0 5.8rem;
   border-radius: 50%;
   overflow: hidden;
-  height: 5.8rem;
-  margin-right: 2rem;
   position: relative;
   backface-visibility: hidden;
+  height: 5.8rem;
+  margin-right: 2rem;
 }
-.preview__fig::before {
+
+.rank-fig::before {
   content: "";
   display: block;
   height: 100%;
@@ -145,60 +156,57 @@ body {
   background-image: linear-gradient(to right bottom, #285b29, #0d3a0e);
   opacity: 0.1;
 }
-.preview__fig img {
-  display: block;
+
+.rank-fig img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: all 0.3s;
 }
-.preview__data {
+
+.rank-data {
+  row-gap: 0.5rem;
+  align-items: center;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 2rem;
-  row-gap: 0.5rem;
-  align-items: center;
 }
-.preview__title {
-  grid-column: 1/-1;
+
+.rank-title {
+  font-weight: 600;
+  text-overflow: ellipsis;
   font-size: 1.8rem;
   color: #19325f;
   text-transform: uppercase;
-  font-weight: 600;
-  text-overflow: ellipsis;
   max-width: 25rem;
   white-space: nowrap;
   overflow: hidden;
+  grid-column: 1/-1;
 }
-.preview__organizer {
-  font-size: 1.5rem;
+
+.rank-score {
   color: #5c5a5a;
   font-weight: 600;
-}
-.preview__user-generated {
-  background-color: #adc8f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 10rem;
-  margin-left: auto;
-  margin-right: 1.75rem;
+  font-size: 1.5rem;
 }
 
 /**************************/
-/* EVENT COMPONENTS */
+/* SUBURB COMPONENTS */
 /**************************/
-.event {
+.suburb {
   background-color: #adc8f1;
 }
-.event__fig {
+
+.suburb-fig {
   height: 32rem;
   position: relative;
   transform-origin: top;
 }
-.event__fig::before {
+
+.suburb-fig::before {
+  background-image: linear-gradient(to right bottom, #282b5b, #0d133a);
+  opacity: 0.1;
   content: "";
   display: block;
   height: 100%;
@@ -206,92 +214,96 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #285b29, #0d3a0e);
-  opacity: 0.1;
 }
-.event__img {
+
+.suburb-img {
+  object-fit: cover;
   width: 100%;
   display: block;
   height: 100%;
-  object-fit: cover;
 }
-.event__title {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 20%);
-  color: #fff;
-  font-weight: 700;
+
+.suburb-title {
+  font-weight: 600;
   font-size: 2.5rem;
   text-transform: uppercase;
+  transform: translate(-50%, 20%);
+  color: #fff;
   width: 70%;
   line-height: 1.95;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
 }
-.event__title span {
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  padding: 1.3rem 2rem;
+
+.suburb-title span {
   background-color: #19325f;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 1.3rem 2rem;
 }
+
 @media only screen and (max-width: 61.25em) {
-  .event__title {
+  .suburb-title {
     width: 70%;
   }
 }
-.event__details {
+.suburb-details {
+  grid-gap: 1.8rem;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   padding: 5rem 5rem 6rem 5rem;
-  grid-gap: 1.8rem;
 }
 
-.event__info-row {
+.suburb-info-row {
+  align-items: center;
   font-size: 2rem;
   display: flex;
-  align-items: center;
 }
 
-.event__info-column {
+.suburb-info-column {
+  align-items: flex-start;
+  gap: 1rem;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
 }
 
-.event__info-data {
+.suburb-info-data {
   margin-left: 1rem;
   font-weight: 500;
 }
 
-.event__info-text {
+.suburb-info-text {
   margin-left: 1rem;
   font-weight: 400;
 }
-.event__info-buttons {
+.suburb-info-buttons {
   color: #19325f;
   transition: all 0.3s ease;
 }
 
-.event__info-buttons:hover,
-.event__info-buttons:focus,
-.event__info-buttons:active {
+.suburb-info-buttons:hover,
+.suburb-info-buttons:focus,
+.suburb-info-buttons:active {
   color: #e18b00;
   scale: 1.05;
   text-decoration: none;
 }
 
-.event__organizer {
+.suburb-organizer {
   font-weight: 700;
 }
 
-.event__info-row {
-  font-size: 2rem;
-  display: flex;
+.suburb-info-row {
   align-items: flex-start;
   gap: 1rem;
+  font-size: 2rem;
+  display: flex;
 }
+
+/* End code snippet (1. How to comment) */

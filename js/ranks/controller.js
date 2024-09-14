@@ -5,7 +5,6 @@ import SuburbController from "./controlArea.js";
 
 const controlSearchResults = async () => {
   try {
-    console.log("in controller", state.suburbs);
     ranksView.render(state.suburbs);
   } catch (err) {
     console.error(err);

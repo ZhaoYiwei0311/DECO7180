@@ -41,6 +41,10 @@ a {
   border-radius: 50%; /* Ensure round shape */
 }
 
+.img__container::-webkit-scrollbar {
+  display: none;
+}
+
 .img__container img {
   width: 100%;
   height: 100%;

@@ -6,92 +6,91 @@ const divider1 = masonry.querySelector(".divider1");
 
 // variables
 let pageSize = 12;
-let cardCount = 0;
+let propertyCount = 0;
 let colHeights = [0, 0, 0, 0]; // each column's height
 let observer; // intersection observer
 
-function loadCard() {
+function loadProperty() {
   for (let i = 0; i < pageSize; i++) {
-    createCard(i);
+    createProperty(i);
   }
 }
 
-function observe(card) {
+function observe(property) {
   if (!observer) {
     observer = new IntersectionObserver((entries) => {
       if (entries.length === 1 && entries[0].isIntersecting) {
-        loadCard();
+        loadProperty();
         observer.unobserve(entries[0].target);
       }
     });
   }
-  observer.observe(card);
+  observer.observe(property);
 }
 
-function createCard(i) {
+function createProperty(i) {
   const fakeData = fakeDataList[i];
-  const cardElement = document.createElement("div");
-  cardElement.classList.add("card");
-  cardElement.setAttribute("tabindex", "0");
-  // hide card at beginning
-  cardElement.style.position = "fixed";
-  cardElement.style.top = 0;
-  cardElement.style.left = 0;
-  cardElement.style.visibility = "hidden";
+  const propertyElement = document.createElement("div");
+  propertyElement.classList.add("property");
+  propertyElement.setAttribute("tabindex", "0");
+  // hide property at beginning
+  propertyElement.style.position = "fixed";
+  propertyElement.style.top = 0;
+  propertyElement.style.left = 0;
+  propertyElement.style.visibility = "hidden";
 
-  const cardMarkup = `
-      <img src="${fakeData.imgSrc}" class="card-img" alt=${
+  const propertyMarkup = `
+      <img src="${fakeData.imgSrc}" class="property-img" alt=${
     fakeData.imageDescription
   } />
-      <div class="card-content">
+      <div class="property-content">
         
-          <p class="card-attribute">
-            <span>${fakeData.comment}</span>
-            
+          <p class="property-attribute">
+            <span>${fakeData.price}</span>
           </p>
-          <a class="blog-link" href="rank.html#${"Milton"}">👉See Info👈</a>
-          <p class="card-username">${fakeData.username}</p>
-          <p class="card-username">${fakeData.propertyInfo}</p>
+          <p class="property-name">${fakeData.name}</p>
+          <p class="property-name">${fakeData.propertyInfo}</p>
+          <a class="property-link" href="rank.html#${"Milton"}">👉See Info👈</a>
       </div>
   `;
 
-  cardElement.innerHTML = cardMarkup;
-  document.body.append(cardElement);
+  propertyElement.innerHTML = propertyMarkup;
+  document.body.append(propertyElement);
 
-  const cardIndex = cardCount;
-  const colIndex = (cardIndex + 1) % 3;
-  let cardHeight = cardElement.clientHeight;
-  if (cardHeight < 400) {
-    cardHeight = 400;
+  const propertyIndex = propertyCount;
+  const colIndex = (propertyIndex + 1) % 3;
+  let propertyHeight = propertyElement.clientHeight;
+  if (propertyHeight < 400) {
+    propertyHeight = 400;
   }
-  colHeights[colIndex] += cardHeight;
+  colHeights[colIndex] += propertyHeight;
   setMasonryHeight();
-  masonry.insertBefore(cardElement, divider1);
-  cardCount++;
+  masonry.insertBefore(propertyElement, divider1);
+  propertyCount++;
 
-  cardElement.style.position = "";
-  cardElement.style.visibility = "";
-  cardElement.classList.add("show");
+  propertyElement.style.position = "";
+  propertyElement.style.visibility = "";
+  propertyElement.classList.add("show");
 
   // Listen for the end of the animation
-  cardElement.addEventListener("animationend", () => {
+  propertyElement.addEventListener("animationend", () => {
     // Remove the 'show' class and add the 'hover' class
-    cardElement.classList.remove("show");
-    cardElement.classList.add("card-hover");
+    propertyElement.classList.remove("show");
+    propertyElement.classList.add("property-hover");
   });
 
   if (i === pageSize - 1) {
-    observe(cardElement);
+    observe(propertyElement);
   }
 }
 
-function updateCardHeight(imgElement) {
+function updatePropertyHeight(imgElement) {
   return new Promise((resolve) => {
-    const cardElement = imgElement.parentElement;
-    const contentElement = cardElement.querySelector(".card-content");
+    const propertyElement = imgElement.parentElement;
+    const contentElement = propertyElement.querySelector(".property-content");
     const imgHeight = imgElement.clientHeight;
     const contentHeight = contentElement.clientHeight;
-    cardElement.style.height = `${imgHeight + contentHeight}px`;
+    propertyElement.style.height = `${imgHeight + contentHeight}px`;
     resolve();
   });
 }
@@ -103,14 +102,14 @@ function setMasonryHeight() {
 // handle window resize
 function resetMasonryHeight() {
   colHeights = [0, 0, 0, 0];
-  document.querySelectorAll(".card").forEach((card, index) => {
-    const cardHeight = card.clientHeight;
+  document.querySelectorAll(".property").forEach((property, index) => {
+    const propertyHeight = property.clientHeight;
     const colIndex = (index + 1) % 3;
-    colHeights[colIndex] += cardHeight;
+    colHeights[colIndex] += propertyHeight;
   });
   setMasonryHeight();
 }
 
 window.addEventListener("resize", resetMasonryHeight);
 //////////
-loadCard();
+loadProperty();
