@@ -1,4 +1,5 @@
 // Function to get color depending on the value (e.g., population density)
+
 function getColor(d) {
   return d > 1000
     ? "#A9404260"
@@ -18,22 +19,22 @@ function getColor(d) {
 }
 
 import { geodata } from '../../data/suburb_2_coordinates.js'
-import { fakeDataList } from '../../data/test/suburb_2_coordinates.js'
 import { load_flood_data_to_suburbs } from '../../js/mapRelated/fetchFloodMapData.js'
 
 import { MAP_COLORS } from '../../js/mapRelated/mapConstants.js'
 // console.log(fakeDataList)
 // Initialize the map and set it to a default location (e.g., Brisbane, Australia)
 
-var dimension = 'Overall';
+var dimension = 'OVERALL';
 var info;
 var geojson;
 var legend;
+var results;
 
 function changeDimension() {
   var selectElement = document.getElementById('dimensionSelect');
-  var selectedValue = selectElement.value;
-  console.log("Selected option:", selectedValue);
+  dimension = selectElement.value;
+  // alert("Selected option:" + selectedValue);
 }
 
 // Ensure the DOM is fully loaded
@@ -51,11 +52,14 @@ async function drawMap() {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  let resultsa = await load_flood_data_to_suburbs();
+  results = await load_flood_data_to_suburbs();
   console.log(resultsa);
   loadGeoJson(map)
   addInfo(map)
   addLegend(map)
+}
+
+function fetch_data_by_dimension() {
 
 }
 
@@ -122,10 +126,7 @@ function onEachFeature(feature, layer) {
 }
 
 function get_data_by_suburb(suburb) {
-
-  let filteredData = fakeDataList.filter(data => data.suburb == suburb)
-
-
+  let filteredData = geodata.filter(data => data.features[0].properties.Name == suburb)
 }
 
 function loadGeoJson(map) {
