@@ -1,4 +1,5 @@
 // Function to get color depending on the value (e.g., population density)
+
 function getColor(d) {
   return d > 1000
     ? "#A9404270"
@@ -18,6 +19,7 @@ function getColor(d) {
 }
 
 import { geodata } from "../../data/suburb_2_coordinates.js";
+import { fakeDataList } from "../../data/test/suburb_2_coordinates.js";
 import { load_flood_data_to_suburbs } from "../../js/mapRelated/fetchFloodMapData.js";
 
 import { MAP_COLORS } from "../../js/mapRelated/mapConstants.js";
@@ -28,6 +30,7 @@ var dimension = "Overall";
 var info;
 var geojson;
 var legend;
+var results;
 
 function changeDimension() {
   var selectElement = document.getElementById("dimensionSelect");
@@ -50,7 +53,7 @@ async function drawMap() {
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
-  let resultsa = await load_flood_data_to_suburbs();
+  results = await load_flood_data_to_suburbs();
   console.log(resultsa);
   loadGeoJson(map);
   addInfo(map);
@@ -116,6 +119,10 @@ function onEachFeature(feature, layer) {
     mouseout: resetHighlight,
     click: zoomToFeature,
   });
+}
+
+function get_data_by_suburb(suburb) {
+  let filteredData = fakeDataList.filter((data) => data.suburb == suburb);
 }
 
 function loadGeoJson(map) {
