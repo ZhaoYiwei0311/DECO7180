@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/mainHeader.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/styleQueries.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <title>Map Page</title>
 
-    <title>Property Page</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <!-- Custom CSS -->
+    
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
-
-
   <body>
- 
-      <header class="header">
+    <header class="header">
         <div class="header-container">
           <a href="index.html">
             <img
@@ -41,7 +46,7 @@
         </div>
         <nav class="header-nav">
           <ul class="header-nav-list">
-            <li><a class="header-nav-link" href="map.html">RiskMap</a></li>
+            <li><a class="header-nav-link" href="index.html">RiskMap</a></li>
             <li><a class="header-nav-link" href="data.html">loadData</a></li>
             <li><a class="header-nav-link" href="rank.html">Rank</a></li>
             
@@ -59,12 +64,12 @@
           </ul>
         </nav>
       </header>
-
-    <section id="map-container">
-      <h1>This page is for the map</h1>
+    <section id="map-container"></section>
+      <div id="map"></div>
     </section>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   
+    
+
+    <!-- Custom JavaScript -->
+    <script type="module" src="./js/mapRelated/drawMap.js"></script>
   </body>
 </html>
-

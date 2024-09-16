@@ -35,7 +35,7 @@ class AreaView extends View {
 
           <div class="suburb-info-row">
           <h2 class="heading--2">📍 Location: </h2>
-            <a class="suburb-info-data suburb-info-buttons" href="map.html#${this._data.suburb}" target="_blank">
+            <a class="suburb-info-data suburb-info-buttons" href="index.html#${this._data.suburb}" target="_blank">
               <span>See on the map</span>
             </a> 
           </div>
