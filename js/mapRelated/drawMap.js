@@ -10,9 +10,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap contributors",
 }).addTo(map);
 
-/* #BC4749	#A94042	#96393A	#843233	#712B2C	#5E2425	#4B1C1D	#381516	#260E0F	#130707	#000000
-#BC4749	#C3595B	#C96C6D	#D07E80	#D79192	#DEA3A4	#E4B5B6	#EBC8C8	#F2DADB	#F8EDED	#FFFFFF */
-
 // Function to get color depending on the value (e.g., population density)
 function getColor(d) {
   return d > 1000

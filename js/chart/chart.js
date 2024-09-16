@@ -1,10 +1,10 @@
 import { state } from "../ranks/model.js";
-import fakeDataList from '../../data/fakeDataMill.js';
+import fakeDataList from "../../data/fakeDataMill.js";
 //Get the hash from the URL
 const suburbHref = window.location.hash.slice(1);
 const Suburb = state.suburbs[suburbHref];
 console.log(Suburb);
-let data = fakeDataList.filter(item => item.suburb === Suburb)[0];
+let data = fakeDataList.filter((item) => item.suburb === Suburb)[0];
 console.log(data);
 
 /////////////////////////////////////////
@@ -22,37 +22,38 @@ google.charts.setOnLoadCallback(function () {
 // Callback that creates and populates a data table
 
 function drawChart() {
+  const crime = fakeDataList[0].crime;
+  const suburb = fakeDataList[0].suburb;
 
-    const crime = fakeDataList[0].crime;
-    const suburb = fakeDataList[0].suburb;
+  const dataArr = [["Crime Type", "Count"]];
+  crime.forEach((item) => dataArr.push([item.type, item.count]));
 
-    const dataArr = [['Crime Type', 'Count']];
-    crime.forEach(item => dataArr.push([item.type, item.count]));
+  const data = google.visualization.arrayToDataTable(dataArr);
 
-    const data = google.visualization.arrayToDataTable(dataArr);
+  const options = {
+    title: `Crime Statistics for ${suburb}`,
+    backgroundColor: "transparent",
+    pieHole: 0.4,
+    colors: [
+      "#364859",
+      "#3C6482",
+      "#6189AE",
+      "#86AED9",
+      "#BFB084",
+      "#D9BD57",
+      "#E2A532",
+      "#E69225",
+      "#DD7E1E",
+      "#DA5B17",
+      "#F8EDED",
+      "#FFFFFF",
+    ],
+  };
 
-    const options = {
-        title: `Crime Statistics for ${suburb}`,
-        backgroundColor: 'transparent',
-        pieHole: 0.4,
-        colors: [
-          '#364859',
-          '#3C6482',
-          '#6189AE',
-          '#86AED9',
-          '#BFB084',
-          '#D9BD57',
-          '#E2A532',
-          '#E69225',
-          '#DD7E1E',
-          '#DA5B17',
-          '#F8EDED',
-          '#FFFFFF',
-        ]
-    };
-
-    const chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    chart.draw(data, options);
+  const chart = new google.visualization.PieChart(
+    document.getElementById("piechart")
+  );
+  chart.draw(data, options);
   // var data = google.visualization.arrayToDataTable([
   //   ["Task", "Hours per Day"],
   //   ["Work", 11],
@@ -104,6 +105,7 @@ function drawStuff() {
   var options = {
     width: "100%",
     height: "100%",
+
     chart: {
       title: "Nearby galaxies",
       subtitle: "distance on the left, brightness on the right",
@@ -119,6 +121,7 @@ function drawStuff() {
         brightness: { side: "top", label: "apparent magnitude" }, // Top x-axis.
       },
     },
+    backgroundColor: "transparent",
   };
 
   var chart = new google.charts.Bar(document.getElementById("dual_x_div"));
@@ -138,6 +141,7 @@ function drawChart3() {
     title: "Company Performance",
     curveType: "function",
     legend: { position: "bottom" },
+    backgroundColor: "transparent",
   };
 
   var chart = new google.visualization.LineChart(

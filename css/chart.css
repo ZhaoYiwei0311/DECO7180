@@ -55,7 +55,7 @@ body {
 /**************************/
 
 .heading-sec {
-  font-size: 4.4rem;
+  font-size: 3.2rem;
   line-height: 1.2;
   margin-bottom: 2.8rem;
   font-weight: 700;
@@ -64,10 +64,10 @@ body {
   text-align: center;
 }
 
-
 .intro-sec {
   padding: 2.4rem 0;
-  background-color: #ffffff;
+  /* background-color: #e2eaf5; */
+  background-color: #fff;
 }
 
 .introNum {
