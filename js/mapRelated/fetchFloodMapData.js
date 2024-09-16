@@ -2,8 +2,8 @@
 import { geodata } from '../../data/suburb_2_coordinates.js'
 
 let FLOOD_URL = 'https://data.brisbane.qld.gov.au/api/explore/v2.1/catalog/datasets/flood-awareness-creek/records?where=flood_risk = \'High\'';
-var flood_results = [];
-let suburb_data = {};
+var floodResults = [];
+// let suburb_data = {};
 
 
 var data = {
@@ -25,7 +25,7 @@ async function fetch_flood_data() {
         const data = await fetch_flood_data_every_100(offset);
         // Process the data here...
         console.log(data['results']);
-        data['results'].forEach((result) => flood_results.push(result));
+        data['results'].forEach((result) => floodResults.push(result));
 
         if (data['results'].length < 100) {  // If no more data is returned
             hasMoreData = false;  // Stop the loop
@@ -38,13 +38,14 @@ async function fetch_flood_data() {
 }
 
 function load_test() {
-    console.log(flood_results.length, geodata.length);
-    // console.log(flood_results)
+    let suburb_data = {};
+    console.log(floodResults.length, geodata.length);
+    // console.log(floodResults)
 
-    for (let i = 0; i < flood_results.length; i++) {
-        // console.log(flood_results[i]);
-        let flood_coord = flood_results[i].geo_point_2d;
-        let flood_range = flood_results[i].shape_length;
+    for (let i = 0; i < floodResults.length; i++) {
+        // console.log(floodResults[i]);
+        let flood_coord = floodResults[i].geo_point_2d;
+        let flood_range = floodResults[i].shape_length;
 
         if (flood_coord != null) {
             // console.log(flood_coord);
@@ -78,8 +79,9 @@ function load_test() {
 }
 
 function load_flood_data_to_suburbs() {
+    floodResults = [];
     return fetch_flood_data();
 
 }
 
-export {load_flood_data_to_suburbs, suburb_data}
+export {load_flood_data_to_suburbs}
