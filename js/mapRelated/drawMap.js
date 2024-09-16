@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { geodata } from "../../data/suburb_2_coordinates.js";
 // Initialize the map and set it to a default location (e.g., Brisbane, Australia)
 
@@ -11,8 +10,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap contributors",
 }).addTo(map);
 
-=======
->>>>>>> 2ce755841ede72a95c3f84cc128112cebfc7c5fe
 // Function to get color depending on the value (e.g., population density)
 function getColor(d) {
   return d > 1000
@@ -32,48 +29,46 @@ function getColor(d) {
     : "#FFFFFF60";
 }
 
-import { geodata } from '../../data/suburb_2_coordinates.js'
-import { fakeDataList } from '../../data/test/suburb_2_coordinates.js'
-import { load_flood_data_to_suburbs } from '../../js/mapRelated/fetchFloodMapData.js'
+import { geodata } from "../../data/suburb_2_coordinates.js";
+import { fakeDataList } from "../../data/test/suburb_2_coordinates.js";
+import { load_flood_data_to_suburbs } from "../../js/mapRelated/fetchFloodMapData.js";
 
-import { MAP_COLORS } from '../../js/mapRelated/mapConstants.js'
+import { MAP_COLORS } from "../../js/mapRelated/mapConstants.js";
 // console.log(fakeDataList)
 // Initialize the map and set it to a default location (e.g., Brisbane, Australia)
 
-var dimension = 'Overall';
+var dimension = "Overall";
 var info;
 var geojson;
 var legend;
 
 function changeDimension() {
-  var selectElement = document.getElementById('dimensionSelect');
+  var selectElement = document.getElementById("dimensionSelect");
   var selectedValue = selectElement.value;
   console.log("Selected option:", selectedValue);
 }
 
 // Ensure the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-  var selectElement = document.getElementById('dimensionSelect');
-  selectElement.addEventListener('change', changeDimension);
+document.addEventListener("DOMContentLoaded", function () {
+  var selectElement = document.getElementById("dimensionSelect");
+  selectElement.addEventListener("change", changeDimension);
 });
 
 async function drawMap() {
-  var map = L.map('map').setView([-27.4698, 153.0251], 10);
+  var map = L.map("map").setView([-27.4698, 153.0251], 10);
 
-// Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  // Add OpenStreetMap tiles
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
-    attribution: '&copy; OpenStreetMap contributors'
+    attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
   let resultsa = await load_flood_data_to_suburbs();
   console.log(resultsa);
-  loadGeoJson(map)
-  addInfo(map)
-  addLegend(map)
-
+  loadGeoJson(map);
+  addInfo(map);
+  addLegend(map);
 }
-
 
 // Function to get color depending on the value (e.g., population density)
 // function getColor(d) {
@@ -93,9 +88,9 @@ function style(feature) {
     fillColor: getColor(feature.properties.CrimeCounts), // Example data
     weight: 2,
     opacity: 1,
-    color: 'white',
-    dashArray: '3',
-    fillOpacity: 0.7
+    color: "white",
+    dashArray: "3",
+    fillOpacity: 0.7,
   };
 }
 
@@ -105,21 +100,21 @@ function highlightFeature(e) {
 
   layer.setStyle({
     weight: 3,
-    color: '#666',
-    dashArray: '',
-    fillOpacity: 0.7
+    color: "#666",
+    dashArray: "",
+    fillOpacity: 0.7,
   });
 
   layer.bringToFront();
 
   // console.log(layer.feature.properties.Name);
-  info.update(layer.feature.properties)
+  info.update(layer.feature.properties);
 }
 
 // Reset highlight when not hovering
 function resetHighlight(e) {
   geojson.resetStyle(e.target);
-  info.update()
+  info.update();
 }
 
 // Zoom to a region when clicked
@@ -132,24 +127,21 @@ function onEachFeature(feature, layer) {
   layer.on({
     mouseover: highlightFeature,
     mouseout: resetHighlight,
-    click: zoomToFeature
+    click: zoomToFeature,
   });
 }
 
 function get_data_by_suburb(suburb) {
-
-  let filteredData = fakeDataList.filter(data => data.suburb == suburb)
-
-
+  let filteredData = fakeDataList.filter((data) => data.suburb == suburb);
 }
 
 function loadGeoJson(map) {
   // Load GeoJSON data (for example, district boundaries)
   var geojsonData = geodata;
-// Create a GeoJSON layer and add it to the map
+  // Create a GeoJSON layer and add it to the map
   geojson = L.geoJson(geojsonData, {
     style: style,
-    onEachFeature: onEachFeature
+    onEachFeature: onEachFeature,
   }).addTo(map);
 }
 
@@ -157,41 +149,47 @@ function addInfo(map) {
   info = L.control();
 
   info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this._div = L.DomUtil.create("div", "info"); // create a div with a class "info"
     this.update();
     return this._div;
   };
 
-// method that we will use to update the control based on feature properties passed
+  // method that we will use to update the control based on feature properties passed
   info.update = function (props) {
     if (props != null) {
       get_data_by_suburb(props.Name);
-      this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-          '<b>' + props.Name + '</b><br />' + props.CrimeCounts + ' people / mi<sup>2</sup>'
-          : 'Hover over a state');
+      this._div.innerHTML =
+        "<h4>US Population Density</h4>" +
+        (props
+          ? "<b>" +
+            props.Name +
+            "</b><br />" +
+            props.CrimeCounts +
+            " people / mi<sup>2</sup>"
+          : "Hover over a state");
     }
-
   };
 
   info.addTo(map);
-
-
 }
 
 function addLegend(map) {
   // Add a legend
-  legend = L.control({position: 'bottomright'});
+  legend = L.control({ position: "bottomright" });
 
   legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 10, 20, 50, 100, 200, 500, 1000],
-        labels = [];
+    var div = L.DomUtil.create("div", "info legend"),
+      grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+      labels = [];
 
     // Loop through density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
-          '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-          grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+        '<i style="background:' +
+        getColor(grades[i] + 1) +
+        '"></i> ' +
+        grades[i] +
+        (grades[i + 1] ? "&ndash;" + grades[i + 1] + "<br>" : "+");
     }
 
     return div;
