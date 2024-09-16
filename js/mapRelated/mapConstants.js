@@ -1,0 +1,48 @@
+
+/* Crime Color*/
+let CRIME_COLORS = {
+    'CRIME_COLOR_5': '#BC4749',
+    'CRIME_COLOR_4': '#C96C6D',
+    'CRIME_COLOR_3': '#D79192',
+    'CRIME_COLOR_2': '#EBC8C8',
+    'CRIME_COLOR_1': '#F8EDED'
+}
+
+
+/* Wildfire Color */
+let WILDFIRE_COLORS = {
+    'WILDFIRE_COLOR_5': '#C45215',
+    'WILDFIRE_COLOR_4': '#de6b2e',
+    'WILDFIRE_COLOR_3': '#E99D74',
+    'WILDFIRE_COLOR_2': '#F0BDA2',
+    'WILDFIRE_COLOR_1': '#F8EDED'
+}
+
+
+/* Flood Color */
+let FLOOD_COLORS = {
+    'FLOOD_COLOR_5': '#3E6771',
+    'FLOOD_COLOR_4': '#538996',
+    'FLOOD_COLOR_3': '#77B3C3',
+    'FLOOD_COLOR_2': '#B4D5DE',
+    'FLOOD_COLOR_1': '#F8EDED'
+}
+
+
+/* Overall Color */
+let OVERALL_COLORS = {
+    'OVERALL_COLOR_5': '#F8EDED',
+    'OVERALL_COLOR_4': '#A6DDAF',
+    'OVERALL_COLOR_3': '#7ACD86',
+    'OVERALL_COLOR_2': '#43B153',
+    'OVERALL_COLOR_1': '#389446',
+
+}
+
+export const MAP_COLORS = {
+    'OVERALL_COLORS': OVERALL_COLORS,
+    'FLOOD_COLORS': FLOOD_COLORS,
+    'CRIME_COLORs': CRIME_COLORS,
+    'WILDFIRE_COLORS': WILDFIRE_COLORS
+}
+

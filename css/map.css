@@ -37,3 +37,25 @@ body {
   margin: 0 0 5px;
   color: #777;
 }
+
+/**************************/
+/* SORT BUTTON COMPONENTS */
+/**************************/
+.sort-button {
+  background-color: #f3fafa;
+  color: #19325f;
+  width: 18rem;
+  height: 3.2rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.sort-button:hover,
+.sort-button:focus {
+  color: #17406c;
+  border: none;
+  background-color: #bdcfe1;
+}
