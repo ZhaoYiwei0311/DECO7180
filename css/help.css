@@ -39,6 +39,14 @@ The code snippet appears in its original form
   border-radius: 20px;
 }
 
+.part-img-2 {
+  width: 100%;
+  position: relative;
+  transition: all 0.4s;
+  display: block;
+  border-radius: 20px;
+}
+
 .part-img:hover {
   transform: scale(1.05);
 }
@@ -251,7 +259,6 @@ The code snippet appears in its original form
   margin-top: auto;
 }
 
-
 .contacts {
   font-style: normal;
   font-size: 1.6rem;
@@ -261,4 +268,3 @@ The code snippet appears in its original form
 .address {
   margin-bottom: 2.4rem;
 }
-
