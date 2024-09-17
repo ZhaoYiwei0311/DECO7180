@@ -18,13 +18,31 @@
   grid-area: head;
   justify-content: space-between;
   align-items: center;
-  background-color: #e7ebed;
+  background-color: #e6edf9;
   height: 9.6rem;
   padding: 0 4.8rem;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   height: 8rem;
+}
+
+.header-text h1 {
+  margin-left: 12px;
+  font-size: 3.5rem;
+  color: #35415e;
+}
+
+.header-text p {
+  margin-left: 12px;
+  font-size: 1.3rem;
+  color: #35415e;
 }
 
 .search {

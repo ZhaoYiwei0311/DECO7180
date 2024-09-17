@@ -36,7 +36,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #212c3d;
-  background-color: #9ab4dc;
+  background-color: #b7c6e3;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -45,16 +45,16 @@ body {
   overflow-y: auto;
 }
 
-.container {
+.div-container {
   margin: 0;
-  width: 80%;
-  background-color: #8ca9d7;
+  width: 100%;
+  background-color: #d4dff0;
   border-radius: 0;
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba(97, 85, 81, 0.2);
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 2.5fr;
   grid-template-areas: "head head" "list recipe";
 }
 
@@ -63,7 +63,7 @@ body {
 /**************************/
 
 .suburb-results {
-  background-color: #b7d3f4;
+  background-color: #d4dff0;
   flex-direction: column;
   padding: 1rem 0;
   display: flex;
@@ -195,11 +195,11 @@ body {
 /* SUBURB COMPONENTS */
 /**************************/
 .suburb {
-  background-color: #adc8f1;
+  background-color: #c5d4eb;
 }
 
 .suburb-fig {
-  height: 32rem;
+  height: 40rem;
   position: relative;
   transform-origin: top;
 }

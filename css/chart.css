@@ -41,7 +41,7 @@ body {
 }
 
 .container-chart {
-  width: 80%;
+  width: 100%;
   margin: 0;
   background-color: #6a8ab9;
   border-radius: 0;
@@ -80,4 +80,20 @@ body {
 .introDes {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+/*************************/
+/* CHART HEADING */
+/**************************/
+.heading-container {
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/*************************/
+/* CHART BODY */
+/**************************/
+.chart-container {
+  padding: 0 3.2rem;
+  margin: 0 auto;
 }

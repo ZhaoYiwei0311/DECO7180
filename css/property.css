@@ -17,6 +17,7 @@
 .container-blog {
   grid-template-columns: 1fr;
   z-index: 1;
+  padding: 1rem 4rem;
 }
 
 /**************************/

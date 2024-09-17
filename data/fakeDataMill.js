@@ -5,6 +5,7 @@ const fakeDataList = [
     imageUrl:
       "https://cf.bstatic.com/xdata/images/hotel/max1280x900/102909774.jpg?k=51ce76490fcd81eade0aff827b885902c39b0a981e80a444a52388dba60b6f30&o=&hp=1",
     imageDescription: "Milton photo",
+
     boundaries: [
       {
         lat: -27.4710107,
@@ -65,6 +66,14 @@ const fakeDataList = [
       { type: "Liquor (excl. Drunkenness)", count: 17 },
       { type: "others", count: 23 },
     ],
+  },
+  {
+    suburb: "Milton",
+    postcode: 4064,
+    imageUrl:
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/102909774.jpg?k=51ce76490fcd81eade0aff827b885902c39b0a981e80a444a52388dba60b6f30&o=&hp=1",
+    imageDescription: "Milton photo",
+    suburbDescription: "wgdakugsfckjqdwahsckljx",
   },
 ];
 
