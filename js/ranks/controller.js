@@ -13,7 +13,8 @@ const controlSearchResults = async () => {
 
 const controlSuburbs = async () => {
   try {
-    const suburbHref = window.location.hash.slice(1);
+    let suburbHref = window.location.hash.slice(1);
+    suburbHref = suburbHref.replace('%20', ' ')
     if (!suburbHref) return;
 
     const Suburb = state.suburbs[suburbHref];
