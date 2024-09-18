@@ -80,15 +80,15 @@ const fakeDataList = [
     commercial areas. The suburb is home to the famous New Farm Park and a variety of cafes and 
     restaurants, making it a popular spot for locals and visitors alike.`
   },
-  {
-    suburb: "South Brisbane",
-    postcode: 4101,
+    {
+    suburb: "Stretton",
+    postcode: 4116,
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/South_Bank_inna_Brisbane.jpg",
-    imageDescription: "South Brisbane photo",
-    suburbDescription: `South Brisbane is a bustling suburb located just across the river from the Brisbane CBD. 
-    It is known for its cultural attractions, including the Queensland Performing Arts Centre and the 
-    South Bank Parklands. The suburb offers a mix of modern apartments and historic buildings, providing 
-    a dynamic urban lifestyle.`
+    imageDescription: "Stretton photo",
+    suburbDescription: `Stretton is a peaceful suburb located in Brisbane, Queensland, Australia. 
+    Known for its spacious homes and family-friendly environment, Stretton offers a mix of residential 
+    and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
+    an ideal place for families.`
   },
   {
     suburb: "West End",
@@ -110,36 +110,35 @@ const fakeDataList = [
     and live music venues. The suburb is also home to a range of restaurants and shops, making it a popular 
     destination for both locals and tourists.`
   },
-  {
-    suburb: "Paddington",
-    postcode: 4064,
+    {
+    suburb: "Fig Tree Pocket",
+    postcode: 4069,
     imageUrl: "https://rimh2.domainstatic.com.au/X1eG-o6-S02qvmXXlGyF5ZiPD4I=/fit-in/1920x1080/filters:format(jpeg):quality(80):no_upscale()/2018392751_2_1_230302_074133-w2000-h1335",
-    imageDescription: "Paddington photo",
-    suburbDescription: `Paddington is a charming suburb located in Brisbane, Queensland, Australia. 
-    Known for its historic homes and leafy streets, Paddington offers a mix of residential and commercial areas. 
-    The suburb is home to a variety of cafes, restaurants, and boutique shops, making it a popular spot for 
-    locals and visitors alike.`
+    imageDescription: "Fig Tree Pocket photo",
+    suburbDescription: `Fig Tree Pocket is a tranquil suburb located in Brisbane, Queensland, Australia. 
+    Known for its spacious properties and lush greenery, Fig Tree Pocket offers a peaceful residential environment. 
+    The suburb is home to several parks, schools, and the Lone Pine Koala Sanctuary, making it an ideal place for families.`
   },
   {
-    suburb: "Kangaroo Point",
-    postcode: 4169,
+    suburb: "Nundah",
+    postcode: 4012,
     imageUrl: "https://www.adrianschrinner.com.au/wp-content/uploads/2023/11/KPGB-Artist-impression-aerial-scaled.jpg",
-    imageDescription: "Kangaroo Point photo",
-    suburbDescription: `Kangaroo Point is a picturesque suburb located in Brisbane, Queensland, Australia. 
-    Known for its stunning views of the Brisbane River and the city skyline, Kangaroo Point offers a mix of 
-    residential and recreational areas. The suburb is home to the famous Kangaroo Point Cliffs and a variety 
-    of parks and walking trails.`
+    imageDescription: "Nundah photo",
+    suburbDescription: `Nundah is a vibrant suburb located in Brisbane, Queensland, Australia. 
+    Known for its community atmosphere and convenient amenities, Nundah offers a mix of residential 
+    and commercial areas. The suburb is home to several parks, schools, and shopping centers, making it 
+    an ideal place for families and professionals.`
   },
-  {
-    suburb: "Spring Hill",
-    postcode: 4000,
-    imageUrl: "https://spaceproperty.com.au/wp-content/uploads/2022/08/brisbane-City-scaled.jpg",
-    imageDescription: "Spring Hill photo",
-    suburbDescription: `Spring Hill is a historic suburb located in Brisbane, Queensland, Australia. 
-    Known for its heritage buildings and close proximity to the Brisbane CBD, Spring Hill offers a mix of 
-    residential and commercial areas. The suburb is home to a variety of cafes, restaurants, and shops, 
-    making it a popular spot for locals and visitors alike.`
-  },
+        {
+      suburb: "Keperra",
+      postcode: 4054,
+      imageUrl: "https://example.com/keperra.jpg",
+      imageDescription: "Keperra photo",
+      suburbDescription: `Keperra is a quiet suburb located in Brisbane, Queensland, Australia. 
+      Known for its affordable housing and family-friendly environment, Keperra offers a mix of residential 
+      and recreational areas. The suburb is home to several parks, schools, and shopping centers, making it 
+      an ideal place for families.`
+    },
   {
     suburb: "Newstead",
     postcode: 4006,
@@ -151,14 +150,16 @@ const fakeDataList = [
     popular spot for locals and visitors alike.`
   },
   {
-    suburb: "Teneriffe",
-    postcode: 4005,
-    imageUrl: "https://propertymash.com/wp-content/uploads/The-James-Teneriffe.jpg",
-    imageDescription: "Teneriffe photo",
-    suburbDescription: `Teneriffe is a stylish suburb located in Brisbane, Queensland, Australia. 
-    Known for its historic wool stores and riverside location, Teneriffe offers a mix of residential 
-    and commercial areas. The suburb is home to a variety of cafes, restaurants, and boutique shops, 
-    making it a popular spot for locals and visitors alike.`
+    suburb: "Sunnybank",
+    postcode: 4109,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/50/Mains_Rd_43_N_Sunnybank_sign.jpg",
+    imageDescription: "Sunnybank photo",
+    suburbDescription: `Sunnybank is a vibrant suburb located in Brisbane, Queensland, Australia. 
+    Known for its cultural diversity and bustling shopping centers, Sunnybank offers a mix of residential 
+    and commercial areas. The suburb is home to a variety of Asian restaurants, markets, and shops, 
+    making it a popular destination for food lovers and shoppers. Sunnybank is also known for its 
+    excellent public transport links and proximity to major highways, providing easy access to the Brisbane CBD 
+    and surrounding areas.`
   },
   {
     suburb: "Woolloongabba",
@@ -171,7 +172,7 @@ const fakeDataList = [
     and shops.`
   },
   {
-    suburb: "St Lucia",
+    suburb: "Saint Lucia",
     postcode: 4067,
     imageUrl: "https://images.squarespace-cdn.com/content/v1/5ac45f9796d455f6ce2dd952/1583792746869-8HJ7PRLH8ATHS0W74TCG/RixRyan-4617.jpg/",
     imageDescription: "St Lucia photo",
@@ -189,25 +190,26 @@ const fakeDataList = [
     Known for its shopping and dining options, Toowong offers a mix of residential and commercial areas. 
     The suburb is home to the Toowong Village shopping centre and a variety of cafes, restaurants, and shops.`
   },
-  {
-    suburb: "Auchenflower",
-    postcode: 4066,
-    imageUrl: "https://cdn.prod.website-files.com/668cd20c358ecf3bcc532c88/66a4d8d0864d67f057593859_20240727T1123-963b9824-973a-4bc3-8243-309aa1f2a790.webp",
-    imageDescription: "Auchenflower photo",
-    suburbDescription: `Auchenflower is a charming suburb located in Brisbane, Queensland, Australia. 
-    Known for its leafy streets and historic homes, Auchenflower offers a mix of residential and 
-    recreational areas. The suburb is home to a variety of parks and walking trails, making it a 
-    popular spot for outdoor activities.`
+    {
+    suburb: "Gordon Park",
+    postcode: 4031,
+    imageUrl: "https://live.staticflickr.com/3869/15148053067_d62f68cb91_c.jpg",
+    imageDescription: "Gordon Park photo",
+    suburbDescription: `Gordon Park is a peaceful suburb located in Brisbane, Queensland, Australia. 
+    Known for its green spaces and friendly community, Gordon Park offers a mix of residential and 
+    recreational areas. The suburb is home to the beautiful Kedron Brook, which provides a variety of 
+    walking and cycling trails. With its close proximity to the Brisbane CBD and excellent public transport 
+    links.`
   },
-  {
-    suburb: "Red Hill",
-    postcode: 4059,
-    imageUrl: "https://cdn.concreteplayground.com/content/uploads/2019/11/Red-Hill-Cinemas_supplied.jpg",
-    imageDescription: "Red Hill photo",
-    suburbDescription: `Red Hill is a historic suburb located in Brisbane, Queensland, Australia. 
-    Known for its heritage buildings and close proximity to the Brisbane CBD, Red Hill offers a mix of 
-    residential and commercial areas. The suburb is home to a variety of cafes, restaurants, and shops, 
-    making it a popular spot for locals and visitors alike.`
+   {
+    suburb: "Balmoral",
+    postcode: 4171,
+    imageUrl: "https://images.allhomes.com.au/property/photo/bfac94044e0969b619371cce58dbc23a_hd.jpg",
+    imageDescription: "Balmoral photo",
+    suburbDescription: `Balmoral is a charming suburb located in Brisbane, Queensland, Australia. 
+    Known for its leafy streets and family-friendly atmosphere, Balmoral offers a mix of residential 
+    and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
+    an ideal place for families. `
   },
   {
     suburb: "Bowen Hills",
@@ -219,45 +221,52 @@ const fakeDataList = [
     commercial areas. The suburb is home to a variety of cafes, restaurants, and shops, making it a 
     popular spot for locals and visitors alike.`
   },
-  {
-    suburb: "Herston",
-    postcode: 4006,
+    {
+    suburb: "Bridgeman Downs",
+    postcode: 4035,
     imageUrl: "https://www.coxarchitecture.com.au/wp-content/uploads/2019/08/409051_00_N62_highresjpg-1980x1332.jpg",
-    imageDescription: "Herston photo",
-    suburbDescription: `Herston is a leafy suburb located in Brisbane, Queensland, Australia. 
-    Known for its medical facilities and beautiful parks, Herston offers a mix of residential and 
-    educational areas. The suburb is home to the Royal Brisbane and Women's Hospital and a variety of 
-    cafes, restaurants, and shops.`
+    imageDescription: "Bridgeman Downs photo",
+    suburbDescription: `Bridgeman Downs is a peaceful suburb in Brisbane, known for its spacious homes and parks. 
+    It offers a family-friendly environment with easy access to amenities and schools.`
   },
-  {
-    suburb: "Highgate Hill",
-    postcode: 4101,
+    {
+    suburb: "Clayfield",
+    postcode: 4011,
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqmlZQHBqVOxSqgwmhz5SAWcipRl3WFAXNg&s",
-    imageDescription: "Highgate Hill photo",
-    suburbDescription: `Highgate Hill is a charming suburb located in Brisbane, Queensland, Australia. 
-    Known for its leafy streets and historic homes, Highgate Hill offers a mix of residential and 
-    recreational areas. The suburb is home to a variety of parks and walking trails, making it a 
-    popular spot for outdoor activities.`
+    imageDescription: "Clayfield photo",
+    suburbDescription: `Clayfield is a well-established suburb in Brisbane, Queensland, Australia. 
+    Known for its heritage homes and leafy streets, Clayfield offers a mix of residential and commercial areas. 
+    The suburb is home to several parks, schools, and local shops, making it an ideal place for families.`
   },
-  {
-    suburb: "East Brisbane",
-    postcode: 4169,
+    {
+    suburb: "Mount Gravatt East",
+    postcode: 4122,
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJSy4fFdVn7edKQWQfyvqObtVGrNGZrWlnpA&s",
-    imageDescription: "East Brisbane photo",
-    suburbDescription: `East Brisbane is a vibrant suburb located in Brisbane, Queensland, Australia. 
-    Known for its sports and entertainment options, East Brisbane offers a mix of residential and 
-    commercial areas. The suburb is home to the famous Gabba stadium and a variety of cafes, restaurants, 
-    and shops.`
+    imageDescription: "Mount Gravatt East photo",
+    suburbDescription: `Mount Gravatt East is a leafy suburb located in Brisbane, Queensland, Australia. 
+    Known for its family-friendly environment and excellent schools, Mount Gravatt East offers a mix of 
+    residential and recreational areas. The suburb is home to several parks, shopping centers, and cafes, 
+    making it an ideal place for families.`
   },
-  {
-    suburb: "Dutton Park",
-    postcode: 4102,
+    {
+    suburb: "Northgate",
+    postcode: 4013,
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAhYSow4qLILfFiHJmp9_PSCvqOS4HrCz7yA&s",
-    imageDescription: "Dutton Park photo",
-    suburbDescription: `Dutton Park is a leafy suburb located in Brisbane, Queensland, Australia. 
-    Known for its beautiful parks and close proximity to the Brisbane River, Dutton Park offers a mix of 
-    residential and recreational areas. The suburb is home to a variety of parks and walking trails, 
-    making it a popular spot for outdoor activities.`
+    imageDescription: "Northgate photo",
+    suburbDescription: `Northgate is a well-connected suburb located in Brisbane, Queensland, Australia. 
+    Known for its convenient transport links and community amenities, Northgate offers a mix of residential 
+    and commercial areas. The suburb is home to several parks, schools, and local shops, making it an ideal 
+    place for families and professionals.`
+  },
+    {
+    suburb: "Wavell Heights",
+    postcode: 4012,
+    imageUrl: "https://example.com/wavellheights.jpg",
+    imageDescription: "Wavell Heights photo",
+    suburbDescription: `Wavell Heights is a quiet suburb located in Brisbane, Queensland, Australia. 
+    Known for its family-friendly environment and green spaces, Wavell Heights offers a mix of residential 
+    and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
+    an ideal place for families.`
   }
 ];
 
