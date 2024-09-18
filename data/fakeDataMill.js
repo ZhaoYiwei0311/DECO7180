@@ -132,7 +132,7 @@ const fakeDataList = [
         {
       suburb: "Keperra",
       postcode: 4054,
-      imageUrl: "https://example.com/keperra.jpg",
+      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/59/Keperra_arana_leagues_2.jpg",
       imageDescription: "Keperra photo",
       suburbDescription: `Keperra is a quiet suburb located in Brisbane, Queensland, Australia. 
       Known for its affordable housing and family-friendly environment, Keperra offers a mix of residential 
@@ -261,7 +261,7 @@ const fakeDataList = [
     {
     suburb: "Wavell Heights",
     postcode: 4012,
-    imageUrl: "https://example.com/wavellheights.jpg",
+    imageUrl: "https://content.api.news/v3/images/bin/f38e22e952e1c76dbc9419e0a64e4de3",
     imageDescription: "Wavell Heights photo",
     suburbDescription: `Wavell Heights is a quiet suburb located in Brisbane, Queensland, Australia. 
     Known for its family-friendly environment and green spaces, Wavell Heights offers a mix of residential 
