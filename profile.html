@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/mainHeader.css" />
     <link rel="stylesheet" href="css/profile.css" />
-   
+    <script type="module" src="js/property/profile.js"></script>
+
     
   </head>
   <body>
@@ -66,13 +67,13 @@
           <span></span>
         </div>
         <h2>Pipi Tan</h2>
-        <p>UI/UX Designer</p>
-        <p>pipi@gmail.com</p>
-
-        <ul class="about">
-          <li><span>17</span>Saved</a></li>
-          <li><span>250-450 pw</span>Budget</li>
-        </ul>
+        <p class="label">UI/UX Designer</p>
+        <p class="label">Buyer</p>
+        <div class="profile-details">
+          <p><strong>Location:</strong> Brisbane</p>
+          <p><strong>Email Address:</strong><br>pipi.tan@example.com</p>
+          <p><strong>Phone Number:</strong><br> +61 123 456 789</p>
+        </div>
 
         <div class="content">
           <p>
@@ -90,23 +91,16 @@
       <div class="right__col">
         <nav>
           <ul>
-            <li><a href="#">Saved</a></li>
-            <li><a href="index.html">Homepage</a></li>
-            <li><a href="map.html">Map</a></li>
-            <li><a href="rank.html">Rank</a></li>
+            <li class="active"><a href="#">Saved</a></li>
           </ul>
         </nav>
-        <div class="photos">
-          <img src="media/profile_photo/house1.jpg" alt="Photos" />
-          <img src="media/profile_photo/house2.0.jpg" alt="Photos" />
-          <img src="media/profile_photo/house3.jpg" alt="Photos" />
-          <img src="media/profile_photo/house4.jpg" alt="Photos" />
-          <img src="media/profile_photo/house5.jpg" alt="Photos" />
-          <img src="media/profile_photo/house6.jpg" alt="Photos" />
+        <div class="carousel-container">
+          <div id="carousel" class="carousel">
+          </div>
+          <button class="carousel-btn left-btn">←</button>
+          <button class="carousel-btn right-btn">→</button>
         </div>
       </div>
     </div>
-
-     
   </body>
 </html>
