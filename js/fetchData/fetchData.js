@@ -51,7 +51,7 @@ function fetchDataAndExport() {
 
   let wildfirePromise = fetchData(datasetId1, totalRecords1, additionalQuery1);
   let floodPromise = fetchData(datasetId2, totalRecords2, additionalQuery2);
-
+  console.log(wildfirePromise, floodPromise);
   return Promise.all([wildfirePromise, floodPromise])
     .then((data) => {
       [wildfireData, floodData] = data;

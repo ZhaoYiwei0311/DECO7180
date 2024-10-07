@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function drawMap() {
-  map = L.map("map").setView([-27.4698, 153.0251], 12);
+  map = L.map("map").setView([-27.4698, 153.0251], 14);
 
   // Add OpenStreetMap tiles
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 14,
+    maxZoom: 18,
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
