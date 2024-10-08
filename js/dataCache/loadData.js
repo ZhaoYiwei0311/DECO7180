@@ -9,6 +9,7 @@ import {
 function downloadData() {
   fetchDataAndExport()
     .then((data) => {
+      console.log(data);
       const wildfireData = filterFireData(data.wildfireData);
       const floodData = filterFloodData(data.floodData);
       // downloadAsJSON(wildfireData, "wildfireData.json");
@@ -23,7 +24,7 @@ function downloadData() {
         .flatMap(filterCrimeData);
       // downloadAsJSON(crimeData, "crimeData.json");
 
-      // console.log(crimeData);
+      console.log(crimeData);
     })
     .catch((err) => console.error("Error fetching crime data:", err));
 }
