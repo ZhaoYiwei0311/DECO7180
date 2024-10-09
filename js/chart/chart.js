@@ -13,7 +13,7 @@ google.charts.load("current", { packages: ["corechart", "bar"] });
 
 google.charts.setOnLoadCallback(function () {
   drawChart();
-  drawChart2();
+  // drawChart2();
   drawStuff();
   drawChart3();
 });
