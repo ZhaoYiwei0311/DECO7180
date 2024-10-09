@@ -1,11 +1,11 @@
 const generalChartData = [
     {
         ave_fire_trend: [
-            { year: 2023, count: 20 },
-            { year: 2022, count: 70 },
-            { year: 2021, count: 80 },
-            { year: 2020, count: 90 },
-            { year: 2019, count: 122 },
+            { year: 2019, count: 12 },
+            { year: 2020, count: 17 },
+            { year: 2021, count: 30 },
+            { year: 2022, count: 25 },
+            { year: 2013, count: 19 },
         ],
 
         ave_flood_risk: [
