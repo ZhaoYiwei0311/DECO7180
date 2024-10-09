@@ -11,10 +11,10 @@ const fakeChartData = [
         ],
 
         floodRisk: [
-            { type: high, count: 30 },
-            { type: medium, count: 20 },
-            { type: low, count: 5 },
-        ]
+            { type: "high", count: 30 },
+            { type: "medium", count: 20 },
+            { type: "low", count: 5 },
+          ],
     }
 ]
 

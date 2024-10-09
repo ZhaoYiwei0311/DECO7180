@@ -1,5 +1,8 @@
 import { state } from "../ranks/model.js";
 import fakeDataList from "../../data/fakeDataMill.js";
+import fakeChartData from "../../data/fakeChartData.js";
+import generalChartData from "../../data/generalChartdata.js";
+
 //Get the hash from the URL
 const suburbHref = window.location.hash.slice(1);
 const Suburb = state.suburbs[suburbHref];
@@ -92,33 +95,73 @@ function drawChart2() {
   chart.draw(data, null);
 }
 
+// function drawStuff() {
+//   var data = new google.visualization.arrayToDataTable([
+//     ["Galaxy", "Distance", "Brightness"],
+//     ["Canis Major Dwarf", 8000, 23.3],
+//     ["Sagittarius Dwarf", 24000, 4.5],
+//     ["Ursa Major II Dwarf", 30000, 14.3],
+//     ["Lg. Magellanic Cloud", 50000, 0.9],
+//     ["Bootes I", 60000, 13.1],
+//   ]);
+
+//   var options = {
+//     width: "100%",
+//     height: "100%",
+
+//     chart: {
+//       title: "Nearby galaxies",
+//       subtitle: "distance on the left, brightness on the right",
+//     },
+//     bars: "horizontal", // Required for Material Bar Charts.
+//     series: {
+//       0: { axis: "distance" }, // Bind series 0 to an axis named 'distance'.
+//       1: { axis: "brightness" }, // Bind series 1 to an axis named 'brightness'.
+//     },
+//     axes: {
+//       x: {
+//         distance: { label: "parsecs" }, // Bottom x-axis.
+//         brightness: { side: "top", label: "apparent magnitude" }, // Top x-axis.
+//       },
+//     },
+//     backgroundColor: "transparent",
+//   };
+
+//   var chart = new google.charts.Bar(document.getElementById("dual_x_div"));
+//   chart.draw(data, options);
+// }
+
 function drawStuff() {
-  var data = new google.visualization.arrayToDataTable([
-    ["Galaxy", "Distance", "Brightness"],
-    ["Canis Major Dwarf", 8000, 23.3],
-    ["Sagittarius Dwarf", 24000, 4.5],
-    ["Ursa Major II Dwarf", 30000, 14.3],
-    ["Lg. Magellanic Cloud", 50000, 0.9],
-    ["Bootes I", 60000, 13.1],
-  ]);
+  const floodRiskMilton = fakeChartData[0].floodRisk;
+  const floodRiskAverage = generalChartData[0].ave_flood_risk;
+  const suburb = fakeDataList[0].suburb;
+
+  const dataArr = [
+    ["Flood Risk Type", suburb, "Average"]
+  ];
+
+  floodRiskMilton.forEach((item, index) => {
+    dataArr.push([item.type, item.count, floodRiskAverage[index].count]);
+  });
+
+  var data = google.visualization.arrayToDataTable(dataArr);
 
   var options = {
     width: "100%",
     height: "100%",
-
     chart: {
-      title: "Nearby galaxies",
-      subtitle: "distance on the left, brightness on the right",
+      title: "Flood Risk Levels",
+      subtitle: "Comparing flood risk types and their counts",
     },
-    bars: "horizontal", // Required for Material Bar Charts.
+    bars: "horizontal", 
     series: {
-      0: { axis: "distance" }, // Bind series 0 to an axis named 'distance'.
-      1: { axis: "brightness" }, // Bind series 1 to an axis named 'brightness'.
+      0: { axis: "Average" }, 
+      1: { axis: suburb }, 
     },
     axes: {
       x: {
-        distance: { label: "parsecs" }, // Bottom x-axis.
-        brightness: { side: "top", label: "apparent magnitude" }, // Top x-axis.
+        Milton: { label: "Number of occurrences (Milton)" },
+        Average: { side: "top", label: "Number of occurrences (Average)" }, 
       },
     },
     backgroundColor: "transparent",
@@ -129,24 +172,29 @@ function drawStuff() {
 }
 
 function drawChart3() {
-  var data = google.visualization.arrayToDataTable([
-    ["Year", "Sales", "Expenses"],
-    ["2004", 1000, 400],
-    ["2005", 1170, 460],
-    ["2006", 660, 1120],
-    ["2007", 1030, 540],
-  ]);
+  const bushfireTrend = fakeChartData[0].bushfireTrend;
+  const aveFireTrend = generalChartData[0].ave_fire_trend;
+  const suburb = fakeDataList[0].suburb;
 
-  var options = {
-    title: "Company Performance",
+  const dataArr = [["Year", suburb+" "+"Bushfire Count", "Average Bushfire Count"]];
+  
+  bushfireTrend.forEach((item, index) => {
+    dataArr.push([item.year.toString(), item.count, aveFireTrend[index].count]);
+  });
+
+  const data = google.visualization.arrayToDataTable(dataArr);
+
+  const options = {
+    title: "Bushfire Trend Comparison ",
     curveType: "function",
     legend: { position: "bottom" },
     backgroundColor: "transparent",
   };
 
-  var chart = new google.visualization.LineChart(
+  const chart = new google.visualization.LineChart(
     document.getElementById("curve_chart")
   );
 
   chart.draw(data, options);
 }
+

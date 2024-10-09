@@ -9,9 +9,9 @@ const generalChartData = [
         ],
 
         ave_flood_risk: [
-            { type: high, count: 60 },
-            { type: medium, count: 20 },
-            { type: low, count: 50 },
+            { type: "high", count: 120 },
+            { type: "medium", count: 60 },
+            { type: "low", count: 15 },
         ]
     }
 ]
