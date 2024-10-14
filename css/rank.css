@@ -43,6 +43,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .div-container {
@@ -54,7 +55,7 @@ body {
   box-shadow: 0 2rem 6rem 0.5rem rgba(97, 85, 81, 0.2);
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas: "head head" "list recipe";
 }
 
@@ -167,28 +168,28 @@ body {
 
 .rank-data {
   row-gap: 0.5rem;
+  grid-template-columns: 1fr 2rem;
   align-items: center;
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 2rem;
 }
 
 .rank-title {
   font-weight: 600;
   text-overflow: ellipsis;
-  font-size: 1.8rem;
-  color: #19325f;
-  text-transform: uppercase;
   max-width: 25rem;
   white-space: nowrap;
   overflow: hidden;
   grid-column: 1/-1;
+  font-size: 1.8rem;
+  color: #19325f;
+  text-transform: uppercase;
 }
 
 .rank-score {
-  color: #5c5a5a;
+  font-size: 1.6rem;
+  color: #7c7b7b;
   font-weight: 600;
-  font-size: 1.5rem;
 }
 
 /**************************/
@@ -225,7 +226,7 @@ body {
 
 .suburb-title {
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
   transform: translate(-50%, 20%);
   color: #fff;
@@ -282,6 +283,18 @@ body {
   margin-left: 1rem;
   font-weight: 400;
 }
+
+.suburb-score {
+  margin-left: 1rem;
+  font-weight: 400;
+}
+
+.suburb-score-bold {
+  margin-left: 1rem;
+  font-weight: 600;
+  color: #13264a;
+}
+
 .suburb-info-buttons {
   color: #19325f;
   transition: all 0.3s ease;
@@ -295,10 +308,6 @@ body {
   text-decoration: none;
 }
 
-.suburb-organizer {
-  font-weight: 700;
-}
-
 .suburb-info-row {
   align-items: flex-start;
   gap: 1rem;
@@ -307,3 +316,78 @@ body {
 }
 
 /* End code snippet (1. How to comment) */
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .suburb_results {
+    max-height: 96rem;
+  }
+  .div-container {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .div-container {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .suburb-results {
+    width: 40rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 45%;
+  }
+
+  .event__info-row {
+    flex-direction: column;
+  }
+  .div-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .suburb-results {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    width: auto;
+    max-height: 50rem;
+  }
+
+  .suburb {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+}
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  html {
+    font-size: 40%;
+  }
+
+  .div-container {
+    display: grid;
+  }
+}
