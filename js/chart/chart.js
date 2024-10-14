@@ -8,10 +8,13 @@ console.log(Suburb);
 
 /////////////////////////////////////////////////////
 // Set the heading and total risk score of the suburb
-document.querySelector(".subheading").textContent = Suburb.suburb;
+document.querySelector(".subheading").textContent =
+  "🏙️ " + Suburb.suburb + " 🏙️";
 document.querySelector(
   ".heading-sec"
 ).textContent = `Total Risk Score: ${Suburb.score}/100`;
+var elem = document.querySelector(".nav-btn");
+elem.href = "rank.html#" + Suburb.suburb;
 
 /////////////////////////////////////////
 // Set Google Charts Callback
@@ -38,7 +41,13 @@ function drawDonutChart() {
   const options = {
     title: `Crime Statistics for ${suburb}`,
     backgroundColor: "transparent",
-    pieHole: 0.4,
+    pieHole: 0.5,
+    fontSize: 16,
+    titleTextStyle: {
+      fontSize: 20,
+      color: "#384A67",
+    },
+
     colors: [
       "#364859",
       "#3C6482",
@@ -59,32 +68,51 @@ function drawDonutChart() {
     document.getElementById("piechart")
   );
   chart.draw(data, options);
-  // var data = google.visualization.arrayToDataTable([
-  //   ["Task", "Hours per Day"],
-  //   ["Work", 11],
-  //   ["Eat", 2],
-  //   ["Commute", 2],
-  //   ["Watch TV", 2],
-  //   ["Sleep", 7],
-  // ]);
+}
 
-  // var options = {
-  //   pieHole: 0.4,
-  //   width: "100%",
-  //   height: "100%",
-  // };
+function drawFireLineChart() {
+  const bushfireTrend = Suburb.wildfire;
+  const aveFireTrend = avgChartData.avgWildfire;
+  const suburb = Suburb.suburb;
 
-  // var chart = new google.visualization.PieChart(
-  //   document.getElementById("donutchart")
-  // );
-  // chart.draw(data, options);
+  const dataArr = [
+    ["Year", suburb + " " + "Bushfire Cases", "Average Bushfire Cases"],
+  ];
+
+  bushfireTrend.forEach((item, index) => {
+    dataArr.push([item.year.toString(), item.count, aveFireTrend[index].count]);
+  });
+
+  const data = google.visualization.arrayToDataTable(dataArr);
+
+  const options = {
+    title: "Bushfire Trend Comparison",
+    fontSize: 16,
+    curveType: "function",
+    legend: { position: "bottom" },
+    backgroundColor: "transparent",
+    titleTextStyle: {
+      fontSize: 20,
+      color: "#384A67",
+    },
+    colors: ["#DA5B17", "#F3C623"],
+    series: {
+      0: { lineWidth: 3.5 },
+      1: { lineWidth: 3.5 },
+    },
+  };
+
+  const chart = new google.visualization.LineChart(
+    document.getElementById("curve_chart")
+  );
+
+  chart.draw(data, options);
 }
 
 function drawFloodBarChart() {
   const suburbFloodCount = Suburb.flood;
   const floodAverage = avgChartData.avgFlood;
   const suburb = Suburb.suburb;
-  console.log(suburbFloodCount, floodAverage);
 
   const dataArr = [["Flood Risk Type", suburb, "Average"]];
 
@@ -95,55 +123,31 @@ function drawFloodBarChart() {
   var data = google.visualization.arrayToDataTable(dataArr);
 
   var options = {
-    width: "100%",
-    height: "100%",
-    chart: {
-      title: "Flood Risk Levels",
-      subtitle: "Comparing flood risk types and their counts",
+    backgroundColor: "transparent",
+    fontSize: 16,
+    title: "Flood Occurrences Comparison Last 5 Years",
+    titleTextStyle: {
+      fontSize: 20,
+      color: "#384A67",
+      bold: true,
     },
+    titlePosition: "in",
+    colors: ["#6189AE", "#86AED9"],
     bars: "horizontal",
-    series: {
-      0: { axis: "Average" },
-      1: { axis: suburb },
-    },
-    axes: {
-      x: {
-        Milton: { label: "Number of occurrences (Milton)" },
-        Average: { side: "top", label: "Number of occurrences (Average)" },
+    hAxis: {
+      title: "Number of Flood Occurrences Last 5 Years",
+      textStyle: {
+        fontSize: 16,
       },
     },
-    backgroundColor: "transparent",
+    vAxis: {
+      title: "Flood Risk Type",
+      textStyle: {
+        fontSize: 16,
+      },
+    },
   };
 
   var chart = new google.charts.Bar(document.getElementById("dual_x_div"));
-  chart.draw(data, options);
-}
-
-function drawFireLineChart() {
-  const bushfireTrend = Suburb.wildfire;
-  const aveFireTrend = avgChartData.avgWildfire;
-  const suburb = Suburb.suburb;
-
-  const dataArr = [
-    ["Year", suburb + " " + "Bushfire Count", "Average Bushfire Count"],
-  ];
-
-  bushfireTrend.forEach((item, index) => {
-    dataArr.push([item.year.toString(), item.count, aveFireTrend[index].count]);
-  });
-
-  const data = google.visualization.arrayToDataTable(dataArr);
-
-  const options = {
-    title: "Bushfire Trend Comparison ",
-    curveType: "function",
-    legend: { position: "bottom" },
-    backgroundColor: "transparent",
-  };
-
-  const chart = new google.visualization.LineChart(
-    document.getElementById("curve_chart")
-  );
-
-  chart.draw(data, options);
+  chart.draw(data, google.charts.Bar.convertOptions(options));
 }

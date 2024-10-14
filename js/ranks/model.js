@@ -6,8 +6,8 @@ export const state = {
 
 export const LoadSuburb = async function () {
   try {
-    const events = fakeDataList;
-    events.forEach((suburbObject) => {
+    const AllSuburbs = fakeDataList;
+    AllSuburbs.forEach((suburbObject) => {
       state.suburbs[suburbObject.suburb] = suburbObject;
     });
   } catch (err) {

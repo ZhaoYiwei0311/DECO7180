@@ -1,5 +1,13 @@
 import View from "./view.js";
 
+/* Reference */
+/*
+The code snippet below has been sourced from Siyin Ye‘s (one of my team members) repository on GitHub.
+https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/events/view/resultsView.js
+
+The code snippet has been modified to suit the needs of the project.
+*/
+
 export class PreviewView extends View {
   _generateMarkup() {
     const suburb = window.location.hash.slice(1);
@@ -14,6 +22,9 @@ export class PreviewView extends View {
               </figure>
               <div class="rank-data">
                 <h4 class="rank-title">${this._data.suburb}</h4>
+                 <p class="rank-score">📫 ${this._data.postcode} ;   💰 ${
+      this._data.housePrice
+    }  ; score 📊: ${this._data.score}</p>
               </div>
             </a>
           </li>
@@ -34,3 +45,4 @@ class RanksView extends View {
 }
 
 export default new RanksView();
+/* End code snippet */

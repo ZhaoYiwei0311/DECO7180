@@ -199,6 +199,14 @@ body {
   background-color: #c5d4eb;
 }
 
+.message {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #19325f;
+  text-align: center;
+  margin-top: 3rem;
+}
+
 .suburb-fig {
   height: 40rem;
   position: relative;

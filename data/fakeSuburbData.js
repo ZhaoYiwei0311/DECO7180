@@ -9,7 +9,13 @@ const fakeDataList = [
     Known for its rich history and cultural diversity, Milton offers a unique blend of urban living 
     and natural beauty. The suburb is home to a variety of cafes, restaurants, and boutique shops, 
     making it a popular destination for both locals and tourists.`,
-    housePrice: 1000000,
+    housePrice: 1681822,
+    annualChange: 9.2,
+    rentalPrice: 797,
+    rentalYield: 4.8,
+    rentalChange: -0.3,
+    holdType: "Investor 61% vs Owner 39%",
+
     score: 86,
     wildfire: [
       { year: 2019, count: 2 },
@@ -19,9 +25,9 @@ const fakeDataList = [
       { year: 2023, count: 11 },
     ],
     flood: [
-      { type: "high", count: 30 },
-      { type: "medium", count: 20 },
-      { type: "low", count: 5 },
+      { type: "severe", count: 30 },
+      { type: "moderate", count: 20 },
+      { type: "minor", count: 5 },
     ],
     crime: [
       { type: "Other Theft (excl. Unlawful Entry)", count: 159 },
@@ -47,6 +53,13 @@ const fakeDataList = [
     Known for its beautiful parks and vibrant community, New Farm offers a mix of residential and 
     commercial areas. The suburb is home to the famous New Farm Park and a variety of cafes and 
     restaurants, making it a popular spot for locals and visitors alike.`,
+    score: 80,
+    housePrice: 2507974,
+    annualChange: 7.6,
+    rentalPrice: 1150,
+    rentalYield: 4.91,
+    rentalChange: 9.5,
+    holdType: "Investor 57% vs Owner 43%",
   },
   {
     suburb: "Stretton",
@@ -58,6 +71,13 @@ const fakeDataList = [
     Known for its spacious homes and family-friendly environment, Stretton offers a mix of residential 
     and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
     an ideal place for families.`,
+    score: 78,
+    housePrice: 1266284,
+    annualChange: 7.9,
+    rentalPrice: 850,
+    rentalYield: 4.75,
+    rentalChange: 6.3,
+    holdType: "Investor 42% vs Owner 58%",
   },
   {
     suburb: "West End",
@@ -69,6 +89,13 @@ const fakeDataList = [
     Known for its diverse community and bohemian atmosphere, West End offers a variety of cafes, restaurants, 
     and boutique shops. The suburb is also home to several markets and cultural events, making it a lively 
     and dynamic place to live.`,
+    score: 84,
+    housePrice: 1616667,
+    annualChange: 8.6,
+    rentalPrice: 780,
+    rentalYield: 4.8,
+    rentalChange: -0.6,
+    holdType: "Investor 57% vs Owner 43%",
   },
   {
     suburb: "Fortitude Valley",
@@ -80,6 +107,13 @@ const fakeDataList = [
     Known for its nightlife and entertainment options, Fortitude Valley offers a variety of bars, clubs, 
     and live music venues. The suburb is also home to a range of restaurants and shops, making it a popular 
     destination for both locals and tourists.`,
+    score: 68,
+    housePrice: 1535044,
+    annualChange: 6.4,
+    rentalPrice: 550,
+    rentalYield: 4.04,
+    rentalChange: -17.9,
+    holdType: "Investor 75% vs Owner 25%",
   },
   {
     suburb: "Fig Tree Pocket",
@@ -90,6 +124,13 @@ const fakeDataList = [
     suburbDescription: `Fig Tree Pocket is a tranquil suburb located in Brisbane, Queensland, Australia. 
     Known for its spacious properties and lush greenery, Fig Tree Pocket offers a peaceful residential environment. 
     The suburb is home to several parks, schools, and the Lone Pine Koala Sanctuary, making it an ideal place for families.`,
+    score: 75,
+    housePrice: 1626706,
+    annualChange: 7.3,
+    rentalPrice: 865,
+    rentalYield: 4.77,
+    rentalChange: -2.8,
+    holdType: "Investor 13% vs Owner 87%",
   },
   {
     suburb: "Nundah",
@@ -101,6 +142,13 @@ const fakeDataList = [
     Known for its community atmosphere and convenient amenities, Nundah offers a mix of residential 
     and commercial areas. The suburb is home to several parks, schools, and shopping centers, making it 
     an ideal place for families and professionals.`,
+    score: 81,
+    housePrice: 1116938,
+    annualChange: 9.2,
+    rentalPrice: 680,
+    rentalYield: 4.89,
+    rentalChange: 4.6,
+    holdType: "Investor 57% vs Owner 43%",
   },
   {
     suburb: "Keperra",
@@ -112,6 +160,13 @@ const fakeDataList = [
       Known for its affordable housing and family-friendly environment, Keperra offers a mix of residential 
       and recreational areas. The suburb is home to several parks, schools, and shopping centers, making it 
       an ideal place for families.`,
+    score: 78,
+    housePrice: 801335,
+    annualChange: 8.3,
+    rentalPrice: 622,
+    rentalYield: 5.12,
+    rentalChange: 11.2,
+    holdType: "Investor 30% vs Owner 70%",
   },
   {
     suburb: "Newstead",
@@ -123,6 +178,13 @@ const fakeDataList = [
     Known for its modern apartments and vibrant community, Newstead offers a mix of residential and 
     commercial areas. The suburb is home to a variety of cafes, restaurants, and shops, making it a 
     popular spot for locals and visitors alike.`,
+    score: 72,
+    housePrice: 950821,
+    annualChange: 9.1,
+    rentalPrice: 625,
+    rentalYield: 4.75,
+    rentalChange: 6.4,
+    holdType: "Investor 59% vs Owner 41%",
   },
   {
     suburb: "Sunnybank",
@@ -136,6 +198,13 @@ const fakeDataList = [
     making it a popular destination for food lovers and shoppers. Sunnybank is also known for its 
     excellent public transport links and proximity to major highways, providing easy access to the Brisbane CBD 
     and surrounding areas.`,
+    score: 84,
+    housePrice: 966130,
+    annualChange: 12.7,
+    rentalPrice: 600,
+    rentalYield: 5.03,
+    rentalChange: 3.4,
+    holdType: "Investor 26% vs Owner 74%",
   },
   {
     suburb: "Woolloongabba",
@@ -147,6 +216,13 @@ const fakeDataList = [
     Known for its sports and entertainment options, Woolloongabba offers a mix of residential and 
     commercial areas. The suburb is home to the famous Gabba stadium and a variety of cafes, restaurants, 
     and shops.`,
+    score: 83,
+    housePrice: 1244623,
+    annualChange: 10.0,
+    rentalPrice: 720,
+    rentalYield: 5.24,
+    rentalChange: 10.8,
+    holdType: "Investor 63% vs Owner 37%",
   },
   {
     suburb: "Saint Lucia",
@@ -158,6 +234,13 @@ const fakeDataList = [
     Known for its prestigious university and beautiful parks, St Lucia offers a mix of residential 
     and educational areas. The suburb is home to the University of Queensland and a variety of cafes, 
     restaurants, and shops.`,
+    score: 90,
+    housePrice: 1801986,
+    annualChange: 9.9,
+    rentalPrice: 790,
+    rentalYield: 4.77,
+    rentalChange: 0.0,
+    holdType: "Investor 56% vs Owner 44%",
   },
   {
     suburb: "Toowong",
@@ -168,6 +251,13 @@ const fakeDataList = [
     suburbDescription: `Toowong is a bustling suburb located in Brisbane, Queensland, Australia. 
     Known for its shopping and dining options, Toowong offers a mix of residential and commercial areas. 
     The suburb is home to the Toowong Village shopping centre and a variety of cafes, restaurants, and shops.`,
+    score: 88,
+    housePrice: 1433016,
+    annualChange: 9.2,
+    rentalPrice: 700,
+    rentalYield: 4.69,
+    rentalChange: -3.4,
+    holdType: "Investor 53% vs Owner 47%",
   },
   {
     suburb: "Gordon Park",
@@ -179,6 +269,13 @@ const fakeDataList = [
     recreational areas. The suburb is home to the beautiful Kedron Brook, which provides a variety of 
     walking and cycling trails. With its close proximity to the Brisbane CBD and excellent public transport 
     links.`,
+    score: 77,
+    housePrice: 1296649,
+    annualChange: 8.1,
+    rentalPrice: 695,
+    rentalYield: 4.92,
+    rentalChange: 7.8,
+    holdType: "Investor 42% vs Owner 57%",
   },
   {
     suburb: "Balmoral",
@@ -190,6 +287,13 @@ const fakeDataList = [
     Known for its leafy streets and family-friendly atmosphere, Balmoral offers a mix of residential 
     and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
     an ideal place for families. `,
+    score: 73,
+    housePrice: 1558360,
+    annualChange: 6.4,
+    rentalPrice: 900,
+    rentalYield: 5.04,
+    rentalChange: 12.9,
+    holdType: "Investor 37% vs Owner 63%",
   },
   {
     suburb: "Bowen Hills",
@@ -201,6 +305,13 @@ const fakeDataList = [
     Known for its modern apartments and vibrant community, Bowen Hills offers a mix of residential and 
     commercial areas. The suburb is home to a variety of cafes, restaurants, and shops, making it a 
     popular spot for locals and visitors alike.`,
+    score: 81,
+    housePrice: 1296175,
+    annualChange: 7.3,
+    rentalPrice: 720,
+    rentalYield: 4.8,
+    rentalChange: 6.7,
+    holdType: "Investor 66% vs Owner 34%",
   },
   {
     suburb: "Bridgeman Downs",
@@ -210,6 +321,13 @@ const fakeDataList = [
     imageDescription: "Bridgeman Downs photo",
     suburbDescription: `Bridgeman Downs is a peaceful suburb in Brisbane, known for its spacious homes and parks. 
     It offers a family-friendly environment with easy access to amenities and schools.`,
+    score: 76,
+    housePrice: 880669,
+    annualChange: 6.6,
+    rentalPrice: 850,
+    rentalYield: 4.83,
+    rentalChange: 6.3,
+    holdType: "Investor 23% vs Owner 77%",
   },
   {
     suburb: "Clayfield",
@@ -220,6 +338,14 @@ const fakeDataList = [
     suburbDescription: `Clayfield is a well-established suburb in Brisbane, Queensland, Australia. 
     Known for its heritage homes and leafy streets, Clayfield offers a mix of residential and commercial areas. 
     The suburb is home to several parks, schools, and local shops, making it an ideal place for families.`,
+    score: 82,
+    housePrice: 1698792,
+
+    annualChange: 9.8,
+    rentalPrice: 825,
+    rentalYield: 4.67,
+    rentalChange: 3.4,
+    holdType: "Investor 45% vs Owner 55%",
   },
   {
     suburb: "Mount Gravatt East",
@@ -231,6 +357,13 @@ const fakeDataList = [
     Known for its family-friendly environment and excellent schools, Mount Gravatt East offers a mix of 
     residential and recreational areas. The suburb is home to several parks, shopping centers, and cafes, 
     making it an ideal place for families.`,
+    score: 87,
+    housePrice: 983234,
+    annualChange: 14.8,
+    rentalPrice: 650,
+    rentalYield: 4.81,
+    rentalChange: 8.3,
+    holdType: "Investor 37% vs Owner 63%",
   },
   {
     suburb: "Northgate",
@@ -242,6 +375,13 @@ const fakeDataList = [
     Known for its convenient transport links and community amenities, Northgate offers a mix of residential 
     and commercial areas. The suburb is home to several parks, schools, and local shops, making it an ideal 
     place for families and professionals.`,
+    score: 69,
+    housePrice: 1170794,
+    annualChange: 8.4,
+    rentalPrice: 650,
+    rentalYield: 4.9,
+    rentalChange: 4.0,
+    holdType: "Investor 44% vs Owner 56%",
   },
   {
     suburb: "Wavell Heights",
@@ -253,6 +393,13 @@ const fakeDataList = [
     Known for its family-friendly environment and green spaces, Wavell Heights offers a mix of residential 
     and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
     an ideal place for families.`,
+    score: 71,
+    housePrice: 1178650,
+    annualChange: 8.7,
+    rentalPrice: 690,
+    rentalYield: 4.71,
+    rentalChange: 2.2,
+    holdType: "Investor 27% vs Owner 73%",
   },
 ];
 

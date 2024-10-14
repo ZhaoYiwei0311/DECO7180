@@ -7,9 +7,9 @@ const avgChartData = {
     { year: 2013, count: 19 },
   ],
   avgFlood: [
-    { type: "high", count: 120 },
-    { type: "medium", count: 60 },
-    { type: "low", count: 15 },
+    { type: "severe", count: 120 },
+    { type: "moderate", count: 60 },
+    { type: "minor", count: 15 },
   ],
   avgCrime: [
     { type: "Other Theft (excl. Unlawful Entry)", count: 159 },

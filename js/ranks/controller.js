@@ -13,10 +13,7 @@ const controlSearchResults = async () => {
 
 const controlSuburbs = async () => {
   try {
-    let suburbHref = window.location.hash.slice(1);
-    suburbHref = suburbHref.replaceAll('%20', ' ')
-    if (!suburbHref) return;
-
+    let suburbHref = decodeURIComponent(window.location.hash.slice(1));
     const Suburb = state.suburbs[suburbHref];
     areaView.render(Suburb);
   } catch (err) {
@@ -26,24 +23,19 @@ const controlSuburbs = async () => {
 
 const controlSortedResults = async () => {
   try {
-    // 1) Load search results
+    // Load search results
     const suburbController = new SuburbController(state.suburbs);
-    // 3) Listen for changes on the sort select
+    // Listen for changes on the sort select
     document
       .getElementById("sortSelect")
       .addEventListener("change", function (e) {
         let sortBy = e.target.value;
-
-        // Sort events
+        // Sort suburbs
         let sortedSuburbs = suburbController.sortSuburbs(sortBy);
-
-        // Update state.events
-        state.events = sortedSuburbs;
-
-        // 4) Render results on UI
-        resultsView.render(state.suburbs);
-        // Reset filter select to default value
-        document.getElementById("filterSelect").value = "";
+        // Update state.suburbs
+        state.suburbs = sortedSuburbs;
+        // Render results on UI
+        ranksView.render(state.suburbs);
       });
   } catch (err) {
     console.error(err);

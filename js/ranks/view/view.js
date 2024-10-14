@@ -1,8 +1,9 @@
 /* Reference */
 /*
-The code snippet (1. How to comment) below has been sourced from
-http://answers.unity3d.com/answers/221574/view.html
-The code snippet appears in its original form
+The code snippet below has been sourced from Siyin Ye‘s (one of my team members) repository on GitHub.
+https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/events/view/View.js
+
+The code snippet appears in its original form cause it is the general dom management for the view class.
 */
 
 export default class View {
@@ -49,4 +50,4 @@ export default class View {
   }
 }
 
-/* End code snippet (1. How to comment) */
+/* End code snippet */
