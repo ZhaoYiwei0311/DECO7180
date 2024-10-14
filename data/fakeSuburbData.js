@@ -15,7 +15,6 @@ const fakeDataList = [
     rentalYield: 4.8,
     rentalChange: -0.3,
     holdType: "Investor 61% vs Owner 39%",
-
     score: 86,
     wildfire: [
       { year: 2019, count: 2 },
