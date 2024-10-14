@@ -12,8 +12,6 @@ function downloadData() {
       console.log(data);
       const wildfireData = filterFireData(data.wildfireData);
       const floodData = filterFloodData(data.floodData);
-      // downloadAsJSON(wildfireData, "wildfireData.json");
-      // downloadAsJSON(floodData, "floodData.json");
     })
     .catch((err) => console.error("Error fetching export data:", err));
 
@@ -22,7 +20,6 @@ function downloadData() {
       const crimeData = data
         .filter((result) => result !== null)
         .flatMap(filterCrimeData);
-      // downloadAsJSON(crimeData, "crimeData.json");
 
       console.log(crimeData);
     })

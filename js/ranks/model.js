@@ -1,4 +1,4 @@
-import fakeDataList from "../../data/fakeDataMill.js";
+import fakeDataList from "../../data/fakeSuburbData.js";
 
 export const state = {
   suburbs: {},
