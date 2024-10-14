@@ -5,13 +5,15 @@ export default class SuburbController {
 
   sortSuburbs(sortBy) {
     let sortedSuburbs;
+    if (sortBy === "postcode") {
+      sortedSuburbs = [...this.suburbs].sort((a, b) => a[sortBy] - b[sortBy]);
+    }
     if (
-      sortBy === "postcode" ||
       sortBy === "score" ||
       sortBy === "housePrice" ||
       sortBy === "rentalPrice"
     ) {
-      sortedSuburbs = [...this.suburbs].sort((a, b) => a[sortBy] - b[sortBy]);
+      sortedSuburbs = [...this.suburbs].sort((a, b) => b[sortBy] - a[sortBy]);
     }
     if (sortBy === "suburb")
       sortedSuburbs = [...this.suburbs].sort((a, b) =>
