@@ -1,10 +1,13 @@
 import { state } from "../ranks/model.js";
 import fakeDataList from "../../data/fakeSuburbData.js";
+import avgChartData from "../../data/fakeAvgChartdata.js";
 //Get the hash from the URL
-const suburbHref = window.location.hash.slice(1);
+const suburbHref = decodeURIComponent(window.location.hash.slice(1));
 const Suburb = state.suburbs[suburbHref];
 console.log(Suburb);
 
+/////////////////////////////////////////////////////
+// Set the heading and total risk score of the suburb
 document.querySelector(".subheading").textContent = Suburb.suburb;
 document.querySelector(
   ".heading-sec"
@@ -15,18 +18,17 @@ document.querySelector(
 google.charts.load("current", { packages: ["corechart", "bar"] });
 
 google.charts.setOnLoadCallback(function () {
-  drawChart();
-  // drawChart2();
-  drawStuff();
-  drawChart3();
+  drawDonutChart();
+  drawFireLineChart();
+  drawFloodBarChart();
 });
 ////////////////////////////////////////
 
 // Callback that creates and populates a data table
 
-function drawChart() {
-  const crime = fakeDataList[0].crime;
-  const suburb = fakeDataList[0].suburb;
+function drawDonutChart() {
+  const crime = Suburb.crime;
+  const suburb = Suburb.suburb;
 
   const dataArr = [["Crime Type", "Count"]];
   crime.forEach((item) => dataArr.push([item.type, item.count]));
@@ -78,68 +80,16 @@ function drawChart() {
   // chart.draw(data, options);
 }
 
-function drawChart2() {
-  var data = new google.visualization.DataTable();
-  data.addColumn("string", "Element");
-  data.addColumn("number", "Percentage");
-  data.addRows([
-    ["Nitrogen", 0.78],
-    ["Oxygen", 0.21],
-    ["Other", 0.01],
-  ]);
-
-  // Instantiate and draw the chart.
-  var chart = new google.visualization.PieChart(
-    document.getElementById("myPieChart")
-  );
-  chart.draw(data, null);
-}
-
-// function drawStuff() {
-//   var data = new google.visualization.arrayToDataTable([
-//     ["Galaxy", "Distance", "Brightness"],
-//     ["Canis Major Dwarf", 8000, 23.3],
-//     ["Sagittarius Dwarf", 24000, 4.5],
-//     ["Ursa Major II Dwarf", 30000, 14.3],
-//     ["Lg. Magellanic Cloud", 50000, 0.9],
-//     ["Bootes I", 60000, 13.1],
-//   ]);
-
-//   var options = {
-//     width: "100%",
-//     height: "100%",
-
-//     chart: {
-//       title: "Nearby galaxies",
-//       subtitle: "distance on the left, brightness on the right",
-//     },
-//     bars: "horizontal", // Required for Material Bar Charts.
-//     series: {
-//       0: { axis: "distance" }, // Bind series 0 to an axis named 'distance'.
-//       1: { axis: "brightness" }, // Bind series 1 to an axis named 'brightness'.
-//     },
-//     axes: {
-//       x: {
-//         distance: { label: "parsecs" }, // Bottom x-axis.
-//         brightness: { side: "top", label: "apparent magnitude" }, // Top x-axis.
-//       },
-//     },
-//     backgroundColor: "transparent",
-//   };
-
-//   var chart = new google.charts.Bar(document.getElementById("dual_x_div"));
-//   chart.draw(data, options);
-// }
-
-function drawStuff() {
-  const floodRiskMilton = fakeChartData[0].floodRisk;
-  const floodRiskAverage = generalChartData[0].ave_flood_risk;
-  const suburb = fakeDataList[0].suburb;
+function drawFloodBarChart() {
+  const suburbFloodCount = Suburb.flood;
+  const floodAverage = avgChartData.avgFlood;
+  const suburb = Suburb.suburb;
+  console.log(suburbFloodCount, floodAverage);
 
   const dataArr = [["Flood Risk Type", suburb, "Average"]];
 
-  floodRiskMilton.forEach((item, index) => {
-    dataArr.push([item.type, item.count, floodRiskAverage[index].count]);
+  suburbFloodCount.forEach((item, index) => {
+    dataArr.push([item.type, item.count, floodAverage[index].count]);
   });
 
   var data = google.visualization.arrayToDataTable(dataArr);
@@ -169,10 +119,10 @@ function drawStuff() {
   chart.draw(data, options);
 }
 
-function drawChart3() {
-  const bushfireTrend = fakeChartData[0].bushfireTrend;
-  const aveFireTrend = generalChartData[0].ave_fire_trend;
-  const suburb = fakeDataList[0].suburb;
+function drawFireLineChart() {
+  const bushfireTrend = Suburb.wildfire;
+  const aveFireTrend = avgChartData.avgWildfire;
+  const suburb = Suburb.suburb;
 
   const dataArr = [
     ["Year", suburb + " " + "Bushfire Count", "Average Bushfire Count"],
