@@ -65,13 +65,16 @@
   border-radius: 1rem;
 }
 
+.padded-input {
+  padding-left: 15px;
+}
+
 .search-field:focus {
   outline: none;
   border: 0.5rem solid #19325f;
 }
 
 .search-field::placeholder {
-  padding-left: 1.2rem;
 }
 
 .search-btn {
@@ -141,4 +144,10 @@
   outline: none;
   border: 0.5rem solid #6a8ab9;
   transform-origin: left center;
+}
+
+@media (max-width: 600px) {
+  .search {
+    display: none;
+  }
 }

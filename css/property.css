@@ -168,3 +168,11 @@
   margin-top: 1rem;
   text-align: right;
 }
+
+.property-title {
+  font-size: 1.6rem;
+  color: #2c3b52;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: right;
+}
