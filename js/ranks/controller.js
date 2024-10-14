@@ -42,11 +42,32 @@ const controlSortedResults = async () => {
   }
 };
 
+const controlSearch = function () {
+  const searchForm = document.querySelector(".search");
+
+  searchForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const searchInput = document.querySelector(".search-field");
+    const inputValue = searchInput.value.trim();
+
+    for (let suburbKey in state.suburbs) {
+      if (suburbKey.toLowerCase().includes(inputValue.toLowerCase())) {
+        window.location.hash = encodeURIComponent(suburbKey);
+        const matchedSuburb = state.suburbs[suburbKey];
+        await areaView.render(matchedSuburb);
+        searchInput.value = "";
+        break;
+      }
+    }
+  });
+};
 //////////////////////////
 
 const init = function () {
   controlSearchResults();
   controlSortedResults();
+  controlSearch();
   areaView.addHandlerRender(controlSuburbs);
 };
 

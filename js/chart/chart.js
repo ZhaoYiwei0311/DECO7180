@@ -151,3 +151,36 @@ function drawFloodBarChart() {
   var chart = new google.charts.Bar(document.getElementById("dual_x_div"));
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
+
+///////////////////////////////////////////////////
+// Search Form Event Listener
+
+function matchSuburb(inputValue, suburbs) {
+  for (let suburbKey in suburbs) {
+    if (suburbKey.toLowerCase().includes(inputValue.toLowerCase())) {
+      return suburbKey;
+    }
+  }
+  return null;
+}
+
+const searchForm = document.querySelector(".search");
+
+searchForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const inputValue = document.querySelector(".search-field").value.trim();
+  const matchedSuburb = matchSuburb(inputValue, state.suburbs);
+  if (matchedSuburb) {
+    window.location.hash = encodeURIComponent(matchedSuburb);
+    const newSuburb = state.suburbs[matchedSuburb];
+    document.querySelector(".subheading").textContent =
+      "🏙️ " + newSuburb.suburb + " 🏙️";
+    document.querySelector(
+      ".heading-sec"
+    ).textContent = `Total Risk Score: ${newSuburb.score}/100`;
+    location.reload();
+    document.querySelector(".search-field").value = "";
+  } else {
+    console.log("No matched suburb found.");
+  }
+});
