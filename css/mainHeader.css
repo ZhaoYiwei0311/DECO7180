@@ -45,8 +45,6 @@ The code snippet appears in its original form
 /* NAVIGATION */
 /**************************/
 
-
-
 .header-nav-list {
   list-style: none;
   gap: 3.2rem;
@@ -70,41 +68,6 @@ The code snippet appears in its original form
   background-color: #19325f;
   border-radius: 12px;
   color: #fff;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropbtn{
-  display: inline-block;
-  font-weight: 600;
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: #333;
-  transition: all 0.3s;
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  min-width: 80px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .profile-container {

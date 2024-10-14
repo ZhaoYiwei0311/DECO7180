@@ -38,6 +38,7 @@ const fakeDataList = [
     ],
   },
   {
+<<<<<<< HEAD:data/fakeSuburbData.js
     suburb: "New Farm",
     postcode: 4005,
     imageUrl:
@@ -254,6 +255,15 @@ const fakeDataList = [
     and recreational areas. The suburb is home to several parks, schools, and local shops, making it 
     an ideal place for families.`,
   },
+=======
+    suburb: "Milton",
+    postcode: 4064,
+    imageUrl:
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/102909774.jpg?k=51ce76490fcd81eade0aff827b885902c39b0a981e80a444a52388dba60b6f30&o=&hp=1",
+    imageDescription: "Milton photo",
+    suburbDescription: "wgdakugsfckjqdwahsckljx",
+  },
+>>>>>>> dd95e924b03e12dcbf1d2aacbce99e5a66737ef6:data/fakeDataMill.js
 ];
 
 export default fakeDataList;

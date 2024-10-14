@@ -97,11 +97,3 @@ body {
   padding: 0 3.2rem;
   margin: 0 auto;
 }
-
-.chart_grid {
-  display: grid;
-  column-gap: 4.4rem;
-  row-gap: 6.6rem;
-
-  /* margin-bottom: 9.6rem; */
-}
