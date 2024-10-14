@@ -48,7 +48,7 @@ function createProperty(i) {
           <p class="property-attribute">
             <span>${fakeData.price}</span>
           </p>
-          <p class="property-name">${fakeData.name}</p>
+          <p class="property-title">${fakeData.name}</p>
           <p class="property-name">${fakeData.propertyInfo}</p>
           <a class="property-link" href="rank.html#${"Milton"}">👉See Info👈</a>
       </div>
