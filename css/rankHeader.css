@@ -56,8 +56,8 @@ The code snippet has been adapted to suit for the rank header of our website.
   max-height: 150px;
   overflow-y: auto;
   background-color: white;
-  position: absolute; /* Positioning the suggestions below the search bar */
-  top: 10%; /* 100% to place it right below the search bar */
+  position: absolute;
+  top: 10%;
   left: 66rem;
   right: 0;
   z-index: 10;
@@ -70,15 +70,11 @@ The code snippet has been adapted to suit for the rank header of our website.
   padding: 5px 10px;
   cursor: pointer;
   color: black;
-
 }
 
 #suggestions li:hover {
   background-color: #f0f0f0;
-
 }
-
-
 
 .no-suggestions {
   padding: 8px;
