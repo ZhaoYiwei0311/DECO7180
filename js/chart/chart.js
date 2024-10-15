@@ -1,5 +1,4 @@
 import { state } from "../ranks/model.js";
-import fakeDataList from "../../data/fakeSuburbData.js";
 import avgChartData from "../../data/fakeAvgChartdata.js";
 //Get the hash from the URL
 const suburbHref = decodeURIComponent(window.location.hash.slice(1));
@@ -28,7 +27,6 @@ google.charts.setOnLoadCallback(function () {
 ////////////////////////////////////////
 
 // Callback that creates and populates a data table
-
 function drawDonutChart() {
   const crime = Suburb.crime;
   const suburb = Suburb.suburb;

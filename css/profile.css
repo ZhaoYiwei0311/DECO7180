@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/*************************/
+/* PROFILE GENERAL */
+/**************************/
+
 body {
   width: 100%;
   margin: 0;
@@ -31,6 +35,10 @@ a {
   display: flex;
   gap: 8rem;
 }
+
+/*************************/
+/* PROFILE LEFT COLUMN */
+/**************************/
 
 .left__col {
   flex-grow: 2;
@@ -91,7 +99,9 @@ a {
   text-align: center;
 }
 
-/* Profile Details Section */
+/*************************/
+/* PROFILE PERSON SECTION */
+/**************************/
 .profile-details {
   padding: 20px;
   background-color: #e2eaf5;
@@ -145,6 +155,10 @@ a {
   font-size: 2rem;
 }
 
+/*************************/
+/* PROFILE RIGHT SECTION */
+/**************************/
+
 .right__col {
   flex-grow: 1;
   height: 60vh;
@@ -177,6 +191,10 @@ a {
   font-size: 2rem;
 }
 
+/*************************/
+/* PROFILE RIGHT PHOTO COLLECTION */
+/**************************/
+
 .right__col .photos {
   margin-top: 2rem;
   display: grid;
@@ -192,7 +210,10 @@ a {
   object-fit: cover;
 }
 
-/* Carousel Styling */
+/*************************/
+/* PROFILE SAVED PROPERTY */
+/**************************/
+
 .carousel-container {
   position: relative;
   width: 100%;
@@ -232,6 +253,10 @@ a {
 .right-btn {
   right: 10px;
 }
+
+/*************************/
+/* PROFILE PROPERTY */
+/**************************/
 
 .property {
   display: flex;

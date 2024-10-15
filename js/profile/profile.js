@@ -1,15 +1,16 @@
 import fakeDataList from "../../data/fakePropertyData.js";
 
+// carousel features added to the profile page
 function loadSavedProperties() {
-    const savedProperties = fakeDataList.slice(0, 8); // Select 8 properties to display in carousel
-    const carousel = document.getElementById('carousel'); // Get carousel container
+  const savedProperties = fakeDataList.slice(0, 8); // Select 8 properties to display in carousel
+  const carousel = document.getElementById("carousel"); // Get carousel container
 
-    savedProperties.forEach((property) => {
-        const propertyElement = document.createElement('div');
-        propertyElement.classList.add('property'); // Add property class for styling
+  savedProperties.forEach((property) => {
+    const propertyElement = document.createElement("div");
+    propertyElement.classList.add("property"); // Add property class for styling
 
-        // Reuse the property markup from property.js
-        const propertyMarkup = `
+    // Reuse the property markup from property.js
+    const propertyMarkup = `
   <div class="property-wrapper">
       <img src="${property.imgSrc}" class="property-img" alt="${property.imageDescription}" />
       <div class="property-content">
@@ -23,10 +24,9 @@ function loadSavedProperties() {
   </div>
 `;
 
-
-        propertyElement.innerHTML = propertyMarkup; // Insert markup into property div
-        carousel.appendChild(propertyElement); // Append to the carousel container
-    });
+    propertyElement.innerHTML = propertyMarkup;
+    carousel.appendChild(propertyElement);
+  });
 }
 
 // Initialize the saved properties carousel when the page loads
@@ -34,16 +34,16 @@ window.addEventListener("load", loadSavedProperties);
 
 // Handle carousel scrolling
 let currentIndex = 0;
-const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
-const carousel = document.getElementById('carousel');
+const leftBtn = document.querySelector(".left-btn");
+const rightBtn = document.querySelector(".right-btn");
+const carousel = document.getElementById("carousel");
 
-leftBtn.addEventListener('click', () => {
-    currentIndex = Math.max(currentIndex - 1, 0);
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+leftBtn.addEventListener("click", () => {
+  currentIndex = Math.max(currentIndex - 1, 0);
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
 
-rightBtn.addEventListener('click', () => {
-    currentIndex = Math.min(currentIndex + 1, 7); 
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+rightBtn.addEventListener("click", () => {
+  currentIndex = Math.min(currentIndex + 1, 7);
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 });

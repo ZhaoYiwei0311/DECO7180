@@ -1,3 +1,9 @@
+// This data object represents the suburb and contains various pieces of information.
+// The 'wildfire', 'flood' and 'crime' data are processed from datasets provided by the QLD government and are inserted via the backend.
+// The 'imageUrl' and 'suburbDescription' are sourced from Wikipedia.
+// The 'housePrice', 'annualChange', 'rentalPrice', 'rentalYield', 'rentalChange', and 'holdType' information are fetched from realestate.
+// The 'score' field might represent a custom rating or score for the suburb, which is the simulated data for better user experience.
+
 const fakeDataList = [
   {
     suburb: "Milton",

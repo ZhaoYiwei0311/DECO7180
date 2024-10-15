@@ -1,6 +1,7 @@
 let wildfireData;
 let floodData;
 
+// Function to fetch flood and wildfire data from the API
 function fetchData(datasetId, totalRecords, additionalQuery) {
   return new Promise(function (resolve, reject) {
     var limit = 100;
@@ -40,6 +41,7 @@ function fetchData(datasetId, totalRecords, additionalQuery) {
   });
 }
 
+// Function to fetch wildfire and flood data and export them
 function fetchDataAndExport() {
   const datasetId1 = "wild-fire-history";
   const totalRecords1 = 556;

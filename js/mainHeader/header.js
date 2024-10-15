@@ -1,6 +1,5 @@
 ///////////////////////////////////////////////////////////
-// Make mobile navigation work
-
+// Make mobile navigation work for main headers of all page
 const btnNavEl = document.querySelector("#mobile-nav-button");
 const headerEl = document.querySelector(".header");
 

@@ -8,6 +8,7 @@ https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/eve
 The code snippet has been modified to suit the needs of the project.
 */
 
+// PreviewView class for rendering the suburb details
 export class PreviewView extends View {
   _generateMarkup() {
     const suburb = window.location.hash.slice(1);
@@ -32,6 +33,7 @@ export class PreviewView extends View {
   }
 }
 
+// Export an instance of the class
 class RanksView extends View {
   _parentElement = document.querySelector(".rank-results");
 

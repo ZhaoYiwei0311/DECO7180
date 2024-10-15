@@ -1,14 +1,5 @@
-/* Reference */
-/*
-The code snippet (1. How to comment) below has been sourced from
-http://answers.unity3d.com/answers/221574/view.html
-The code snippet appears in its original form
-*/
-/* CODE HERE
-/ / End code snippet (1. How to comment) */
-
 /**************************/
-/* part SECTION */
+/* PART SECTION */
 /**************************/
 
 .sec-part {
@@ -62,7 +53,10 @@ The code snippet appears in its original form
   height: 100%;
 }
 
-/* add */
+/**************************/
+/* KEY SECTION */
+/**************************/
+
 .key-items {
   list-style: none;
   padding: 0;
@@ -128,7 +122,7 @@ The code snippet appears in its original form
 }
 
 /**************************/
-/* cardS SECTION */
+/* CARD SECTION */
 /**************************/
 
 .card-sec {
@@ -268,6 +262,10 @@ The code snippet appears in its original form
 .address {
   margin-bottom: 2.4rem;
 }
+
+/**************************/
+/* MEDIA QUERY */
+/**************************/
 
 /**************************/
 /* BELOW 1344px (Smaller desktops) */

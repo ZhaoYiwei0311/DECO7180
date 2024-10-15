@@ -1,3 +1,4 @@
+// Function to filter the wildfire data
 export function filterFireData(data) {
   const filteredData = data.map((item) => {
     return {
@@ -9,6 +10,7 @@ export function filterFireData(data) {
   return filteredData;
 }
 
+// Function to filter the flood data
 export function filterFloodData(data) {
   const filteredData = data.map((item) => {
     return {
@@ -19,6 +21,7 @@ export function filterFloodData(data) {
   return filteredData;
 }
 
+// Function to filter crime data
 export function filterCrimeData(results) {
   let acc = results.reduce((accum, item) => {
     const key = item.Postcode;

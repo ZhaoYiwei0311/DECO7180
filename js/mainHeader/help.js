@@ -1,6 +1,5 @@
 ///////////////////////////////////////////////////////////
-// Smooth scrolling animation
-
+// Smooth scrolling animation for the help page
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {

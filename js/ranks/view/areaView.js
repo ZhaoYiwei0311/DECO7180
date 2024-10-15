@@ -8,6 +8,7 @@ https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/eve
 The code snippet has been modified to suit the needs of the project.
 */
 
+// AreaView class for rendering the suburb details
 class AreaView extends View {
   _parentElement = document.querySelector(".suburb");
 
@@ -27,7 +28,7 @@ class AreaView extends View {
         </figure>
 
      <div class="suburb-details">
- <div class="suburb-info-row">
+    <div class="suburb-info-row">
             <h2 class="heading--2">📪 Postcode :  </h2>
             <span class="suburb-info-data">${this._data.postcode}</span>
           </div>

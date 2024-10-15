@@ -6,6 +6,9 @@ import {
   filterCrimeData,
 } from "../helper/filter.js";
 
+// Function to filter and download raw api data
+// This function is called when the DOMContentLoaded event is fired
+// This function only run once when the page is loaded for the performance reason
 function downloadData() {
   fetchDataAndExport()
     .then((data) => {
@@ -26,6 +29,7 @@ function downloadData() {
     .catch((err) => console.error("Error fetching crime data:", err));
 }
 
+// Function to download data as JSON
 function downloadAsJSON(data, filename) {
   try {
     var dataStr =
