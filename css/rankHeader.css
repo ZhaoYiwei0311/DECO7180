@@ -52,13 +52,17 @@ The code snippet has been adapted to suit for the rank header of our website.
 }
 
 #suggestions {
-  position: fixed;
-  list-style: none;
-  left: 15px;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute; /* Positioning the suggestions below the search bar */
+  top: 10%; /* 100% to place it right below the search bar */
+  left: 66rem;
   right: 0;
-  padding-left: 30%;
-  /*box-shadow: 0 2px 5px 0 black;*/
-  width: 50%;
+  z-index: 10;
+  width: 32rem;
+  display: none; /* Hidden by default */
 }
 
 #suggestions li {
