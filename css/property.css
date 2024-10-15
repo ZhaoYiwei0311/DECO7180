@@ -10,6 +10,14 @@
   --property-width: calc((var(--masonry-width) - var(--divider-width) * 3) / 4);
 }
 
+/* Reference */
+/*
+The code snippet below has been sourced from Siyin Ye‘s (one of my team members) repository on GitHub.
+https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/blog.js
+
+The code snippet has been adapted to suit for property masonry rendering.
+*/
+
 /**************************/
 /* CONTAINER */
 /**************************/
@@ -21,7 +29,7 @@
 }
 
 /**************************/
-/* MASONRY */
+/* MASONRY CONTAINER*/
 /**************************/
 
 .container-photo {
@@ -47,7 +55,7 @@
 }
 
 /**************************/
-/* MASONRY */
+/* MASONRY PROPERTY CARD*/
 /**************************/
 
 .property {
@@ -120,6 +128,8 @@
 }
 
 /**************************/
+/* MASONRY PROPERTY CONTENT */
+/**************************/
 .property {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   border-radius: 12px;
@@ -143,7 +153,16 @@
   font-size: 1.8rem;
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  font-weight: 600;
+  gap: 1.2rem;
+}
+
+.property-price {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #2c3b52;
+  font-weight: 600;
+  text-align: center;
 }
 
 .property-link {
@@ -151,14 +170,17 @@
   font-size: 1.6rem;
   margin-top: 1rem;
   align-self: flex-end;
-  margin-right: 1rem;
-  transition: transform 0.3s;
+  font-style: italic;
+  transition: transform 0.4s;
 }
 
 .property-link:hover,
 .property-link:focus,
 .property-link:active {
-  color: #e18b00;
+  color: #2c3b52;
+  transform: scale(1.1);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .property-name {
@@ -169,10 +191,43 @@
   text-align: right;
 }
 
-.property-title {
+.property-line-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.save-button {
+  background-color: #87a9db;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 5px 10px;
+  border: none;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.save-button:hover,
+.save-button:focus {
+  background-color: #43597b;
+  outline-style: none;
+  box-shadow: 0px 0px 3px 2px #43597bab;
+  transform: scale(1.05);
+}
+
+.property-info {
   font-size: 1.6rem;
   color: #2c3b52;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 1rem;
   text-align: right;
 }
+
+/* End code snippet */

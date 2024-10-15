@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/styleQueries.css" />
     <link rel="stylesheet" href="css/map.css" />
-    <title>Map Page</title>
+    <title>Risk Map</title>
 
     <!-- Leaflet CSS -->
     <link
@@ -28,6 +28,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
+    <!-- Map header section -->
     <header class="header">
         <div class="header-container">
           <a href="index.html">
@@ -52,11 +53,9 @@
                   <option value="WILDFIRE">Wild Fire Map</option>
               </select>
             </li>
-            <li><a class="header-nav-link" href="data.html">loadData</a></li>
             <li><a class="header-nav-link" href="rank.html">Rank</a></li>
-            
-            <li><a class="header-nav-link" href="property.html">Recommend</a></li>
-            <li><a class="header-nav-link" href="help.html">Help</a></li>
+            <li><a class="header-nav-link" href="property.html">Properties</a></li>
+           
             <li>
               <a class="profile-container" href="profile.html">
                 <img
@@ -68,12 +67,19 @@
             </li>
           </ul>
         </nav>
-          
+        <button id="mobile-nav-button" class="btn-mobile-nav btn btn--outline">
+          <a class="icon-mobile-nav" name="close-outline">SEE MORE</a>
+          <a class="icon-mobile-nav" name="menu-outline"></a>
+        </button>
 
       </header>
+      <!-- Map main section with leaflet injected map -->
     <section id="map-container">
+     
     </section>
-      <div id="map"></div>
+      <div class="map-leaflet-container"id="map">
+          <li><a class="map-help-btn" href="help.html">👉 See How to Use</a></li>
+      </div>
     </section>
     
 

@@ -6,6 +6,7 @@ https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/eve
 The code snippet appears in its original form cause it is the general dom management for the view class.
 */
 
+// View class for all dynamic rendering views
 export default class View {
   _data;
 

@@ -1,3 +1,6 @@
+// This data object represents the average suburb data.
+// The 'avgWildfire', 'avgFlood' and 'avgCrime' data are processed from datasets provided by the QLD government and are inserted via the backend.
+
 const avgChartData = {
   avgWildfire: [
     { year: 2019, count: 12 },

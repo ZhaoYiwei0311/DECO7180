@@ -1,6 +1,5 @@
 ///////////////////////////////////////////////////////////
-// Smooth scrolling animation
-
+// Smooth scrolling animation for the help page
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
@@ -29,4 +28,16 @@ allLinks.forEach(function (link) {
       }, 500);
     }
   });
+});
+
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector("#mobile-nav-button");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function (e) {
+  e.preventDefault();
+  console.log("clicked");
+  headerEl.classList.toggle("nav-open");
 });

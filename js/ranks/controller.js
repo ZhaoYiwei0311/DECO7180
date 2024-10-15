@@ -3,6 +3,7 @@ import ranksView from "./view/ranksView.js";
 import areaView from "./view/areaView.js";
 import SuburbController from "./controlArea.js";
 
+// Control the suburb results, which is saved for the api call for the future implementation
 const controlSearchResults = async () => {
   try {
     ranksView.render(state.suburbs);
@@ -11,6 +12,7 @@ const controlSearchResults = async () => {
   }
 };
 
+// Control the suburb details
 const controlSuburbs = async () => {
   try {
     let suburbHref = decodeURIComponent(window.location.hash.slice(1));
@@ -21,6 +23,7 @@ const controlSuburbs = async () => {
   }
 };
 
+// Control the sorted results
 const controlSortedResults = async () => {
   try {
     // Load search results
@@ -42,6 +45,7 @@ const controlSortedResults = async () => {
   }
 };
 
+// Control the search
 const controlSearch = function () {
   const searchForm = document.querySelector(".search");
 
@@ -73,8 +77,9 @@ const controlSearch = function () {
     }
   });
 };
-//////////////////////////
 
+//////////////////////////
+// Initialize the controller
 const init = function () {
   controlSearchResults();
   controlSortedResults();

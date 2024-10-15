@@ -1,5 +1,13 @@
 import fakeDataList from "../../data/fakePropertyData.js";
 
+/* Reference */
+/*
+The code snippet below has been sourced from Siyin Ye‘s (one of my team members) repository on GitHub.
+https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/js/blog.js
+
+The code snippet has been adapted to suit for property masonry rendering.
+*/
+
 // Initiate Masonry
 const masonry = document.querySelector(".container-photo");
 const divider1 = masonry.querySelector(".divider1");
@@ -40,17 +48,21 @@ function createProperty(i) {
   propertyElement.style.visibility = "hidden";
 
   const propertyMarkup = `
-      <img src="${fakeData.imgSrc}" class="property-img" alt=${
-    fakeData.imageDescription
-  } />
+      <img src="${fakeData.imgSrc}" class="property-img" alt=${fakeData.imageDescription} />
       <div class="property-content">
-        
-          <p class="property-attribute">
-            <span>${fakeData.price}</span>
+          <p class="property-attribute">💰 Property Price:
+            <span class="property-price">${fakeData.price}</span>
           </p>
-          <p class="property-title">${fakeData.name}</p>
-          <p class="property-name">${fakeData.propertyInfo}</p>
-          <a class="property-link" href="rank.html#${"Milton"}">👉See Info👈</a>
+          <p class="property-name">🏡 ${fakeData.name}</p>
+           <a class="property-link" href="rank.html#${fakeData.name}">👉 See Suburb Info</a>
+          <div class="property-line-container">
+              <div class="buttons-container">
+                <button class="save-button">SAVE</button>
+                <button class="save-button">🤍</button>
+              </div>
+              <p class="property-info">${fakeData.propertyInfo}</p>
+          </div>
+         
       </div>
   `;
 
@@ -114,3 +126,5 @@ function resetMasonryHeight() {
 window.addEventListener("resize", resetMasonryHeight);
 //////////
 loadProperty();
+
+/* End code snippet */

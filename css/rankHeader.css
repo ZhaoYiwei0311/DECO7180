@@ -1,14 +1,10 @@
-/**************************/
-/* BASE COMPONENTS */
-/**************************/
+/* Reference */
+/*
+The code snippet below has been sourced from Siyin Ye‘s (one of my team members) repository on GitHub.
+https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/css/general.css
 
-/* @media only screen and (max-width: 78.15em) {
-  .container {
-    max-width: 100%;
-    margin: 0;
-    border-radius: 0;
-  }
-} */
+The code snippet has been adapted to suit for the rank header of our website.
+*/
 
 /**************************/
 /* HEADER COMPONENTS */
@@ -132,6 +128,10 @@
   border: 0.5rem solid #6f94cd;
 }
 
+/**************************/
+/* NAV ITEM COMPONENTS */
+/**************************/
+
 .nav {
   align-self: stretch;
   margin-right: 2.5rem;
@@ -146,10 +146,6 @@
   margin-left: 1.6rem;
   gap: 1.6rem;
 }
-
-/* .nav-item {
-  position: relative;
-} */
 
 .nav-btn {
   text-decoration: none;
@@ -181,3 +177,4 @@
     display: none;
   }
 }
+/* End code snippet */

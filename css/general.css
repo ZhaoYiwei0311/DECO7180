@@ -83,12 +83,11 @@ Medium: 11px
 
 /* Reference */
 /*
-The code snippet (1. How to comment) below has been sourced from
-http://answers.unity3d.com/answers/221574/view.html
-The code snippet appears in its original form
+The code snippet below has been sourced from Siyin Ye‘s (one of my team members) repository on GitHub.
+https://github.com/SereneYe/DECO7140/blob/main/src/website_implementation/css/general.css
+
+The code snippet has been adapted to suit for the whole display of our website.
 */
-/* CODE HERE
-/ / End code snippet (1. How to comment) */
 
 * {
   padding: 0;
@@ -163,10 +162,6 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* .grid--5-cols {
-    grid-template-columns: repeat(5, 1fr);
-  } */
-
 .grid--center-v {
   align-items: center;
 }
@@ -220,20 +215,14 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
-
-  /* Only necessary for .btn */
   border: none;
   cursor: pointer;
   font-family: inherit;
-
-  /* Put transition on original "state" */
-  /* transition: background-color 0.3s; */
   transition: all 0.3s;
 }
 
@@ -265,10 +254,6 @@ body {
   color: #fff;
   background-color: #414f67;
   transform: scale(1.05);
-
-  /* border: 3px solid #fff; */
-
-  /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
 }
 
@@ -291,7 +276,6 @@ body {
   color: #19325f;
   font-weight: bold;
   text-decoration: none;
-  /* border-bottom: 1px solid currentColor; */
   padding-bottom: 2px;
   transition: all 0.3s;
 }
@@ -299,7 +283,6 @@ body {
 .link:hover,
 .link:active {
   color: #030f03;
-  /* border-bottom: 1px solid transparent; */
   transform: scale(1.1);
 }
 
@@ -326,8 +309,6 @@ body {
 
 *:focus {
   outline: none;
-  /* outline: 4px dotted #354e6b; */
-  /* outline-offset: 8px; */
   box-shadow: 0 0 0 0.8rem #354e6b8e;
 }
 
@@ -346,7 +327,7 @@ body {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .heading--2 {
@@ -356,3 +337,9 @@ strong {
   text-transform: uppercase;
   text-align: center;
 }
+
+.btn-mobile-nav {
+  display: none;
+}
+
+/* End code snippet */

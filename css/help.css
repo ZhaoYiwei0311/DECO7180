@@ -1,14 +1,5 @@
-/* Reference */
-/*
-The code snippet (1. How to comment) below has been sourced from
-http://answers.unity3d.com/answers/221574/view.html
-The code snippet appears in its original form
-*/
-/* CODE HERE
-/ / End code snippet (1. How to comment) */
-
 /**************************/
-/* part SECTION */
+/* PART SECTION */
 /**************************/
 
 .sec-part {
@@ -62,7 +53,14 @@ The code snippet appears in its original form
   height: 100%;
 }
 
-/* add */
+.intro-btn {
+  margin-right: 2rem;
+}
+
+/**************************/
+/* KEY SECTION */
+/**************************/
+
 .key-items {
   list-style: none;
   padding: 0;
@@ -94,7 +92,7 @@ The code snippet appears in its original form
 
 .intro-sec {
   padding: 9.6rem 0;
-  background-color: #ffffff;
+  background-color: #f8fafe;
 }
 
 .introNum {
@@ -105,6 +103,7 @@ The code snippet appears in its original form
 }
 
 .introDes {
+  color: #212c3d;
   font-size: 1.8rem;
   line-height: 1.8;
 }
@@ -127,11 +126,16 @@ The code snippet appears in its original form
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
 }
 
+.intro-text-highlight {
+  color: #e99827;
+}
+
 /**************************/
-/* cardS SECTION */
+/* CARD SECTION */
 /**************************/
 
 .card-sec {
+  background-color: #dee9fd;
   padding: 9.6rem 0;
 }
 
@@ -140,6 +144,7 @@ The code snippet appears in its original form
   transition: all 0.4s;
   border-radius: 11px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .card:hover {
@@ -197,6 +202,7 @@ The code snippet appears in its original form
 /**************************/
 
 .footer {
+  background-color: #edf3fb;
   padding: 12.8rem 0;
   border-top: 1px solid #eee;
 }
@@ -233,7 +239,7 @@ The code snippet appears in its original form
 
 .footer-link:hover,
 .footer-link:active {
-  color: #555;
+  color: #333333;
 }
 
 .logolCol {
@@ -255,7 +261,7 @@ The code snippet appears in its original form
 .copyright {
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #767676;
+  color: #292929;
   margin-top: auto;
 }
 
@@ -268,6 +274,10 @@ The code snippet appears in its original form
 .address {
   margin-bottom: 2.4rem;
 }
+
+/**************************/
+/* MEDIA QUERY */
+/**************************/
 
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
@@ -407,21 +417,21 @@ The code snippet appears in its original form
     z-index: 9999;
   }
 
-  .header-nav {
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     transform: translateX(100%);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(10px);
 
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in;
-    background-color: rgba(255, 255, 255, 0.9);
 
     /* 1) Hide it visually */
     opacity: 0;
@@ -433,7 +443,7 @@ The code snippet appears in its original form
     visibility: hidden;
   }
 
-  .nav-open .header-nav {
+  .nav-open .main-nav {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
@@ -449,13 +459,13 @@ The code snippet appears in its original form
     display: none;
   }
 
-  .header-nav-list {
+  .main-nav-list {
     flex-direction: column;
     gap: 4.8rem;
   }
 
-  .header-nav-link:link,
-  .header-nav-link:visited {
+  .main-nav-link:link,
+  .main-nav-link:visited {
     font-size: 3rem;
   }
 }
@@ -473,5 +483,62 @@ The code snippet appears in its original form
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 5;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 }
