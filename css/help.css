@@ -88,7 +88,7 @@
 
 .intro-sec {
   padding: 9.6rem 0;
-  background-color: #ffffff;
+  background-color: #f8fafe;
 }
 
 .introNum {
@@ -126,6 +126,7 @@
 /**************************/
 
 .card-sec {
+  background-color: #dee9fd;
   padding: 9.6rem 0;
 }
 
@@ -134,6 +135,7 @@
   transition: all 0.4s;
   border-radius: 11px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .card:hover {
@@ -191,6 +193,7 @@
 /**************************/
 
 .footer {
+  background-color: #edf3fb;
   padding: 12.8rem 0;
   border-top: 1px solid #eee;
 }
@@ -227,7 +230,7 @@
 
 .footer-link:hover,
 .footer-link:active {
-  color: #555;
+  color: #333333;
 }
 
 .logolCol {
@@ -249,7 +252,7 @@
 .copyright {
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #767676;
+  color: #292929;
   margin-top: auto;
 }
 
@@ -341,7 +344,6 @@
     display: none;
   }
 }
-
 
 /**************************/
 /* BELOW 944px (Tablets) */
