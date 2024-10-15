@@ -338,4 +338,8 @@ strong {
   text-align: center;
 }
 
+.btn-mobile-nav {
+  display: none;
+}
+
 /* End code snippet */
