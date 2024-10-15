@@ -1,139 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <head>
-    <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/rankHeader.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/chart.css" />
-   
+    <link rel="stylesheet" href="css/rankHeader.css"/>
+    <link rel="stylesheet" href="css/general.css"/>
+    <link rel="stylesheet" href="css/chart.css"/>
+
     <script
-      defer
-      type="module"
-      src="js/chart/chart.js"
+            defer
+            type="module"
+            src="js/chart/chart.js"
     ></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <title>Suburb Analyze</title>
+    <title>Chart Page</title>
   </head>
 
 
-  <body>
-     <div class="container-chart">
-      <!-- Chart Header -->
-      <header class="header">
-            <div class="header-container">
-          <a href="index.html">
-            <img
-              class="logo"
-              alt="application logo"
-              src="media/logo/web logo.png"
-            />
-          </a>
-          <div class="header-text">
-            <h1>BriSentinel</h1>
-            <p>
-              Your Trusted Guide to Safe and Smart Property Choices in Brisbane
-            </p>
-          </div>
-        </div>
-          
-          <form class="search">
-            <input
+<body>
+
+<div class="container-chart">
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html">
+        <img
+                class="logo"
+                alt="application logo"
+                src="media/logo/web logo.png"
+        />
+      </a>
+      <div class="header-text">
+        <h1>BriSentinel</h1>
+        <p>
+          Your Trusted Guide to Safe and Smart Property Choices in Brisbane
+        </p>
+      </div>
+    </div>
+
+    <form class="search">
+      <input
               type="text"
               class="search-field padded-input"
               placeholder="Search your interested area 🔍"
-            />
-            <button class="search-btn">
-              <span>Search</span>
-            </button>
-          </form>
+      />
+      <button class="search-btn">
+        <span>Search</span>
+      </button>
+      <div id="suggestions"></div>
 
-          <nav class="nav">
-            <ul class="nav-list">
-              <li class="nav-item">
-                <a class="nav-btn" href="rank.html">Back</a>
-              </li>
-            </ul>
-          </nav>
-    </header>
+    </form>
 
-    <!-- Chart Main Page -->
-    <section class="chart-sec" id="intro">
-      <div class="heading-container">
-        <span class="subheading">Milton</span>
-        <h2 class="heading-sec">
-          Total Risk Score: 85/100
-        </h2>
+
+
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-btn" href="rank.html">Back</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="chart-sec" id="intro">
+    <div class="heading-container">
+      <span class="subheading">Milton</span>
+      <h2 class="heading-sec">
+        Total Risk Score: 85/100
+      </h2>
+    </div>
+
+    <div class="chart-container grid grid--2-cols grid--center-v">
+      <!-- donut chart row -->
+      <div class="chartImg-box">
+        <div id="piechart" style="width: 740px; height: 400px"></div>
       </div>
 
-      <div class="chart-container grid grid--2-cols grid--center-v">
-        <!-- donut chart row -->
-        <div class="chartImg-box">
-          <div id="piechart" style="width: 740px; height: 400px"></div>
-        </div>
-
-        <div class="chart-text-box">
-          <h3 class="chart-heading">Crime Cases Last 5 Years 👮</h3>
-          <p class="chartDes">
-            This set of data categorizes crime incidents into different types. 
-          </p>
-          <p class="chartDes">
-            High crime rates, especially severe crimes like <strong class="chart-strong-text">Unlawful Entry'</strong>' and <strong class="chart-strong-text">'Unlawful Use of Motor Vehicle'</strong>, could make the area less desirable to live, thereby impacting house prices. A high crime rate may deter potential buyers, causing a decrease in demand and hence, a decrease in house prices.
-          </p>
-          <p class="chartDes">
-            A high crime rate may deter potential buyers, causing a decrease in demand and hence, a decrease in house prices.
-          </p>
-        </div>
-        <!-- Curve Chart Row -->
-         <div class="chartImg-box">
-          <div id="curve_chart" style="width: 700px; height: 400px"></div>
-        </div>
-        <div class="chart-text-box">
-          <h3 class="chart-heading">Wildfire Trend Last 5 Years 🔥</h3>
-          <p class="chartDes">
-            This data shows the number of wildfire incidents recorded in each year from<strong class="chart-strong-text"> 2019 to 2023</strong> . 
-          </p>
-           <p class="chartDes">
-            The high number of wildfires, particularly in 2020 and 2022, has a potential to negatively impact the house prices in the area. 
-          </p>
-           <p class="chartDes">
-            These incidents could lead to <strong class="chart-strong-text">increased insurance costs</strong> and risk for homeowners, which may deter potential buyers, thus driving house prices down.
-          </p>
-        </div>
-        
-        <!-- Bar Chart Row -->
-        <div class="chartImg-box bar-chart-box">
-          <div id="dual_x_div" style="width: 700px; height: 400px" ></div>
-        </div>
-        <div class="chart-text-box">
-          <h3 class="chart-heading">🌊 Flood Cases Last 5 Years</h3>
-          <p class="chartDes">
-            The flood data represents the number of incidents classified by severity as 'severe', 'moderate', and 'minor'. 
-          </p>
-          <p class="chartDes">
-           A high occurrence of any flood type is another influencing factor that can affect house prices. Severe flooding events especially could <strong class="chart-strong-text">damage properties and infrastructure</strong>, and <strong class="chart-strong-text">increase the risk perception</strong> of potential buyers. 
-          </p>
-          <p class="chartDes">
-             Hence, more flood occurrences, especially of severe magnitude, may lead to a decrease in house prices.
-          </p>
-        </div>
-
-      
+      <div class="chart-text-box">
+        <h3 class="chart-heading">Crime Cases Last 5 Years 👮</h3>
+        <p class="chartDes">
+          This set of data categorizes crime incidents into different types.
+        </p>
+        <p class="chartDes">
+          High crime rates, especially severe crimes like <strong class="chart-strong-text">Unlawful
+          Entry'</strong>' and <strong class="chart-strong-text">'Unlawful Use of Motor Vehicle'</strong>,
+          could make the area less desirable to live, thereby impacting house prices. A high crime rate may
+          deter potential buyers, causing a decrease in demand and hence, a decrease in house prices.
+        </p>
+        <p class="chartDes">
+          A high crime rate may deter potential buyers, causing a decrease in demand and hence, a decrease in
+          house prices.
+        </p>
       </div>
-    </section>
-   
-  </body>
+      <!-- Curve Chart Row -->
+      <div class="chartImg-box">
+        <div id="curve_chart" style="width: 700px; height: 400px"></div>
+      </div>
+      <div class="chart-text-box">
+        <h3 class="chart-heading">Wildfire Trend Last 5 Years 🔥</h3>
+        <p class="chartDes">
+          This data shows the number of wildfire incidents recorded in each year from<strong
+                class="chart-strong-text"> 2019 to 2023</strong> .
+        </p>
+        <p class="chartDes">
+          The high number of wildfires, particularly in 2020 and 2022, has a potential to negatively impact
+          the house prices in the area.
+        </p>
+        <p class="chartDes">
+          These incidents could lead to <strong class="chart-strong-text">increased insurance costs</strong>
+          and risk for homeowners, which may deter potential buyers, thus driving house prices down.
+        </p>
+      </div>
+
+      <!-- Bar Chart Row -->
+      <div class="chartImg-box bar-chart-box">
+        <div id="dual_x_div" style="width: 700px; height: 400px"></div>
+      </div>
+      <div class="chart-text-box">
+        <h3 class="chart-heading">🌊 Flood Cases Last 5 Years</h3>
+        <p class="chartDes">
+          The flood data represents the number of incidents classified by severity as 'severe', 'moderate',
+          and 'minor'.
+        </p>
+        <p class="chartDes">
+          A high occurrence of any flood type is another influencing factor that can affect house prices.
+          Severe flooding events especially could <strong class="chart-strong-text">damage properties and
+          infrastructure</strong>, and <strong class="chart-strong-text">increase the risk perception</strong>
+          of potential buyers.
+        </p>
+        <p class="chartDes">
+          Hence, more flood occurrences, especially of severe magnitude, may lead to a decrease in house
+          prices.
+        </p>
+      </div>
+
+
+    </div>
+  </section>
+
+</body>
 </html>
 </html>
 
