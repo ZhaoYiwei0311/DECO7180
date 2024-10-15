@@ -53,6 +53,10 @@
   height: 100%;
 }
 
+.intro-btn {
+  margin-right: 2rem;
+}
+
 /**************************/
 /* KEY SECTION */
 /**************************/
@@ -99,6 +103,7 @@
 }
 
 .introDes {
+  color: #212c3d;
   font-size: 1.8rem;
   line-height: 1.8;
 }
@@ -119,6 +124,10 @@
 .introImg:hover {
   transform: scale(1.05);
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.1);
+}
+
+.intro-text-highlight {
+  color: #e99827;
 }
 
 /**************************/
