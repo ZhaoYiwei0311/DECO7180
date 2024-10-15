@@ -58,7 +58,6 @@ function createProperty(i) {
           <div class="property-line-container">
               <div class="buttons-container">
                 <button class="save-button">SAVE</button>
-                <button class="save-button">🤍</button>
               </div>
               <p class="property-info">${fakeData.propertyInfo}</p>
           </div>
@@ -77,7 +76,7 @@ function createProperty(i) {
   }
   colHeights[colIndex] += propertyHeight;
   setMasonryHeight();
-  
+
   masonry.insertBefore(propertyElement, divider1);
   propertyCount++;
 
