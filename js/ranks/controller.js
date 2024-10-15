@@ -1,4 +1,4 @@
-import { state } from "./model.js";
+import { state, LoadSuburb} from "./model.js";
 import ranksView from "./view/ranksView.js";
 import areaView from "./view/areaView.js";
 import SuburbController from "./controlArea.js";
@@ -45,10 +45,21 @@ const controlSortedResults = async () => {
 const controlSearch = function () {
   const searchForm = document.querySelector(".search");
 
+  const searchInput = document.querySelector(".search-field");
+
+  searchInput.addEventListener('input', async function(event){
+    // event.preventDefault();
+    let inputValue = searchInput.value.trim();
+    // alert(inputValue)
+    await LoadSuburb(inputValue);
+    console.log(state.suburbs);
+    ranksView.render(state.suburbs);
+
+  })
+
   searchForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const searchInput = document.querySelector(".search-field");
     const inputValue = searchInput.value.trim();
 
     for (let suburbKey in state.suburbs) {

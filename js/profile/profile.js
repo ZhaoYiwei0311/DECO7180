@@ -44,6 +44,6 @@ leftBtn.addEventListener('click', () => {
 });
 
 rightBtn.addEventListener('click', () => {
-    currentIndex = Math.min(currentIndex + 1, 7); 
+    currentIndex = currentIndex + 1;
     carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 });

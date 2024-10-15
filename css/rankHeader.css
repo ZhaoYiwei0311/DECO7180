@@ -55,6 +55,36 @@
   justify-content: space-between;
 }
 
+#suggestions {
+  position: fixed;
+  list-style: none;
+  left: 15px;
+  right: 0;
+  padding-left: 30%;
+  /*box-shadow: 0 2px 5px 0 black;*/
+  width: 50%;
+}
+
+#suggestions li {
+  background-color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: black;
+
+}
+
+#suggestions li:hover {
+  background-color: #f0f0f0;
+
+}
+
+
+
+.no-suggestions {
+  padding: 8px;
+  color: #999;
+}
+
 .search-field {
   border: 3px solid #6f94cd;
   font-family: inherit;

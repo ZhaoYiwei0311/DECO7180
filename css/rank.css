@@ -130,6 +130,7 @@ body {
 .rank-link:hover {
   background-color: #adc8f1;
   transform: translateY(-2px);
+
 }
 
 .rank-link--active {

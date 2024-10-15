@@ -242,21 +242,124 @@ const fakeDataList = [
     holdType: "Investor 56% vs Owner 44%",
   },
   {
-    suburb: "Toowong",
-    postcode: 4066,
-    imageUrl:
-      "https://asquick.com.au/wp-content/uploads/2024/01/toowong-it-support-computer-help-brisbane-qld-australia-1024x576.jpg",
-    imageDescription: "Toowong photo",
-    suburbDescription: `Toowong is a bustling suburb located in Brisbane, Queensland, Australia. 
-    Known for its shopping and dining options, Toowong offers a mix of residential and commercial areas. 
-    The suburb is home to the Toowong Village shopping centre and a variety of cafes, restaurants, and shops.`,
-    score: 88,
-    housePrice: 1433016,
-    annualChange: 9.2,
-    rentalPrice: 700,
-    rentalYield: 4.69,
-    rentalChange: -3.4,
-    holdType: "Investor 53% vs Owner 47%",
+    "suburb": "Toowong",
+    "postcode": 4066,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Warrawee.jpg",
+    "imageDescription": "Toowong photo",
+    "suburbDescription": "Toowong ( t\u0259-WONG) is a riverside suburb in the City of Brisbane, Queensland, Australia. In the 2021 census, Toowong had a population of 12,556 people with a median weekly household income of $1,927.",
+    "housePrice": "",
+    "annualChange": 0,
+    "rentalPrice": "",
+    "rentalYield": 0,
+    "rentalChange": 0,
+    "holdType": "",
+    "score": 0,
+    "wildfire": [
+      {
+        "year": "2020",
+        "count": 9
+      },
+      {
+        "year": "2024",
+        "count": 0
+      },
+      {
+        "year": "2021",
+        "count": 3
+      },
+      {
+        "year": "2022",
+        "count": 9
+      },
+      {
+        "year": "2023",
+        "count": 16
+      }
+    ],
+    "flood": [
+      {
+        "type": "severe",
+        "count": 29
+      },
+      {
+        "type": "moderate",
+        "count": 16
+      },
+      {
+        "type": "minor",
+        "count": 15
+      }
+    ],
+    "crime": [
+      {
+        "type": "Fraud",
+        "count": 138
+      },
+      {
+        "type": "Handling Stolen Goods",
+        "count": 25
+      },
+      {
+        "type": "Good Order Offences",
+        "count": 89
+      },
+      {
+        "type": "Drug Offences",
+        "count": 175
+      },
+      {
+        "type": "Weapons Act Offences",
+        "count": 25
+      },
+      {
+        "type": "Traffic and Related Offences",
+        "count": 117
+      },
+      {
+        "type": "Other Theft (excl. Unlawful Entry)",
+        "count": 1130
+      },
+      {
+        "type": "Other Property Damage",
+        "count": 154
+      },
+      {
+        "type": "Unlawful Entry",
+        "count": 292
+      },
+      {
+        "type": "Assault",
+        "count": 92
+      },
+      {
+        "type": "Other Offences Against the Person",
+        "count": 33
+      },
+      {
+        "type": "Trespassing and Vagrancy",
+        "count": 23
+      },
+      {
+        "type": "Liquor (excl. Drunkenness)",
+        "count": 6
+      },
+      {
+        "type": "Robbery",
+        "count": 16
+      },
+      {
+        "type": "Unlawful Use of Motor Vehicle",
+        "count": 79
+      },
+      {
+        "type": "Miscellaneous Offences",
+        "count": 9
+      },
+      {
+        "type": "Arson",
+        "count": 1
+      }
+    ]
   },
   {
     suburb: "Gordon Park",

@@ -65,6 +65,7 @@ function createProperty(i) {
   }
   colHeights[colIndex] += propertyHeight;
   setMasonryHeight();
+  
   masonry.insertBefore(propertyElement, divider1);
   propertyCount++;
 
