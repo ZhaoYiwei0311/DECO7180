@@ -42,6 +42,10 @@ body {
 /* SORT BUTTON COMPONENTS */
 /**************************/
 .sort-button {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 1000;
   background-color: #f3fafa;
   color: #19325f;
   width: 18rem;
@@ -58,4 +62,31 @@ body {
   color: #17406c;
   border: none;
   background-color: #bdcfe1;
+}
+
+.map-leaflet-container {
+  position: relative;
+}
+
+.map-help-btn {
+  position: absolute;
+  top: 2rem;
+  left: 8rem;
+  z-index: 1000;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  color: #0a0d12;
+  background-color: rgba(255, 255, 255, 0.698);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.map-help-btn:hover,
+.map-help-btn:active,
+.map-help-btn:focus {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #da5b17;
 }
