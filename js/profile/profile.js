@@ -1,16 +1,29 @@
 import fakeDataList from "../../data/fakePropertyData.js";
 
-// carousel features added to the profile page
+let savedPropertiesIndexList = null;
+let pageSize = 12;
+
+const savedProperties = JSON.parse(localStorage.getItem('savedProperties'));
+if (savedProperties) {
+    console.log(savedProperties.savedProperties)
+    savedPropertiesIndexList = JSON.parse(savedProperties.savedProperties) ;
+    pageSize = savedProperties.pageSize;
+}
+
 function loadSavedProperties() {
-  const savedProperties = fakeDataList.slice(0, 8); // Select 8 properties to display in carousel
-  const carousel = document.getElementById("carousel"); // Get carousel container
+    if (savedPropertiesIndexList != null && savedPropertiesIndexList.length !== 0) {
+        let savedList = []
+        for (let i = 0; i < savedPropertiesIndexList.length; i++) {
+            savedList.push(fakeDataList[savedPropertiesIndexList[i] % pageSize]);
+        }
+        const carousel = document.getElementById("carousel"); // Get carousel container
 
-  savedProperties.forEach((property) => {
-    const propertyElement = document.createElement("div");
-    propertyElement.classList.add("property"); // Add property class for styling
+        savedList.forEach((property) => {
+            const propertyElement = document.createElement("div");
+            propertyElement.classList.add("property"); // Add property class for styling
 
-    // Reuse the property markup from property.js
-    const propertyMarkup = `
+            // Reuse the property markup from property.js
+            const propertyMarkup = `
   <div class="property-wrapper">
       <img src="${property.imgSrc}" class="property-img" alt="${property.imageDescription}" />
       <div class="property-content">
@@ -23,11 +36,36 @@ function loadSavedProperties() {
       </div>
   </div>
 `;
+            propertyElement.innerHTML = propertyMarkup;
+            carousel.appendChild(propertyElement);
+        });
+    } else {
+        const carousel = document.getElementById("carousel");
+        const propertyElement = document.createElement("div");
+        propertyElement.classList.add("property"); // Add property class for styling
 
-    propertyElement.innerHTML = propertyMarkup;
-    carousel.appendChild(propertyElement);
-  });
+        // Reuse the property markup from property.js
+        const propertyMarkup = `
+  <div class="property-wrapper">
+
+      <div class="property-content">
+          <p class="property-attribute">
+              <span>The wish list is empty. <br><br>Why not add some nice properties?</span>
+          </p>
+
+      </div>
+  </div>
+`;
+        propertyElement.innerHTML = propertyMarkup;
+        carousel.append(propertyElement);
+
+        const leftBtn = document.querySelector(".left-btn");
+        const rightBtn = document.querySelector(".right-btn");
+        leftBtn.style.display = "none";
+        rightBtn.style.display = "none";
+    }
 }
+
 
 // Initialize the saved properties carousel when the page loads
 window.addEventListener("load", loadSavedProperties);
@@ -39,11 +77,13 @@ const rightBtn = document.querySelector(".right-btn");
 const carousel = document.getElementById("carousel");
 
 leftBtn.addEventListener("click", () => {
-  currentIndex = Math.max(currentIndex - 1, 0);
-  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    currentIndex = Math.max(currentIndex - 1, 0);
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
 
 rightBtn.addEventListener("click", () => {
-  currentIndex = Math.min(currentIndex + 1, 7);
-  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    currentIndex = Math.min(currentIndex + 1, savedPropertiesIndexList.length - 1);
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
+
+
