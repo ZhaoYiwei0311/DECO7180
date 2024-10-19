@@ -216,7 +216,8 @@ a {
 
 .carousel-container {
   position: relative;
-  width: 100%;
+  /*width: 100%;*/
+  width: 650px;
   max-width: 650px;
   margin: 2rem auto;
   overflow: hidden;
