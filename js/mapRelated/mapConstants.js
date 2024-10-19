@@ -1,26 +1,10 @@
-/* Crime Color*/
-let CRIME_COLORS = ["#BC4749", "#C96C6D", "#D79192", "#EBC8C8", "#F8EDED"];
 
-/* Wildfire Color */
-let WILDFIRE_COLORS = ["#C45215", "#de6b2e", "#E99D74", "#F0BDA2", "#F8EDED"];
-
-/* Flood Color */
-let FLOOD_COLORS = ["#3E6771", "#538996", "#77B3C3", "#B4D5DE", "#F8EDED"];
-
-/* Overall Color */
-let OVERALL_COLORS = ["#F8EDED", "#A6DDAF", "#7ACD86", "#43B153", "#389446"];
-
-const MAP_COLORS = {
-  OVERALL_COLORS: OVERALL_COLORS,
-  FLOOD_COLORS: FLOOD_COLORS,
-  CRIME_COLORS: CRIME_COLORS,
-  WILDFIRE_COLORS: WILDFIRE_COLORS,
-};
-
-let FLOOD_GRADES = [30, 25, 20, 15];
+const MAP_COLORS = ["#e70203", "#e96e6e","#dbd3d3", "#A6DDAF", "#389446"]
+// const MAP_COLORS = ["#e70203", "#e70203","#389446", "#389446", "#389446"]
+let FLOOD_GRADES = [160, 120, 100, 60];
 let CRIME_GRADES = [1000, 800, 600, 400];
-let WILDFIRE_GRADES = [100, 80, 60, 40];
-let OVERALL_GRADES = [100, 80, 60, 40];
+let WILDFIRE_GRADES = [45, 30, 20, 10];
+let OVERALL_GRADES = [85, 70, 60, 50];
 
 const GRADES = {
   OVERALL_GRADES: OVERALL_GRADES,
@@ -29,4 +13,6 @@ const GRADES = {
   WILDFIRE_GRADES: WILDFIRE_GRADES,
 };
 
-export { MAP_COLORS, GRADES };
+const HINTS = ['Very Dangerous', 'Dangerous', 'Medium', 'Safe', 'Very Safe']
+
+export { MAP_COLORS, GRADES, HINTS };

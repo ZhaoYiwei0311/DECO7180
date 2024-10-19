@@ -23,8 +23,8 @@ export class PreviewView extends View {
               </figure>
               <div class="rank-data">
                 <h4 class="rank-title">${this._data.suburb}</h4>
-                 <p class="rank-score">📫 ${this._data.postcode} ;   💰 ${
-      this._data.housePrice
+                 <p class="rank-score">📫 ${this._data.postcode} ;   💰$${
+      this._data.housePriceFormatted
     }  ; score 📊: ${this._data.score}</p>
               </div>
             </a>

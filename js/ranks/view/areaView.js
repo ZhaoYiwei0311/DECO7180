@@ -12,6 +12,7 @@ The code snippet has been modified to suit the needs of the project.
 class AreaView extends View {
   _parentElement = document.querySelector(".suburb");
 
+
   addHandlerRender(handler) {
     ["hashchange", "load"].forEach((ev) => {
       window.addEventListener(ev, handler);
@@ -36,7 +37,7 @@ class AreaView extends View {
 
           <div class="suburb-info-row">
             <h2 class="heading--2">💰 Median House Value : </h2>
-            <span class="suburb-info-data">$ ${this._data.housePrice} </span>
+            <span class="suburb-info-data">$ ${this._data.housePriceFormatted} </span>
             <h2 class="heading--2">  [📈 Annual Growth: </h2>
             <span class="suburb-info-data">${this._data.annualChange}%</span>
             <h2 class="heading--2">]</h2>
@@ -44,7 +45,7 @@ class AreaView extends View {
 
           <div class="suburb-info-row">
             <h2 class="heading--2">💰 Median Rental Price : </h2>
-            <span class="suburb-info-data">$ ${this._data.rentalPrice} </span>
+            <span class="suburb-info-data">$ ${this._data.rentalPriceFormatted} </span>
             <h2 class="heading--2"> [📈 Past 12 month growth: </h2>
             <span class="suburb-info-data">${this._data.rentalChange}%</span>
             <h2 class="heading--2">]</h2>

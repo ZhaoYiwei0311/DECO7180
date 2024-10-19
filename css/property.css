@@ -216,6 +216,7 @@ The code snippet has been adapted to suit for property masonry rendering.
 
 .save-button:hover,
 .save-button:focus {
+  cursor: pointer;
   background-color: #43597b;
   outline-style: none;
   box-shadow: 0px 0px 3px 2px #43597bab;

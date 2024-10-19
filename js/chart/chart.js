@@ -34,7 +34,12 @@ function drawDonutChart() {
   const suburb = Suburb.suburb;
 
   const dataArr = [["Crime Type", "Count"]];
-  crime.forEach((item) => dataArr.push([item.type, item.count]));
+  for (let i = 0; i < crime.length; i++) {
+    if (crime[i].type != 'overall') {
+      dataArr.push([crime[i].type, crime[i].count])
+    }
+  }
+  // crime.forEach((item) => dataArr.push([item.type, item.count]));
 
   const data = google.visualization.arrayToDataTable(dataArr);
 
@@ -80,8 +85,14 @@ function drawFireLineChart() {
   ];
 
   bushfireTrend.forEach((item, index) => {
-    dataArr.push([item.year.toString(), item.count, aveFireTrend[index].count]);
+    if (item.type != 'overall'){
+      console.log(item, index)
+      dataArr.push([item.year, item.count, aveFireTrend[index].count]);
+    }
+
   });
+
+  // dataArr.sort((a, b) => a.item.year - b.item.year);
 
   const data = google.visualization.arrayToDataTable(dataArr);
 
@@ -117,7 +128,10 @@ function drawFloodBarChart() {
   const dataArr = [["Flood Risk Type", suburb, "Average"]];
 
   suburbFloodCount.forEach((item, index) => {
-    dataArr.push([item.type, item.count, floodAverage[index].count]);
+    if (item.type != 'overall') {
+      dataArr.push([item.type, item.count, floodAverage[index].count]);
+
+    }
   });
 
   var data = google.visualization.arrayToDataTable(dataArr);
