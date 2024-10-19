@@ -197,6 +197,8 @@ The code snippet has been adapted to suit for property masonry rendering.
   align-items: center;
 }
 
+/* End code snippet */
+
 .buttons-container {
   display: flex;
 }
@@ -210,7 +212,7 @@ The code snippet has been adapted to suit for property masonry rendering.
   padding: 5px 10px;
   border: none;
   margin-right: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: 0.4s;
   outline: none;
 }
 
@@ -224,7 +226,7 @@ The code snippet has been adapted to suit for property masonry rendering.
 }
 
 .remove-button {
-  background-color: #c3002e;
+  background-color: #e97500;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
@@ -239,9 +241,9 @@ The code snippet has been adapted to suit for property masonry rendering.
 .remove-button:hover,
 .remove-button:focus {
   cursor: pointer;
-  background-color: #d8022b;
+  background-color: #dd7e1e;
   outline-style: none;
-  box-shadow: 0px 0px 3px 2px #e62450;
+  box-shadow: 0px 0px 3px 2px #dd7e1e;
   transform: scale(1.05);
 }
 
@@ -252,5 +254,3 @@ The code snippet has been adapted to suit for property masonry rendering.
   margin-top: 1rem;
   text-align: right;
 }
-
-/* End code snippet */
