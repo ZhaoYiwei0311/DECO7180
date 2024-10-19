@@ -1,4 +1,4 @@
-import { state, LoadSuburb} from "./model.js";
+import { state, LoadSuburb } from "./model.js";
 import ranksView from "./view/ranksView.js";
 import areaView from "./view/areaView.js";
 import SuburbController from "./controlArea.js";
@@ -51,15 +51,14 @@ const controlSearch = function () {
 
   const searchInput = document.querySelector(".search-field");
 
-  searchInput.addEventListener('input', async function(event){
+  searchInput.addEventListener("input", async function (event) {
     // event.preventDefault();
     let inputValue = searchInput.value.trim();
     // alert(inputValue)
     await LoadSuburb(inputValue);
     console.log(state.suburbs);
     ranksView.render(state.suburbs);
-
-  })
+  });
 
   searchForm.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -78,12 +77,57 @@ const controlSearch = function () {
   });
 };
 
+// Control Search Suggestions
+const controlSearchSuggestions = function () {
+  let searchInput = document.querySelector(".search-field");
+  const suggestionsContainer = document.getElementById("suggestions");
+
+  // Function to display suggestions
+  function showSuggestions(suggestions) {
+    // Clear previous suggestions
+    suggestionsContainer.innerHTML = "";
+    if (Object.keys(suggestions).length === 0) {
+      suggestionsContainer.innerHTML =
+        '<div class="no-suggestions">No suggestions found</div>';
+    } else {
+      Object.keys(suggestions).forEach((suggestion) => {
+        console.log(suggestion);
+        const div = document.createElement("li");
+        div.textContent = suggestion;
+
+        // When a suggestion is clicked, fill the input and hide the list
+        div.addEventListener("click", () => {
+          searchBar.value = suggestion;
+          suggestionsContainer.style.display = "none";
+        });
+
+        suggestionsContainer.appendChild(div);
+      });
+    }
+
+    suggestionsContainer.style.display = "block"; // Show the suggestions
+  }
+
+  searchInput.addEventListener("input", async function (event) {
+    event.preventDefault();
+    let inputValue = searchInput.value.trim();
+    if (inputValue === "") {
+      suggestionsContainer.style.display = "none";
+      return;
+    }
+    // alert(inputValue)
+    await LoadSuburb(inputValue);
+    showSuggestions(state.suburbs);
+  });
+};
+
 //////////////////////////
 // Initialize the controller
 const init = function () {
   controlSearchResults();
   controlSortedResults();
   controlSearch();
+  controlSearchSuggestions();
   areaView.addHandlerRender(controlSuburbs);
 };
 

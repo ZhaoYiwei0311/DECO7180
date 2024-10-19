@@ -1,4 +1,4 @@
-import {LoadSuburb, state} from "../ranks/model.js";
+import { LoadSuburb, state } from "../ranks/model.js";
 import fakeDataList from "../../data/fakeSuburbData.js";
 import avgChartData from "../../data/fakeAvgChartdata.js";
 //Get the hash from the URL
@@ -185,47 +185,46 @@ searchForm.addEventListener("submit", function (event) {
   }
 });
 
+///////////////////////////////////////////////////
+// Show Suggestions in the search bar
+
 let searchInput = document.querySelector(".search-field");
-const suggestionsContainer = document.getElementById('suggestions');
+const suggestionsContainer = document.getElementById("suggestions");
 
 // Function to display suggestions
 function showSuggestions(suggestions) {
-
   // Clear previous suggestions
-  suggestionsContainer.innerHTML = '';
+  suggestionsContainer.innerHTML = "";
   if (Object.keys(suggestions).length === 0) {
-    suggestionsContainer.innerHTML = '<div class="no-suggestions">No suggestions found</div>';
+    suggestionsContainer.innerHTML =
+      '<div class="no-suggestions">No suggestions found</div>';
   } else {
-    Object.keys(suggestions).forEach(suggestion => {
-      console.log(suggestion)
-      const div = document.createElement('li');
+    Object.keys(suggestions).forEach((suggestion) => {
+      console.log(suggestion);
+      const div = document.createElement("li");
       div.textContent = suggestion;
 
       // When a suggestion is clicked, fill the input and hide the list
-      div.addEventListener('click', () => {
+      div.addEventListener("click", () => {
         searchBar.value = suggestion;
-        suggestionsContainer.style.display = 'none';
+        suggestionsContainer.style.display = "none";
       });
 
       suggestionsContainer.appendChild(div);
     });
   }
 
-  suggestionsContainer.style.display = 'block'; // Show the suggestions
+  suggestionsContainer.style.display = "block"; // Show the suggestions
 }
-searchInput.addEventListener('input', async function(event){
+
+searchInput.addEventListener("input", async function (event) {
   // event.preventDefault();
-
   let inputValue = searchInput.value.trim();
-
-  if (inputValue === '' ) {
-    suggestionsContainer.style.display = 'none';
+  if (inputValue === "") {
+    suggestionsContainer.style.display = "none";
     return;
   }
   // alert(inputValue)
   await LoadSuburb(inputValue);
   showSuggestions(state.suburbs);
-
-
-})
-
+});
