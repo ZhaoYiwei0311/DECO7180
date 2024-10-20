@@ -20,8 +20,8 @@ const fakeDataList = [
     imgSrc:
       "https://i2.au.reastatic.net/1000x750/c4397b7c313a66c5cd4371c9c3acb61afc7045a5553d8806ea23c89d475ed7d1/image.jpg",
     price: "By Negotiation",
-    name: "Saint Lucia",
-    imageDescription: "Saint Lucia Apartment",
+    name: "St Lucia",
+    imageDescription: "St Lucia Apartment",
     propertyInfo: "🛌 3 🛁 1 🚗 1 140㎡ ",
   },
   {

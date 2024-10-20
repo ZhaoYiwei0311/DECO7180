@@ -126,6 +126,7 @@ const controlSearchSuggestions = function () {
 const init = function () {
   controlSearchResults();
   controlSortedResults();
+  controlSuburbs();
   controlSearch();
   controlSearchSuggestions();
   areaView.addHandlerRender(controlSuburbs);

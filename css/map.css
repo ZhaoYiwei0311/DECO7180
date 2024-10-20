@@ -4,13 +4,21 @@ body {
   flex-direction: column;
 }
 
+/* const MAP_COLORS = [
+  "#ae1501d6",
+  "#dd1a007d",
+  "#dbd3d3e1",
+  "#4f8100de",
+  "#005e0ef2",
+]; */
+
 #map {
   height: 100%;
   width: 100%;
 }
 
 .info.legend {
-  background: white;
+  background: #fff;
   padding: 10px;
   font-size: 14px;
   line-height: 18px;
@@ -43,14 +51,14 @@ body {
 /**************************/
 .sort-button {
   position: absolute;
-  top: 10.1rem;
+  top: 10.2rem;
   left: 30rem;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.698);
-  color: #19325f;
+  color: #43597b;
   width: 18rem;
   border: none;
-  height: 4.5rem;
+  height: 4.8rem;
   font-weight: 600;
   font-size: 2rem;
   border-radius: 12px;
@@ -61,7 +69,7 @@ body {
 
 .sort-button:hover,
 .sort-button:focus {
-  color: #19325f;
+  color: #43597b;
   transform: scale(1.1);
   border: none;
   color: #da5b17;
@@ -80,7 +88,7 @@ body {
   font-size: 2rem;
   padding: 0.8rem;
   border-radius: 12px;
-  color: #0a0d12;
+  color: #43597b;
   background-color: rgba(255, 255, 255, 0.698);
   text-decoration: none;
   transition: all 0.4s;
@@ -92,4 +100,8 @@ body {
   transform: scale(1.1);
   background-color: #fff;
   color: #da5b17;
+}
+
+.leaflet-container a {
+  color: #43597b;
 }
