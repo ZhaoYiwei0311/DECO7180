@@ -18,6 +18,8 @@ var grades;
 var colors;
 var geojsonLayer;
 
+
+
 function changeDimension() {
   var selectElement = document.getElementById("dimensionSelect");
   dimension = selectElement.value;
@@ -36,7 +38,7 @@ async function drawMap() {
 
   // Add OpenStreetMap tiles
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 18,
+    maxZoom: 15,
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
 
@@ -44,7 +46,24 @@ async function drawMap() {
 
   // loadGeoJson(map);
 
+
+
   addInfo(map);
+
+  var focusedSuburb = window.location.hash.slice(1).replaceAll("%20", " ");
+
+  if (focusedSuburb != null && focusedSuburb !== '') {
+    // let focusedSuburbData = geodata.filter(geoDataDetail => geoDataDetail.features[0].properties.Name === focusedSuburb)
+    // let mapData = focusedSuburbData[0].features[0].geometry.coordinates[0][400];
+    // map.setView([mapData[1], mapData[0]], 14)
+    Object.values(geojsonLayer._layers).forEach(layer => {
+      if (layer.feature.properties.Name == focusedSuburb) {
+        console.log(layer)
+        layer.fire('mouseover')
+        layer.fire('click')
+      }
+    })
+  }
 }
 
 async function update_map(map) {
@@ -68,11 +87,12 @@ async function update_map(map) {
   colors = MAP_COLORS;
   loadGeoJson(map);
   addLegend(map);
+
+
 }
 
 function getColorByDimension(suburb) {
   let suburbData = results[suburb];
-  // console.log('suburbData = ' + suburb + " " + suburbData);
   return getRankByDimension(suburbData);
 }
 
@@ -131,7 +151,6 @@ function highlightFeature(e) {
 
   layer.bringToFront();
 
-  // console.log(layer.feature.properties.Name);
   info.update(layer.feature.properties);
 }
 
@@ -143,11 +162,14 @@ function resetHighlight(e) {
 
 // Zoom to a region when clicked
 function zoomToFeature(e) {
+
+  // console.log(e)
   map.fitBounds(e.target.getBounds());
 }
 
 // Add the event listeners to each feature
 function onEachFeature(feature, layer) {
+  // console.log(feature)
   layer.on({
     mouseover: highlightFeature,
     mouseout: resetHighlight,
@@ -192,20 +214,38 @@ function addInfo(map) {
 
   // method that we will use to update the control based on feature properties passed
   info.update = function (props) {
-    if (props != null) {
-      getDataBySuburb(props.Name);
-      this._div.innerHTML =
-        "<h4>" +
-        dimension +
-        " MAP</h4>" +
-        (props
-          ? "<b>" +
-            props.Name +
-            "</b><br />" +
-            results[props.Name] +
-            " cases in last 5 years"
-          : "Hover over a state");
+    if (dimension !== 'OVERALL') {
+      if (props != null) {
+        getDataBySuburb(props.Name);
+        this._div.innerHTML =
+            "<h4>" +
+            dimension +
+            " MAP</h4>" +
+            (props
+                ? "<b>" +
+                props.Name +
+                "</b><br />" +
+                results[props.Name] +
+                " cases in last 5 years"
+                : "Hover over a state");
+      }
+    } else {
+      if (props != null) {
+        getDataBySuburb(props.Name);
+        this._div.innerHTML =
+            "<h4>" +
+            dimension +
+            " MAP</h4>" +
+            (props
+                ? "<b>" +
+                props.Name +
+                "</b><br />" +
+                "Danger Index: " +
+                "<strong>" + results[props.Name] + "</strong>"
+                : "Hover over a state");
+      }
     }
+
   };
   info.addTo(map);
 }
@@ -252,3 +292,6 @@ btnNavEl.addEventListener("click", function (e) {
   headerEl.classList.toggle("nav-open");
 });
 ///////////////////////////
+
+
+
